@@ -49,17 +49,4 @@
                 </div>
                 <!-- /.navbar-collapse -->
         </nav>
-
-        <!-- Page Title -->
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-8">
-                    <h1 class="page-header">
-                        Made In World
-                    </h1>
-                </div>
-            </div>
-        </div>
     </header>
-</body>
