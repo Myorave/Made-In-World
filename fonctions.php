@@ -13,24 +13,6 @@ function bdd_article(){ // fonction qui essaye de se connecter à la BDD
     }
 }
 
-function article_solo($id){ //fonction qui lance un article complet sur une page
-    try{
-        $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
-
-        $bdd=new PDO('mysql:host=localhost;dbname=projetphp','root','',$pdo_options);
-        $sth = $bdd->prepare("SELECT *
-                            FROM commentaire
-                            WHERE id = :id");
-        $sth->execute(array(':id' => $id));
-
-        return $sth->fetch();
-    }
-    catch (Exception $e){
-        die('Erreur : '.$e->getMessage());
-    }
-
-}
-
 function insererArticle($a_titre,$a_contenu,$a_auteur){
      try{
         $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;

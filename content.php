@@ -215,35 +215,6 @@
 		</div>
 	</div>
 </section>
-<section>
-  <div class="row">
-
-          <hr>
-          <?php
-             $articles = bdd_article();
-              while($article = $articles->fetch()){
-              ?>
-                  <h2>
-                      <a href="artsolo.php?id=<?php echo $article['id']; ?>">
-                         <?php echo $article['titre']; ?>
-                      </a>
-                  </h2>
-                  <p class="lead">
-                  by <a href="artsolo.php?id=
-                      <?php echo $article['id']; ?>">
-                      <?php echo $article['auteur']; ?>
-                      </a>
-                  </p>
-                  <p><span class="glyphicon glyphicon-time"></span> Posté le <?php echo $article['date'];?></p>
-                  <hr>
-                  <img class="img-responsive" src="/images/<?php echo $article['image'];?>"/>
-                  <hr>
-                  <p><?php echo $article['contenu'];?></p>
-              <hr>
-              <?php }
-              ?>
-  </div>
-</section>
 <section id="team">
 	<div class="container">
 		<div class="section-heading dark text-center">
@@ -268,8 +239,6 @@
 					<li data-target="#quote-carousel" data-slide-to="4">
 						<img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
 					</li>
-
-
 				</ol>
 
 				<div class="carousel-inner">
