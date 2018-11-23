@@ -5,25 +5,14 @@ include("fonctions.php");
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- include the style -->
-    <link rel="stylesheet" href="css/alertify.min.css" />
-    <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
-
-    <title>Administration</title>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="css/admin.css" rel="stylesheet">
+  	<meta charset="UTF-8">
+  	<title>Adminitration | Made in World</title>
+      <link rel="stylesheet" href="css/alertify.min.css" />
+      <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="css/admin.css" rel="stylesheet">
 
   </head>
 
@@ -33,16 +22,13 @@ include("fonctions.php");
       <div class="container-fluid">
         <div class="navbar-header">
 
-          <a class="navbar-brand" href="#">Projet PHP</a>
+          <a class="navbar-brand" href="http://localhost/made-in-world/">Made in World</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Profil</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </nav>
@@ -56,8 +42,8 @@ include("fonctions.php");
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard
-            <a href="ajout-article.php" class="btn btn-success pull-right">Ajouter un commentaire</a></h1>
+          <h1 class="page-header">Administration du site
+            <a href="ajoutCommentaire.php" class="btn btn-success pull-right">Ajouter un commentaire</a></h1>
           <h2 class="sub-header">Liste des commentaires</h2>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -73,15 +59,15 @@ include("fonctions.php");
               <tbody>
 
                 <?php
-                    $articles = bdd_article();
-                    while($article = $articles->fetch()){
+                    $commentaires = bdd_commentaire();
+                    while($commentaire = $commentaires->fetch()){
                 ?>
 
-                <tr data-id="<?php echo $article['id']; ?>">
-                  <td><?php echo $article['id']; ?></td>
-                  <td><?php echo $article['titre']; ?></td>
-                  <td><?php echo $article['contenu']; ?></td>
-                  <td><?php echo $article['auteur']; ?></td>
+                <tr data-id="<?php echo $commentaire['id']; ?>">
+                  <td><?php echo $commentaire['id']; ?></td>
+                  <td><?php echo $commentaire['titre']; ?></td>
+                  <td><?php echo $commentaire['contenu']; ?></td>
+                  <td><?php echo $commentaire['auteur']; ?></td>
                     <td>
                     <a href="" class="btn btn-warning event-edit">Edition</a><br><br>
                     <a href="" class="btn btn-danger event-delete">Supprimer</a>
@@ -141,8 +127,8 @@ include("fonctions.php");
               alertify.confirm('Confirmez-vous la suppression ?', 'Êtes-vous sûr de vouloir supprimer ce commentaire ?', function(){
                  $.ajax({
                   method: "POST",
-                  url: "supprimerArticle.php",
-                  data: { id_article: id },
+                  url: "supprimerCommentaire.php",
+                  data: { id_commentaire: id },
                   dataType: 'json'
                 })
                   .done(function(result) {
@@ -161,13 +147,6 @@ include("fonctions.php");
           $('.event-edit').on('click',function(e){
             e.preventDefault();
             $('#modal-edit').modal('show');
-
-//                  $.ajax({
-//                  method: "POST",
-//                  url: "form-modifierArticle.php",
-//                  data: { id_article: id },
-//                  dataType: 'json'
-//                })
             });
         });
     </script>

@@ -29,5 +29,8 @@ $titre = $_POST['titre'];
 $auteur = $_POST['auteur'];
 $contenu = $_POST['contenu'];
 
-insererArticle($titre,$auteur,$contenu);
+insererCommentaire($titre,$auteur,$contenu);
+
+echo "Votre commentaire a bien été ajouté, redirection vers la page d'administration dans 3 secondes";
+echo '<meta http-equiv="refresh" content="3; URL=admin.php">';
 ?>

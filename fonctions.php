@@ -1,7 +1,7 @@
 <?php
 include("init.php");
 
-function bdd_article(){ // fonction qui essaye de se connecter à la BDD
+function bdd_commentaire(){ // fonction qui essaye de se connecter à la BDD
     try{
         $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
 
@@ -13,7 +13,7 @@ function bdd_article(){ // fonction qui essaye de se connecter à la BDD
     }
 }
 
-function insererArticle($a_titre,$a_contenu,$a_auteur){
+function insererCommentaire($a_titre,$a_contenu,$a_auteur){
      try{
         $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
 
@@ -32,7 +32,7 @@ function insererArticle($a_titre,$a_contenu,$a_auteur){
        }
 }
 
-function deleteArticle($id_article){
+function deleteCommentaire($id_commentaire){
      try{
         $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
 
@@ -40,7 +40,7 @@ function deleteArticle($id_article){
         $stmt = $bdd->prepare("DELETE FROM commentaire
                                 WHERE id = :id");
 
-        $stmt->bindParam(':id', $id_article);
+        $stmt->bindParam(':id', $id_commentaire);
         return $stmt->execute();
 
        }
@@ -49,7 +49,7 @@ function deleteArticle($id_article){
        }
 }
 
-function modifierArticle($a_titre, $a_contenu, $id_article){
+function modifierCommentaire($a_titre, $a_contenu, $id_commentaire){
      try{
         $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
 
@@ -58,7 +58,7 @@ function modifierArticle($a_titre, $a_contenu, $id_article){
 
         $stmt->bindParam(':titre', $a_titre);
         $stmt->bindParam(':contenu', $a_contenu);
-        $stmt->bindParam(':id', $id_article);
+        $stmt->bindParam(':id', $id_commentaire);
 
         return $stmt->execute();
 
