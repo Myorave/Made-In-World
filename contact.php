@@ -24,26 +24,26 @@ include("header.php")
           <div class="row form-group">
             <div class="col-md-12 mb-3 mb-md-0">
               <label class="font-weight-bold" for="fullname">Nom & Prénom</label>
-              <input type="text" id="fullname" class="form-control" placeholder="Full Name">
+              <input type="text" id="fullname" class="form-control" placeholder="Votre nom et prénom">
             </div>
           </div>
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Email Address">
+              <input type="email" id="email" class="form-control" placeholder="Votre email">
             </div>
           </div>
 
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="message">Message</label>
-              <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Say hello to us"></textarea>
+              <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Votre message"></textarea>
             </div>
           </div>
 
           <div class="row form-group">
             <div class="col-md-12">
-              <input type="submit" value="Send" class="btn btn-primary">
+              <input type="submit" value="Envoyer" class="btn btn-primary">
             </div>
           </div>
 

@@ -1001,63 +1001,6 @@ a {
     color: #fff !important;
     border-bottom: 2px solid #fff; }
 
-.block-37 {
-  border-radius: 4px;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  height: 200px; }
-  .block-37 .image {
-    height: 100%;
-    background-color: black;
-    /* fallback color */
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    -webkit-transition: .8s all ease;
-    -o-transition: .8s all ease;
-    transition: .8s all ease; }
-    .block-37 .image:before {
-      content: "";
-      visibility: hidden;
-      opacity: 0;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      -webkit-transition: .3s all ease;
-      -o-transition: .3s all ease;
-      transition: .3s all ease;
-      top: 0;
-      left: 0;
-      background-color: #f23a2e; }
-    .block-37 .image .block-37-overlay {
-      z-index: 3;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      opacity: 0;
-      visibility: hidden;
-      -webkit-transition: .3s all ease;
-      -o-transition: .3s all ease;
-      transition: .3s all ease;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      margin-top: 10px; }
-      .block-37 .image .block-37-overlay .icon {
-        font-size: 30px;
-        color: #fff; }
-  .block-37:hover .block-37-overlay, .block-37:focus .block-37-overlay {
-    opacity: 1;
-    visibility: visible;
-    margin-top: 0px; }
-  .block-37:hover .image, .block-37:focus .image {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2); }
-    .block-37:hover .image:before, .block-37:focus .image:before {
-      opacity: .7;
-      visibility: visible; }
 
 /* LOGIN */
   .colorgraph {

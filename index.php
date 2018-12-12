@@ -45,7 +45,7 @@ include("header.php")
 <div class="site-section border-bottom bg-light py-5">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center mb-5"><h2 class="text-black h6 font-weight-bold text-uppercase" data-aos="fade">Let the number speaks for us.</h2></div>
+      <div class="col-12 text-center mb-5"><h2 class="text-black h6 font-weight-bold text-uppercase" data-aos="fade">Quelques nombres nous concernant.</h2></div>
       <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
         <div class="d-flex align-items-center">
           <div class="mr-3"><span class="flaticon-agreement display-3 text-primary"></span></div>
@@ -164,6 +164,14 @@ include("header.php")
 </div>
 
 <div class="site-section bg-light">
+  <div class="row mb-5 justify-content-center">
+    <div class="col-12 text-center">
+      <h2 class="font-weight-light text-black display-4">Derniers temoignages</h2>
+    </div>
+    <div class="col-md-7 text-center">
+      <p>Voici quelques-uns des temoignages de nos clients.</p>
+    </div>
+  </div>
   <div class="container">
 
     <div class="block-13 nonloop-block-13 owl-carousel" data-aos="fade">

@@ -96,7 +96,7 @@ include("header.php")
           </p>
         </div>
       </div>
-      <div class="col-md-6 pl-md-5 text-left">
+      <div class="col-md-6 pl-md-5 text-right">
         <div>
           <img src="images/person_3.jpg" alt="Image" class="w-50 mb-5 rounded">
           <h3>Mehdi CHOUANIA</h3>
@@ -114,7 +114,7 @@ include("header.php")
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 pr-md-5 text-left mb-5">
+      <div class="col-md-6 text-center">
         <div>
           <img src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded">
           <h3>Aurélie SAUREL</h3>
@@ -129,68 +129,6 @@ include("header.php")
             <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
           </p>
         </div>
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-12 text-center">
-        <h2 class="display-5 text-black mb-5">D'autres petites mains</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-6 col-md-4 col-lg-2 mb-4">
-        <a href="#" class="block-37">
-          <div class="image" style="background-image: url(images/person_1.jpg);">
-            <div class="block-37-overlay">
-              <span class="icon icon-visibility"></span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 mb-4">
-        <a href="#" class="block-37">
-          <div class="image" style="background-image: url(images/person_2.jpg);">
-            <div class="block-37-overlay">
-              <span class="icon icon-visibility"></span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 mb-4">
-        <a href="#" class="block-37">
-          <div class="image" style="background-image: url(images/person_3.jpg);">
-            <div class="block-37-overlay">
-              <span class="icon icon-visibility"></span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 mb-4">
-        <a href="#" class="block-37">
-          <div class="image" style="background-image: url(images/person_4.jpg);">
-            <div class="block-37-overlay">
-              <span class="icon icon-visibility"></span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 mb-4">
-        <a href="#" class="block-37">
-          <div class="image" style="background-image: url(images/person_1.jpg);">
-            <div class="block-37-overlay">
-              <span class="icon icon-visibility"></span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 mb-4">
-        <a href="#" class="block-37">
-          <div class="image" style="background-image: url(images/person_2.jpg);">
-            <div class="block-37-overlay">
-              <span class="icon icon-visibility"></span>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
   </div>
