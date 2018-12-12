@@ -8,7 +8,8 @@ include("header.php")
           <div class="container">
             <div class="row align-items-center justify-content-center text-center">
               <div class="col-md-10">
-                <h1 class="mb-5">Découvrez nos boîtes<br><strong>Made in World</strong></h1>
+                <span class="sub-text">Présentation de nos boîtes</span>
+                <h1 class="mb-5"><strong>Made in World</strong><br></h1>
                 <p>
                   <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Nos Produits</a>
                   <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Contact</a>
@@ -22,12 +23,23 @@ include("header.php")
           <div class="container">
             <div class="row align-items-center justify-content-center text-center">
               <div class="col-md-10">
-                <h1 class="mb-5">La box de <br><strong>Novembre</strong></h1>
+                <span class="sub-text">Découverte de l'Océanie</span>
+                <h1 class="mb-5">La box de <br><strong>Decembre</strong></h1>
               </div>
             </div>
           </div>
         </div>
 
+        <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+          <div class="container">
+            <div class="row align-items-center justify-content-center text-center">
+              <div class="col-md-10">
+                <span class="sub-text">Au-delà de l'Atlantique : Le Canada</span>
+                <h1 class="mb-5">La box de <br><strong>Novembre</strong></h1>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="site-section border-bottom bg-light py-5">
