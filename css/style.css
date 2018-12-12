@@ -1,4 +1,4 @@
-/* Base commune*/
+/* Base commune */
 body {
   line-height: 1.7;
   color: #4d4d4d;
@@ -470,7 +470,7 @@ a {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: .2em; }
-  .site-blocks-cover h1 {
+  .site-blocks-cover h1, .fat-headline {
     font-weight: 900;
     color: #fff;
     text-transform: uppercase;
@@ -873,13 +873,6 @@ a {
   opacity: .5; }
 
 .block-25 ul li a:hover .text .heading {
-  color: #fff; }
-
-#date-countdown .countdown-block {
-  color: rgba(255, 255, 255, 0.4); }
-
-#date-countdown .label {
-  font-size: 40px;
   color: #fff; }
 
 .next-match .image {

@@ -214,29 +214,4 @@ jQuery(document).ready(function($) {
 	};
 	siteStellar();
 
-	var siteCountDown = function() {
-
-		if ( $('#date-countdown').length > 0 ) {
-			$('#date-countdown').countdown('2020/10/10', function(event) {
-			  var $this = $(this).html(event.strftime(''
-			    + '<span class="countdown-block"><span class="label">%w</span> weeks </span>'
-			    + '<span class="countdown-block"><span class="label">%d</span> days </span>'
-			    + '<span class="countdown-block"><span class="label">%H</span> hr </span>'
-			    + '<span class="countdown-block"><span class="label">%M</span> min </span>'
-			    + '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
-			});
-		}
-
-	};
-	siteCountDown();
-
-	var siteDatePicker = function() {
-
-		if ( $('.datepicker').length > 0 ) {
-			$('.datepicker').datepicker();
-		}
-
-	};
-	siteDatePicker();
-
 });
