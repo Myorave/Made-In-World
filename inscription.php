@@ -6,12 +6,12 @@ include("header.php");
 
 <div class="container">
   <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-  		<form role="form">
-  			<h2>S'inscrire <small>sur Made in World</small></h2>
-  			<hr class="colorgraph">
+      
+  		<form class="form" role="form">
+  			<h2>Inscription<small> : Made in World</small></h2>
+  			
   			<div class="row">
-  				<div class="col-xs-12 col-sm-6 col-md-6">
+  				<div class="col-xs-12col-sm-6 col-md-6">
   					<div class="form-group">
               <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Prénom" tabindex="1">
   					</div>
@@ -52,13 +52,13 @@ include("header.php");
   				</div>
   			</div>
 
-  			<hr class="colorgraph">
+  			
   			<div class="row">
   				<div class="col-xs-12 col-md-6"><input type="submit" value="S'inscrire" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
   				<div class="col-xs-12 col-md-6"><a href="connexion.php" class="btn btn-success btn-block btn-lg">Connexion</a></div>
   			</div>
   		</form>
-  	</div>
+  	
   </div>
   
   <!-- Modal -->

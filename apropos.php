@@ -80,7 +80,7 @@ include("header.php")
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 pr-md-5 text-left mb-5">
+      <div class="col-md-4 ">
         <div>
           <img src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded">
           <h3>Adélaide BRELEUX</h3>
@@ -96,7 +96,10 @@ include("header.php")
           </p>
         </div>
       </div>
-      <div class="col-md-6 pl-md-5 text-right">
+      
+      
+   
+      <div class="col-md-4">
         <div>
           <img src="images/person_3.jpg" alt="Image" class="w-50 mb-5 rounded">
           <h3>Mehdi CHOUANIA</h3>
@@ -111,13 +114,13 @@ include("header.php")
             <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
           </p>
         </div>
-      </div>
+      
     </div>
-    <div class="row">
-      <div class="col-md-6 text-center">
+
+    <div class="col-md-4">
         <div>
           <img src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded">
-          <h3>Aurélie SAUREL</h3>
+          <h3>Aurélie SAUREL </h3>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
 
@@ -131,7 +134,6 @@ include("header.php")
         </div>
       </div>
     </div>
-  </div>
 </div>
 
 <?php

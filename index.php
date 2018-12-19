@@ -4,7 +4,7 @@ include("header.php")
 
 <div class="slide-one-item home-slider owl-carousel">
 
-  <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="site-blocks-cover overlay" style="background-image: url(images/visu1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-md-10">
@@ -19,7 +19,7 @@ include("header.php")
     </div>
   </div>
 
-  <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="site-blocks-cover overlay" style="background-image: url(images/visu2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-md-10">
@@ -30,7 +30,7 @@ include("header.php")
     </div>
   </div>
 
-  <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="site-blocks-cover overlay" style="background-image: url(images/visu3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-md-10">
@@ -45,37 +45,41 @@ include("header.php")
 <div class="site-section border-bottom bg-light py-5">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center mb-5"><h2 class="text-black h6 font-weight-bold text-uppercase" data-aos="fade">Quelques nombres nous concernant.</h2></div>
-      <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+      
+    <div class="col-12 text-center mb-5"><h2 class="text-black h6 font-weight-bold text-uppercase" data-aos="fade">Ce que nous proposons toute l'année</h2></div>
+      
+    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
         <div class="d-flex align-items-center">
-          <div class="mr-3"><span class="flaticon-agreement display-3 text-primary"></span></div>
+          <div class="mr-3"><img src="https://img.icons8.com/wired/64/000000/worldwide-location.png"></div>
           <div class="">
-            <h2 class="text-black">12</h2> <strong class="text-black">Personnes</strong> Employés
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-        <div class="d-flex align-items-center">
-          <div class="mr-3"><span class="flaticon-planet-earth display-3 text-primary"></span></div>
-          <div class="">
-            <h2 class="text-black">45+</h2> <strong class="text-black">Fournisseurs</strong> de pays différents
+            <h2 class="text-black">Voyage culinaire</h2> Au quatres coins du  <strong class="text-black">monde</strong> 
           </div>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-4 mb-0 mb-lg-0" data-aos="fade" data-aos-delay="300">
         <div class="d-flex align-items-center">
-          <div class="mr-3"><span class="flaticon-excavator display-3 text-primary"></span></div>
+          <div class="mr-3"><img src="https://img.icons8.com/wired/64/000000/ingredients.png"></div>
           <div class="">
-            <h2 class="text-black">2900+</h2> <strong class="text-black">Finished</strong> Projects
+            <h2 class="text-black">6-7</h2> <strong class="text-black"> Produits </strong> de qualité
           </div>
         </div>
       </div>
+    
+      <div class="col-md-6 col-lg-4 mb-0 mb-lg-0" data-aos="fade" data-aos-delay="300">
+        <div class="d-flex align-items-center">
+          <div class="mr-3"><img src="https://img.icons8.com/wired/64/000000/good-quality.png"></div>
+          <div class="">
+            <h2 class="text-black">1 livret</h2> <strong class="text-black"> Recettes </strong>+ anechdoce et coutume
+          </div>
+        </div>
+      </div>
+      
 
     </div>
   </div>
 </div>
+
 
 <div class="site-section">
 
