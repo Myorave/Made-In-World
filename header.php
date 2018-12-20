@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="css/magnific-popup.css"> <!-- Permet le zoom au survol de souris -->
     <link rel="stylesheet" href="css/aos.css"> <!-- Permet les apparitions des blocs par progression du scroll -->
     <link rel="stylesheet" href="css/owl.carousel.min.css"> <!-- Inscrustation des carousel -->
-   
     <link rel="stylesheet" href="css/style.css">
+
 
   </head>
 

@@ -1016,7 +1016,157 @@ a {
     color: #fff !important;
     border-bottom: 2px solid #fff; }
 
-/*formulaire*/
 
-/* LOGIN */
+    /*FOOTER */
+.Agence{
+  padding-top: 50px;
+  padding-left: 40px;
+}
+.list-unstyled2 {
+  font-weight: lighter;
+  list-style-type:none;
+  padding-left: 0;
+}
+.site-footer{
+  background-color:rgb(245, 245, 245) ;
+  padding: 0;
+  margin: 0;
+}
  
+.footer-heading{
+  color:#B71C1C;
+}
+.logo1{
+  width: 250px;
+  padding-right:50px;
+  padding-top: 50px;
+
+}
+.bandeau{
+  height: 50px;
+  background-color: grey;
+}
+.fab{
+  
+  padding-right: 10px;
+}
+
+.footer-top{
+  width: 100%;
+  text-align: center;
+  color: #cccccc;
+  display: table;
+}
+footer p{ text-align: center; }
+footer ul.social {
+  margin-left: -40px;
+  text-align: center;
+}
+footer ul.social li { 
+  padding: 0px 10px 0px 10px;
+}
+
+
+.socials{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.socials * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.socials li {
+  display: inline-block;
+  list-style: outside none none;
+  float: left;
+  overflow: hidden;
+  width: 20%;
+  font-size: 13px;
+}
+
+.socials a {
+  padding: 0.3em 0.8em;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+  padding: 25px 0;
+  width: 100%;
+  font-size: 9.5px;
+}
+
+.socials a:before,
+.socials a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.socials a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+}
+
+.socials a:after {
+  padding: 0.3em 0.8em;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+  width: 100%;
+  padding: 25px 0;
+}
+
+.socials li:hover a,
+.socials .current a {
+  transform: translateY(100%);
+}
+
+.facebook{
+  background: #1f1616;
+ 
+}
+
+
+.facebook a:after{
+  background-color:#B71C1C;
+}
+.twitter{
+  background: rgb(46, 17, 17);
+}
+
+.twitter a:after{
+  background-color:#B71C1C;
+}
+.Pinterest{
+  background: #641919;
+}
+
+.Pinterest a:after{
+  background:#B71C1C;
+}
+.Mentions {
+  background: #b32222;
+}
+
+.Mentions a:after{
+  background:#B71C1C;
+}
+.CVG {
+  background: #f31616;
+}
+.CVG a:after{
+  background:#B71C1C;
+}
+/*FOOTER END*/

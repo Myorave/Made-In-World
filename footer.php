@@ -1,79 +1,67 @@
 <footer class="site-footer">
+  <div class="row pt-3 mt-3 text-center">
+  </div>
+
   <div class="container">
     <div class="row">
-      <div class="col-lg-7">
+      <div class="col-lg-12">
         <div class="row">
-          <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Company</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Approach</a></li>
-              <li><a href="#">Sustainability</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Navigations</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Approach</a></li>
-              <li><a href="#">Sustainability</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Quick Menu</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Approach</a></li>
-              <li><a href="#">Sustainability</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="row mb-5">
-          <div class="col-md-12"><h3 class="footer-heading mb-4">Europe</h3></div>
-          <div class="col-md-6">
-            <p>London - 2398 <br> 10 Japson Street</p>
-          </div>
-          <div class="col-md-6">
-            Tel. + (123) 3240-345-9348 <br>
-            Mail. europe@youdomain.com
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-12"><h3 class="footer-heading mb-4">USA</h3></div>
-          <div class="col-md-6">
-            <p>New York - 2398 <br> 10 Hadson Carl Street</p>
+
+          <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
+            <img class="logo1" src="images/logo.png">
           </div>
-          <div class="col-md-6">
-            Tel. + (123) 3240-345-9348 <br>
-            Mail. usa@youdomain.com
+
+          <div class="col-5 ">
+            <div class="Agence">
+              <h3 class="footer-heading mb-3">Notre Agence</h3>
+              <ul class="list-unstyled2">
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="apropos.php">Qui-sommes nous</a></li>
+                <li><a href="produits.php">Produits</a></li>
+                <li><a href="news.php">Livre d'or</a></li>
+                <li><a href="contact.php">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-2 ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7883.599362997335!2d4.833759414130745!3d45.764077750992435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eaf87798226b%3A0xa1abd8d18dc1264f!2s31+Quai+Jean+Moulin%2C+69002+Lyon!5e0!3m2!1sfr!2sfr!4v1545308988293"
+              width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
-
-      </div>
-    </div>
-    <div class="row pt-5 mt-5 text-center">
-      <div class="col-md-12">
-        <p>
-        Copyright &copy; Made In World | Fait dans le cadre du cours d'HTML/CSS & PHP</a>
-        </p>
       </div>
 
     </div>
   </div>
+  </div>
+  </div>
+  <!--FOOTER SOCIAUX-->
+
+  <div class="footer-top">
+    <ul class="socials">
+      <li class="facebook">
+        <a href="#" data-hover="Facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
+      </li>
+      <li class="twitter">
+        <a href="#" data-hover="Twitter"><i class="fab fa-twitter"></i>Twitter</a>
+      </li>
+      <li class="Pinterest">
+        <a href="#" data-hover="Pinterest"><i class="fab fa-pinterest"></i>Pinterest</a>
+      </li>
+      <li class="Mentions légals">
+        <a href="#" data-hover="Mentions légals">Mentions </a>
+      </li>
+      <li class="CVG">
+        <a href="#" data-hover="Contrat CVG">Contrat CVG</a>
+      </li>
+    </ul>
+  </div>
+
+
+
 </footer>
 </div>
+
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -88,4 +76,5 @@
 <script src="js/main.js"></script>
 
 </body>
+
 </html>
