@@ -19,18 +19,18 @@ include("header.php")
 
       <div class="col-md-12 col-lg-8 mb-5">
 
-        <form action="#" class="p-5 bg-white">
+        <form action="contactform.php" class="p-5 bg-white">
 
           <div class="row form-group">
             <div class="col-md-12 mb-3 mb-md-0">
               <label class="font-weight-bold" for="fullname">Nom & Prénom</label>
-              <input type="text" id="fullname" class="form-control" placeholder="Votre nom et prénom">
+              <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Votre nom et prénom">
             </div>
           </div>
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="email">Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Votre email">
+              <input type="email" name="email" id="email" class="form-control" placeholder="Votre email">
             </div>
           </div>
 
@@ -43,7 +43,7 @@ include("header.php")
 
           <div class="row form-group">
             <div class="col-md-12">
-              <input type="submit" value="Envoyer" class="btn btn-primary">
+              <input type="submit" name="submit" value="Envoyer" class="btn btn-primary">
             </div>
           </div>
 
