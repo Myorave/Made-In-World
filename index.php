@@ -8,7 +8,7 @@ include("header.php")
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-md-10">
-          <span class="sub-text">Présentation de nos boîtes</span>
+          <span class="sub-text">Des boites d'un autre horizon</span>
           <h1 class="mb-5"><strong>Made in World</strong><br></h1>
           <p>
             <a href="produits.php" class="btn btn-primary py-3 px-5 rounded-0">Nos Produits</a>
@@ -45,14 +45,14 @@ include("header.php")
 <div class="site-section border-bottom bg-light py-5">
   <div class="container">
     <div class="row">
-      
+
     <div class="col-12 text-center mb-5"><h2 class="text-black h6 font-weight-bold text-uppercase" data-aos="fade">Ce que nous proposons toute l'année</h2></div>
-      
+
     <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
         <div class="d-flex align-items-center">
           <div class="mr-3"><img src="https://img.icons8.com/wired/64/000000/worldwide-location.png"></div>
           <div class="">
-            <h2 class="text-black">Voyage culinaire</h2> Au quatres coins du  <strong class="text-black">monde</strong> 
+            <h2 class="text-black">Voyage culinaire</h2> Au quatres coins du  <strong class="text-black">monde</strong>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ include("header.php")
           </div>
         </div>
       </div>
-    
+
       <div class="col-md-6 col-lg-4 mb-0 mb-lg-0" data-aos="fade" data-aos-delay="300">
         <div class="d-flex align-items-center">
           <div class="mr-3"><img src="https://img.icons8.com/wired/64/000000/good-quality.png"></div>
@@ -74,7 +74,7 @@ include("header.php")
           </div>
         </div>
       </div>
-      
+
 
     </div>
   </div>
@@ -86,10 +86,10 @@ include("header.php")
   <div class="container">
     <div class="row mb-5 justify-content-center">
       <div class="col-12 text-center">
-        <h2 class="font-weight-light text-black display-4">Our Specialty</h2>
+        <h2 class="font-weight-light text-black display-4">Notre spécialité</h2>
       </div>
       <div class="col-md-7 text-center">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto eaque qui illo cumque officia nobis assumenda odit perferendis ipsam dolore.</p>
+        <p>Mettre tout en œuvre pour faire voyager vos papilles autour du globe, chez-vous, avec des ingrédients de qualité spécialement choisis et testés par un chef étoilé.</p>
       </div>
     </div>
     <div class="row no-gutters align-items-stretch h-100">
@@ -98,8 +98,10 @@ include("header.php")
           <div class="col-md-6 bg-image bg-sm-height" style="background-image: url('images/img_4_colored.jpg');" data-aos="fade" data-aos-delay="0"></div>
           <div class="col-md-6 bg-light text">
             <div class="p-4">
-              <h2 class="h5 mb-3 text-black line-height-sm">Automative Manufacturing</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium voluptatum vel natus, repellat at optio.</p>
+              <h2 class="h5 mb-3 text-black line-height-sm">Des saveurs insoupçonnés</h2>
+              <p>Des terres ensoleillées de sierra Leone avec un plat da bananes plantains frites accompagnées de riz,
+aux grandes plaines sauvages de Mongolie avec ses khuchuur de moutons. Vos sens seront transportés a chaque bouchées.
+</p>
               <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
             </div>
           </div>
@@ -111,8 +113,8 @@ include("header.php")
           <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height" style="background-image: url('images/img_1_colored.jpg');" data-aos="fade" data-aos-delay="200"></div>
           <div class="col-md-6 bg-light text order-md-1 order-lg-2">
             <div class="p-4">
-              <h2 class="h5 mb-3 text-black line-height-sm">Mechanical Engineering</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, cupiditate officia recusandae velit sint totam.</p>
+              <h2 class="h5 mb-3 text-black line-height-sm">Recettes de chef</h2>
+              <p>Un livre de recettes vous sera fournis dans chaque coffret, spécialement écris par nos chefs dans le respect de la culture culinaires du pays représenté. Dans le souci de toujours vous apportez une expérience authentique.</p>
               <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
             </div>
           </div>
@@ -124,8 +126,8 @@ include("header.php")
           <div class="col-md-6 bg-image order-md-1 order-lg-2 bg-sm-height" style="background-image: url('images/img_2_colored.jpg');" data-aos="fade" data-aos-delay="300"></div>
           <div class="col-md-6 bg-light text order-md-2 order-lg-1">
             <div class="p-4">
-              <h2 class="h5 mb-3 text-black line-height-sm">Oil &amp; Gas Energy</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugiat facilis quasi ratione ducimus ipsam!</p>
+              <h2 class="h5 mb-3 text-black line-height-sm">La qualité avant tout</h2>
+              <p>Tout nos produits sont rigoureusement choisis et testés pour garantir une expérience inoubliable et riche en saveur. Votre santé et votre plaisir, est le pilier de notre entreprise, et jamais nous ne limiteront ces contrôles dans l’objectif d’économiser de l’argent à votre dépend.</p>
               <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
             </div>
           </div>
@@ -137,8 +139,8 @@ include("header.php")
           <div class="col-md-6 bg-image order-md-2 bg-sm-height" style="background-image: url('images/img_3_colored.jpg');" data-aos="fade" data-aos-delay="400"></div>
           <div class="col-md-6 bg-light text order-md-1">
             <div class="p-4">
-              <h2 class="h5 mb-3 text-black line-height-sm">Industrial Construction</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam est alias minus, expedita autem.</p>
+              <h2 class="h5 mb-3 text-black line-height-sm">Chaque mois, une nouvelle expérience</h2>
+              <p>Une nouvelle expérience tous les mois avec nos coffrets, pour un tour du monde gastronomique en famille, dans votre salon. Plats d’hivers pour réchauffer le cœur ou estivaux pour cette sensation de fraicheur tant recherchée. Vous ne serez pas déçu de ce que nous avons à vous offrir.</p>
               <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
             </div>
           </div>
@@ -154,13 +156,8 @@ include("header.php")
     <div class="row">
       <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2" style="background-image: url('images/img_1_colored.jpg');" data-aos="fade-up"></div>
       <div class="col-md-6 pr-md-5 order-md-1">
-        <h2 class="display-3 line-height-xs text-black mb-4">Let's grow <strong>together</strong></h2>
-        <p class="mb-4">Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus quo ab laboriosam qui expedita, cupiditate ex, sed dignissimos facere provident dolores, eius distinctio quas aliquid.</p>
-        <ul class="site-block-check">
-          <li>Magnam iure fugit recusandae</li>
-          <li>Officiis laboriosam repudiandae</li>
-          <li>Quis nostrum numquam</li>
-        </ul>
+        <h2 class="display-3 line-height-xs text-black mb-4">Voyageons <strong>ensemble</strong></h2>
+        <p class="mb-4">C’est grâce à votre soutien que nous arrivons à vous faire partager ces moments de découvertes, et nous espérons continuer encore à vous fournir ces petits instants qui pimentent votre vie.</p>
         <p><a href="#" class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">Read More</a></p>
       </div>
     </div>
@@ -233,18 +230,6 @@ include("header.php")
 
 
   </div>
-</div>
-
-<div class="site-block-half d-block d-lg-flex site-block-video" data-aos="fade">
-  <div class="image bg-image order-2" style="background-image: url(images/hero_bg_1.jpg); ">
-    <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-button popup-vimeo"><span class="icon-play"></span></a>
-  </div>
-  <div class="text order-1">
-    <h2 class="site-heading text-black mb-3">See Our <strong>Video</strong></h2>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum vel, eius nulla inventore aperiam excepturi molestias incidunt, culpa alias repudiandae, a nobis libero vitae repellendus temporibus vero sit natus.</p>
-    <p>Dolores perferendis ipsam animi fuga, dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto, dolore totam consequuntur incidunt illo voluptates vero quaerat excepturi. Iusto dolor, cum et.</p>
-  </div>
-
 </div>
 
 <?php

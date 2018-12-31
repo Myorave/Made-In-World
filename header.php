@@ -48,11 +48,11 @@
                       <li><a href="index.php">Accueil</a></li>
                       <li><a href="apropos.php">Qui-sommes nous</a></li>
                       <li><a href="produits.php">Produits</a></li>
-                      <li><a href="news.php">Livre d'or</a></li>
+                      <li><a href="livredor.php">Livre d'or</a></li>
                       <li><a href="contact.php">Contact</a></li>
                       <li><i class="fas fa-user"></i><a href="inscription.php">S'inscrire/Login</a></li>
                     </ul>
-                    
+
                   </div>
                 </nav>
               </div>

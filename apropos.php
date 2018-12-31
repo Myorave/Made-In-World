@@ -6,7 +6,7 @@ include("header.php")
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-7 text-center">
-        <span class="sub-text">Présentation de nos boîtes</span>
+        <span class="sub-text">Notre entreprise</span>
         <h1 class="mb-5">Qui Sommes <strong>Nous ?</strong></h1>
       </div>
     </div>
@@ -72,7 +72,7 @@ include("header.php")
   </div>
 </div>
 
-<div class="site-section section-about">
+<div class="site-section">
   <div class="container">
     <div class="row mb-5 justify-content-center">
       <div class="col-md-6 text-center">
@@ -96,9 +96,9 @@ include("header.php")
           </p>
         </div>
       </div>
-      
-      
-   
+
+
+
       <div class="col-md-4">
         <div>
           <img src="images/person_3.jpg" alt="Image" class="w-50 mb-5 rounded">
@@ -114,7 +114,7 @@ include("header.php")
             <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
           </p>
         </div>
-      
+
     </div>
 
     <div class="col-md-4">
@@ -134,6 +134,7 @@ include("header.php")
         </div>
       </div>
     </div>
+</div>
 </div>
 
 <?php

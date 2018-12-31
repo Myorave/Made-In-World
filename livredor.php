@@ -6,8 +6,8 @@ include("header.php")
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-7 text-center">
-        <span class="sub-text">Présentation de nos boîtes</span>
-        <h1 class="mb-5">The <strong>News</strong></h1>
+        <span class="sub-text">L'assurance d'une qualité : Nos temoignages</span>
+        <h1 class="mb-5">Livre <strong>d'Or</strong></h1>
       </div>
     </div>
   </div>

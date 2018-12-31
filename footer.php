@@ -1,12 +1,9 @@
 <footer class="site-footer">
-  <div class="row pt-3 mt-3 text-center">
-  </div>
-
+  
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
-
 
           <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
             <img class="logo1" src="images/logo.png">
@@ -51,13 +48,11 @@
       <li class="Mentions légals">
         <a href="#" data-hover="Mentions légals">Mentions </a>
       </li>
-      <li class="CVG">
-        <a href="#" data-hover="Contrat CVG">Contrat CVG</a>
+      <li class="CGV">
+        <a href="#" data-hover="Contrat CGV">Contrat CGV</a>
       </li>
     </ul>
   </div>
-
-
 
 </footer>
 </div>

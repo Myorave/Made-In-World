@@ -6,7 +6,7 @@ include("header.php")
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-7 text-center">
-        <span class="sub-text">Présentation de nos boîtes</span>
+        <span class="sub-text">Besoin d'une information ?</span>
         <h1 class="mb-5">Nous <strong>Contacter</strong></h1>
       </div>
     </div>
