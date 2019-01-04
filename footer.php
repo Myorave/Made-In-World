@@ -1,5 +1,5 @@
 <footer class="site-footer">
-  
+
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -46,15 +46,18 @@
         <a href="#" data-hover="Pinterest"><i class="fab fa-pinterest"></i>Pinterest</a>
       </li>
       <li class="Mentions légals">
-        <a href="#" data-hover="Mentions légals">Mentions </a>
+        <a href="mentionslegales.php" data-hover="Mentions légales">Mentions </a>
       </li>
       <li class="CGV">
-        <a href="#" data-hover="Contrat CGV">Contrat CGV</a>
+        <a href="cgv.php" data-hover="Contrat CGV">Contrat CGV</a>
       </li>
     </ul>
   </div>
 
 </footer>
+
+  <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
 </div>
 
 
@@ -67,6 +70,7 @@
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/aos.js"></script>
+<script src="js/retour.js"></script>
 
 <script src="js/main.js"></script>
 

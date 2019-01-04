@@ -2,56 +2,156 @@
 include("header.php");
 ?>
 
-<script src="js/connexion.js"></script>
+<?php
+// Include config file
+require_once "config.php";
+
+// Je définis les variables et les initialisent avec des valeurs vides
+$identifiant = $mdp = $mdp2 = "";
+$identifiant_err = $mdp_err = $mdp2_err = "";
+
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    // Validation du nom d'utilisateur
+    if(empty(trim($_POST["identifiant"]))){
+        $identifiant_err = "Veuillez entrer un mot de passe d'utilisateur.";
+    } else{
+        // Préparation de la requete SELECT
+        $sql = "SELECT id FROM users WHERE identifiant = :identifiant";
+
+        if($stmt = $pdo->prepare($sql)){
+            // Liaison des variables à la requete comme parametres
+            $stmt->bindParam(":identifiant", $param_identifiant, PDO::PARAM_STR);
+
+            // Set des parametres
+            $param_identifiant = trim($_POST["identifiant"]);
+
+            // Tentative d'execution de la requete
+            if($stmt->execute()){
+                if($stmt->rowCount() == 1){
+                    $identifiant_err = "This identifiant is already taken.";
+                } else{
+                    $identifiant = trim($_POST["identifiant"]);
+                }
+            } else{
+                echo "Oops! Une erreur est survenue. Reessayez plus tard.";
+            }
+        }
+
+        // Fermeture de la requete
+        unset($stmt);
+    }
+
+    // Validation du mot de passe
+    if(empty(trim($_POST["mdp"]))){
+        $mdp_err = "Entrez un mot de passe.";
+    } elseif(strlen(trim($_POST["mdp"])) < 6){
+        $mdp_err = "Votre mot de passe doit contenir au moins 6 caractères.";
+    } else{
+        $mdp = trim($_POST["mdp"]);
+    }
+
+    // Validation du mot de passe de confirmation
+    if(empty(trim($_POST["mdp2"]))){
+        $mdp2_err = "Confirmez votre mot de passe.";
+    } else{
+        $mdp2 = trim($_POST["mdp2"]);
+        if(empty($mdp_err) && ($mdp != $mdp2)){
+            $mdp2_err = "Le mot de passe de confirmation est différent.";
+        }
+    }
+
+    // Vérification des erreurs d'input avant insertion dans la BDD
+    if(empty($identifiant_err) && empty($mdp_err) && empty($mdp2_err)){
+
+      // Préparation d'une requete INSERT
+        $sql = "INSERT INTO users (identifiant, password, prenom, nom, email) VALUES (:identifiant, :password, :prenom, :nom, :email)";
+
+        if($stmt = $pdo->prepare($sql)){
+            // Liaison des variables à la requete comme parametres
+            $stmt->bindParam(":identifiant", $param_identifiant, PDO::PARAM_STR);
+            $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
+            $stmt->bindParam(":prenom", $param_prenom, PDO::PARAM_STR);
+            $stmt->bindParam(":nom", $param_nom, PDO::PARAM_STR);
+            $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
+
+            // Set des parametres
+            $param_identifiant = $identifiant;
+            $param_password = password_hash($mdp, PASSWORD_DEFAULT); // Creates a password hash
+            $param_prenom = trim($_POST["prenom"]);;
+            $param_nom = trim($_POST["nom"]);;
+            $param_email = trim($_POST["email"]);;
+
+            // Tentative d'execution de la requete
+            if($stmt->execute()){
+              // Redirection à la page de connexion
+                header("location: connexion.php");
+            } else{
+              echo "Une erreur est survenue. Veuillez recommencer.";
+            }
+        }
+
+        // Fermeture de la requete
+        unset($stmt);
+    }
+
+    // Fermeture de la connexion
+    unset($pdo);
+}
+?>
 
 <div class="container">
+
   <div class="row">
 
-  		<form class="form" role="form">
+      <!-- Formulaire d'Inscription -->
+  		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
   			<h2>Inscription<small> : Made in World</small></h2>
 
   			<div class="row">
   				<div class="col-xs-12col-sm-6 col-md-6">
   					<div class="form-group">
-              <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Prénom" tabindex="1">
+              <input type="text" name="prenom" id="prenom" class="form-control input-lg" placeholder="Prénom" tabindex="1">
   					</div>
   				</div>
   				<div class="col-xs-12 col-sm-6 col-md-6">
   					<div class="form-group">
-  						<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Nom" tabindex="2">
+  						<input type="text" name="nom" id="nom" class="form-control input-lg" placeholder="Nom" tabindex="2">
   					</div>
-  				</div>
-  			</div>
-        <div class="form-group">
-          <input type="text" name="identifiant" id="identifiant" class="form-control input-lg" placeholder="Identifiant" tabindex="3">
-        </div>
-  			<div class="form-group">
-  				<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Adresse Email" tabindex="3">
-  			</div>
-  			<div class="row">
-  				<div class="col-xs-12 col-sm-6 col-md-6">
-  					<div class="form-group">
-  						<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Mot de passe" tabindex="4">
-  					</div>
-  				</div>
-  				<div class="col-xs-12 col-sm-6 col-md-6">
-  					<div class="form-group">
-  						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirmez le Mot de Passe" tabindex="5">
-  					</div>
-  				</div>
-  			</div>
-  			<div class="row">
-  				<div class="col-xs-4 col-sm-3 col-md-3">
-  					<span class="button-checkbox">
-  						<button type="button" class="btn" data-color="info" tabindex="7">J'accepte</button>
-                <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
-  					</span>
-  				</div>
-  				<div class="col-xs-8 col-sm-9 col-md-9">
-  					 En cliquant sur <strong class="label label-primary">S'inscrire</strong>, vous acceptez les <a href="#" data-toggle="modal" data-target="#t_and_c_m">Termes & Conditions</a> établies par ce site.
   				</div>
   			</div>
 
+        <div class="form-group">
+            <input type="text" name="identifiant" id="identifiant" class="form-control input-lg" placeholder="Identifiant" tabindex="3" value="<?php echo $identifiant; ?>">
+            <span class="help-block"><?php echo $identifiant_err; ?></span>
+          </div>
+
+  			<div class="form-group">
+  				<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Adresse Email" tabindex="3">
+  			</div>
+
+  			<div class="row">
+  				<div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+            <input type="password" name="mdp" id="mdp" class="form-control input-lg" placeholder="Mot de passe" tabindex="4" value="<?php echo $mdp; ?>">
+            <span class="help-block"><?php echo $mdp_err; ?></span>
+          </div>
+  				</div>
+  				<div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+            <input type="password" name="mdp2" id="mdp2" class="form-control input-lg" placeholder="Confirmez le Mot de Passe" tabindex="5" value="<?php echo $mdp2; ?>">
+            <span class="help-block"><?php echo $mdp2_err; ?></span>
+          </div>
+  				</div>
+  			</div>
+
+  			<div class="row">
+  				<div class="col-xs-4 col-sm-3 col-md-3"></div>
+  				<div class="col-xs-8 col-sm-9 col-md-9">
+  					 En cliquant sur <strong class="label label-primary">S'inscrire</strong>, vous acceptez les <strong><a href="#" data-toggle="modal" data-target="#t_and_c_m">Termes & Conditions</a></strong> établies par ce site.
+  				</div><br/><br/>
+  			</div>
 
   			<div class="row">
   				<div class="col-xs-12 col-md-6"><input type="submit" value="S'inscrire" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
@@ -61,7 +161,7 @@ include("header.php");
 
   </div>
 
-  <!-- Modal -->
+  <!-- Modal de Termes et Conditions -->
   <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog modal-lg">
   		<div class="modal-content">
@@ -108,85 +208,85 @@ include("header.php");
 
             <p>Les termes et expressions commençant par une majuscule dans les présentes CGS, qu’ils soient employés au singulier ou au pluriel selon le contexte de leur emploi, auront la signification suivante :</p>
 
-            <p><b>3.1 Made-in-World : désigne la société AGENCE DES MEDIAS NUMERIQUES (Made-in-World), Société par Actions Simplifiées Unipersonnelle, dont le siège social est 12-14 Rond-Point des Champs Elysées - 75008 PARIS, immatriculée au Registre du Commerce et des Sociétés de PARIS sous le numéro B 421 527 797. Made-in-World est une filiale du Groupe DADA et propose différents services Internet, en particulier, l’enregistrement de Noms de domaine, l’hébergement dédié ou mutualisé de sites Internet, le référencement de sites Internet, la création de sites internet et plus généralement tous les services proposés sur le site Internet www.Made-in-World.fr ;</b></p>
+            <p><b>3.1 Made-in-World :</b> désigne la société AGENCE DES MEDIAS NUMERIQUES (Made-in-World), Société par Actions Simplifiées Unipersonnelle, dont le siège social est 12-14 Rond-Point des Champs Elysées - 75008 PARIS, immatriculée au Registre du Commerce et des Sociétés de PARIS sous le numéro B 421 527 797. Made-in-World est une filiale du Groupe DADA et propose différents services Internet, en particulier, l’enregistrement de Noms de domaine, l’hébergement dédié ou mutualisé de sites Internet, le référencement de sites Internet, la création de sites internet et plus généralement tous les services proposés sur le site Internet www.Made-in-World.fr ;</p>
 
-            <p><b>3.2 Autorité(s) : désigne l’ensemble des organismes nationaux ou internationaux responsables de la définition des règles, des procédures et des modalités d’attribution des noms de domaine, de la gestion des bases Whois d’une ou plusieurs extensions de nom de domaine (.COM, .INFO, .BIZ etc.). L’Autorité chargée d’allouer l’espace des adresses de Protocole Internet (IP), d’attribuer les identificateurs de protocole, de gérer le système de nom de domaine de premier niveau pour les codes génériques (gTLD ou ngTLD) et les codes nationaux (ccTLD), et d’assurer les fonctions de gestion du système de serveurs racines est l’ICANN (Internet Corporation for Assigned Names and Numbers), organisation de droit privé à but non lucratif. L’Autorité chargée de l’enregistrement d’un nom de domaine dans une extension nationale (ccTLD) est le NIC (Network Information Center), tel que par exemple l’AFNIC en France pour le « .fr » ;</b></p>
+            <p><b>3.2 Autorité(s) :</b> désigne l’ensemble des organismes nationaux ou internationaux responsables de la définition des règles, des procédures et des modalités d’attribution des noms de domaine, de la gestion des bases Whois d’une ou plusieurs extensions de nom de domaine (.COM, .INFO, .BIZ etc.). L’Autorité chargée d’allouer l’espace des adresses de Protocole Internet (IP), d’attribuer les identificateurs de protocole, de gérer le système de nom de domaine de premier niveau pour les codes génériques (gTLD ou ngTLD) et les codes nationaux (ccTLD), et d’assurer les fonctions de gestion du système de serveurs racines est l’ICANN (Internet Corporation for Assigned Names and Numbers), organisation de droit privé à but non lucratif. L’Autorité chargée de l’enregistrement d’un nom de domaine dans une extension nationale (ccTLD) est le NIC (Network Information Center), tel que par exemple l’AFNIC en France pour le « .fr » ;</p>
 
-            <p><b>3.3 Bande Passante : désigne le débit maximum de transmission de données sur le réseau Internet, généralement spécifiée en nombre de bits par seconde, dont le niveau est déterminé par Made-in-World. Elle peut être allouée de manière mutualisée entre plusieurs Clients (Hébergement Mutualisé) ou de manière dédiée à un Client unique (Hébergement Dédié) ;</b></p>
+            <p><b>3.3 Bande Passante :</b> désigne le débit maximum de transmission de données sur le réseau Internet, généralement spécifiée en nombre de bits par seconde, dont le niveau est déterminé par Made-in-World. Elle peut être allouée de manière mutualisée entre plusieurs Clients (Hébergement Mutualisé) ou de manière dédiée à un Client unique (Hébergement Dédié) ;</p>
 
-            <p><b>3.4 Base Whois : désigne la base de données mise à disposition par les Autorités accessible au Client et/ou à tout tiers permettant de déterminer, suivant une requête de recherche, différentes informations concernant un Nom de Domaine, en particulier sa disponibilité, son titulaire, les coordonnées déclarées de ce dernier, le Registrar, etc. et donnant lieu à un Extrait Whois ;</b></p>
+            <p><b>3.4 Base Whois :</b> désigne la base de données mise à disposition par les Autorités accessible au Client et/ou à tout tiers permettant de déterminer, suivant une requête de recherche, différentes informations concernant un Nom de Domaine, en particulier sa disponibilité, son titulaire, les coordonnées déclarées de ce dernier, le Registrar, etc. et donnant lieu à un Extrait Whois ;</p>
 
-            <p><b>3.5 Bon de Commande : désigne le bon de commande accessible en ligne sur le site Internet de la société Made-in-World https://www.Made-in-World.fr, dûment complété suivant les Services et les caractéristiques techniques de chacun d’entre eux choisis par le Client sur le site Internet d’Made-in-World et transmis par le Client à Made-in-World ;</b></p>
+            <p><b>3.5 Bon de Commande :</b> désigne le bon de commande accessible en ligne sur le site Internet de la société Made-in-World https://www.Made-in-World.fr, dûment complété suivant les Services et les caractéristiques techniques de chacun d’entre eux choisis par le Client sur le site Internet d’Made-in-World et transmis par le Client à Made-in-World ;</p>
 
-            <p><b>3.6 Client(s) : désigne toute personne physique ou morale de droit privé ou de droit public, en ce compris le(s) Revendeur(s), souscrivant au(x) Service(s) proposés par Made-in-World pour ses besoins personnels ou pour son activité professionnelle ;</b></p>
+            <p><b>3.6 Client(s) :</b> désigne toute personne physique ou morale de droit privé ou de droit public, en ce compris le(s) Revendeur(s), souscrivant au(x) Service(s) proposés par Made-in-World pour ses besoins personnels ou pour son activité professionnelle ;</p>
 
-            <p><b>3.7 Conditions Particulières ou CP : désignent les conditions contractuelles spécifiques applicables au(x) Service(s) souscrit(s) par le Client auprès d’Made-in-World ;</b></p>
+            <p><b>3.7 Conditions Particulières ou CP :</b> désignent les conditions contractuelles spécifiques applicables au(x) Service(s) souscrit(s) par le Client auprès d’Made-in-World ;</p>
 
-            <p><b>3.8 DNS (Domain Name System) : désigne la base de données permettant d’assurer la concordance entre un Nom de Domaine et une Adresse IP ;</b></p>
+            <p><b>3.8 DNS (Domain Name System) :</b> désigne la base de données permettant d’assurer la concordance entre un Nom de Domaine et une Adresse IP ;</p>
 
-            <p><b>3.9 Donnée(s) ou Donnée (s) Client : désigne(nt) l’ensemble des données, contenus graphiques, textuels, vidéos, infographiques, photographiques, logiciels, scripts, développements informatiques, sites internet, etc. de toutes sortes, protégés ou non par un droit de propriété intellectuelle, dont le Client est l’auteur, le propriétaire et/ou le concessionnaire des droits associés et que le Client entend utiliser et exploiter dans le cadre des Services et/ou faire héberger sur des Serveurs attribués dans le cadre du Contrat et des Services y afférents ;</b></p>
+            <p><b>3.9 Donnée(s) ou Donnée (s) Client :</b> désigne(nt) l’ensemble des données, contenus graphiques, textuels, vidéos, infographiques, photographiques, logiciels, scripts, développements informatiques, sites internet, etc. de toutes sortes, protégés ou non par un droit de propriété intellectuelle, dont le Client est l’auteur, le propriétaire et/ou le concessionnaire des droits associés et que le Client entend utiliser et exploiter dans le cadre des Services et/ou faire héberger sur des Serveurs attribués dans le cadre du Contrat et des Services y afférents ;</p>
 
-            <p><b>3.10 Données d’Identification : désignent toute information renseignée par le Client permettant à ce dernier de s’identifier auprès d’Made-in-World (nom, prénom, adresse postale, adresse de courrier électronique, numéro de téléphone, raison sociale, et nom d’organisation le cas échéant etc.) ;</b></p>
+            <p><b>3.10 Données d’Identification :</b> désignent toute information renseignée par le Client permettant à ce dernier de s’identifier auprès d’Made-in-World (nom, prénom, adresse postale, adresse de courrier électronique, numéro de téléphone, raison sociale, et nom d’organisation le cas échéant etc.) ;</p>
 
-            <p><b>3.11 Données Personnelles : désignent les données à caractère personnel des Clients, y compris les Données d’Identification, traitées par Made-in-World dans le cadre du Contrat, ’conformément à la Règlementation sur les Données Personnelles et à la Politique de Confidentialité accessible à l’adresse URL suivante : https://www.Made-in-World.fr/company/privacy.html ;</b></p>
+            <p><b>3.11 Données Personnelles :</b> désignent les données à caractère personnel des Clients, y compris les Données d’Identification, traitées par Made-in-World dans le cadre du Contrat, ’conformément à la Règlementation sur les Données Personnelles et à la Politique de Confidentialité accessible à l’adresse URL suivante : https://www.Made-in-World.fr/company/privacy.html ;</p>
 
-            <p><b>3.12 Editeur ou Editeur de Logiciels : désigne la personne physique ou morale qui édite un Logiciel et qui est titulaire des droits de propriété intellectuelle sur ce dernier ;</b></p>
+            <p><b>3.12 Editeur ou Editeur de Logiciels :</b> désigne la personne physique ou morale qui édite un Logiciel et qui est titulaire des droits de propriété intellectuelle sur ce dernier ;</p>
 
-            <p><b>3.13 Eléments d’Identification : désignent l’identifiant de connexion (« Username ») et mot de passe (« Password ») transmis par Made-in-World au Client permettant à ce dernier d’accéder au(x) Service(s) et de le(s) gérer et/ou l’/les administrer via l’Espace Client ;</b></p>
+            <p><b>3.13 Eléments d’Identification :</b> désignent l’identifiant de connexion (« Username ») et mot de passe (« Password ») transmis par Made-in-World au Client permettant à ce dernier d’accéder au(x) Service(s) et de le(s) gérer et/ou l’/les administrer via l’Espace Client ;</p>
 
-            <p><b>3.14 Email ou Mail : désigne le courrier électronique transmis via le réseau Internet suivant différents protocoles : POP3, IMAP etc. ;</b></p>
+            <p><b>3.14 Email ou Mail :</b> désigne le courrier électronique transmis via le réseau Internet suivant différents protocoles : POP3, IMAP etc. ;</p>
 
-            <p><b>3.15 Espace Client : désigne l’espace privatif du Client accessible en ligne sur le site Internet de la société Made-in-World à l’adresse URL suivante https://controlpanel.Made-in-World.fr, contenant notamment les informations relatives aux Services fournis par la société Made-in-World et permettant d’y effectuer les opérations de gestion des Services ;</b></p>
+            <p><b>3.15 Espace Client :</b> désigne l’espace privatif du Client accessible en ligne sur le site Internet de la société Made-in-World à l’adresse URL suivante https://controlpanel.Made-in-World.fr, contenant notamment les informations relatives aux Services fournis par la société Made-in-World et permettant d’y effectuer les opérations de gestion des Services ;</p>
 
-            <p><b>3.16 Extrait Whois ou Whois : désigne la fiche d’identité d’un Nom de Domaine contenant les informations fournies notamment par son titulaire (nom, prénom, coordonnées postales et téléphonique, etc.) gérée par les Autorités (dont notamment les NIC) et les Registrars par le biais de bases de données appelées bases Whois ;</b></p>
+            <p><b>3.16 Extrait Whois ou Whois :</b> désigne la fiche d’identité d’un Nom de Domaine contenant les informations fournies notamment par son titulaire (nom, prénom, coordonnées postales et téléphonique, etc.) gérée par les Autorités (dont notamment les NIC) et les Registrars par le biais de bases de données appelées bases Whois ;</p>
 
-            <p><b>3.17 IP ou Adresse IP : désigne l’adresse sous forme d’une suite de chiffres qui permet d’identifier de manière unique chaque serveur connecté sur Internet, dont l’attribution est effectuée par Made-in-World dans le cadre du Service ;</b></p>
+            <p><b>3.17 IP ou Adresse IP :</b> désigne l’adresse sous forme d’une suite de chiffres qui permet d’identifier de manière unique chaque serveur connecté sur Internet, dont l’attribution est effectuée par Made-in-World dans le cadre du Service ;</p>
 
-            <p><b>3.18 Logiciel : désigne l’ensemble des programmes informatiques, bases de données, scripts, procédés, systèmes d’exploitation, etc., ayant pour objet le traitement automatique de données, mis à la disposition du Client par Made-in-World et/ou par leur Editeur respectif dans le cadre du Service ;</b></p>
+            <p><b>3.18 Logiciel :</b> désigne l’ensemble des programmes informatiques, bases de données, scripts, procédés, systèmes d’exploitation, etc., ayant pour objet le traitement automatique de données, mis à la disposition du Client par Made-in-World et/ou par leur Editeur respectif dans le cadre du Service ;</p>
 
-            <p><b>3.19 Netiquette : désigne l’ensemble des règles de conduite et de politesse recommandées pour l’usage d’Internet ;</b></p>
+            <p><b>3.19 Netiquette :</b> désigne l’ensemble des règles de conduite et de politesse recommandées pour l’usage d’Internet ;</p>
 
-            <p><b>3.20 Nom(s) de Domaine : désigne un identifiant ou une adresse sur le réseau Internet quelle que soit l’extension générique (gTLD – generic Top Level Domain : « .com », « .net », « .biz », etc.) ou nationale (ccTLD : country code Top Level Domain : « .fr », « .be », etc.) ou encore nouvelle (NgTLDs : new generic Top Level Domain https ://newgtlds.icann.org/en/applicants/agb) enregistré par le Client par l’intermédiaire de la société Made-in-World auprès de l’Autorité (en particulier du NIC) ou du Registrar compétent et/ou dont la gestion a été confiée par le Client à Made-in-World ;</b></p>
+            <p><b>3.20 Nom(s) de Domaine :</b> désigne un identifiant ou une adresse sur le réseau Internet quelle que soit l’extension générique (gTLD – generic Top Level Domain : « .com », « .net », « .biz », etc.) ou nationale (ccTLD : country code Top Level Domain : « .fr », « .be », etc.) ou encore nouvelle (NgTLDs : new generic Top Level Domain https ://newgtlds.icann.org/en/applicants/agb) enregistré par le Client par l’intermédiaire de la société Made-in-World auprès de l’Autorité (en particulier du NIC) ou du Registrar compétent et/ou dont la gestion a été confiée par le Client à Made-in-World ;</p>
 
-            <p><b>3.21 Partie(s) : désigne Made-in-World et/ou le Client ;</b></p>
+            <p><b>3.21 Partie(s) :</b> désigne Made-in-World et/ou le Client ;</p>
 
-            <p><b>3.22 Plateforme : désigne l’ensemble d’équipements techniques tels que les Serveurs, switch, load balancer, etc., permettant à Made-in-World d’assurer le(s) Service(s) ;</b></p>
+            <p><b>3.22 Plateforme :</b> désigne l’ensemble d’équipements techniques tels que les Serveurs, switch, load balancer, etc., permettant à Made-in-World d’assurer le(s) Service(s) ;</p>
 
-            <p><b>3.23 Politique de Confidentialité : document accessible à l’adresse URL https://www.Made-in-World.fr/company/privacy.html faisant partie intégrante des présentes CGS et ayant pour objet de définir les conditions dans lesquelles Made-in-World collecte et traite les Données Personnelles des Clients et utilisateurs de ses Services ;</b></p>
+            <p><b>3.23 Politique de Confidentialité :</b> document accessible à l’adresse URL https://www.Made-in-World.fr/company/privacy.html faisant partie intégrante des présentes CGS et ayant pour objet de définir les conditions dans lesquelles Made-in-World collecte et traite les Données Personnelles des Clients et utilisateurs de ses Services ;</p>
 
-            <p><b>3.24 Quarantaine ou Rédemption : désigne le statut dans lequel passent certains Noms de domaine (.eu, .be notamment), une fois expirés faute de renouvellement. Les Noms de domaine restent sous ce statut pendant une période de temps fixée et gérée par l’Autorité concernée, avant leur suppression définitive des bases de données de cette dernière. Une fois en période dite de « quarantaine » (pour les Noms de domaine en « .be » notamment) ou dite de « rédemption » (pour les Noms de domaine génériques ou gTLDs), des frais supplémentaires sont imposés par l’Autorité concernée pour réactiver le Nom de domaine et sont dus par le Client en plus des frais de renouvellement du Nom de domaine ;</b></p>
+            <p><b>3.24 Quarantaine ou Rédemption : </b>désigne le statut dans lequel passent certains Noms de domaine (.eu, .be notamment), une fois expirés faute de renouvellement. Les Noms de domaine restent sous ce statut pendant une période de temps fixée et gérée par l’Autorité concernée, avant leur suppression définitive des bases de données de cette dernière. Une fois en période dite de « quarantaine » (pour les Noms de domaine en « .be » notamment) ou dite de « rédemption » (pour les Noms de domaine génériques ou gTLDs), des frais supplémentaires sont imposés par l’Autorité concernée pour réactiver le Nom de domaine et sont dus par le Client en plus des frais de renouvellement du Nom de domaine ;</p>
 
-            <p><b>3.25 Registrar : désigne l’organisation autorisée par le Registry à intervenir dans la base de données de l’extension concernée (par exemple le « .com », le « .net ») pour y effectuer les opérations de gestion telles que l’enregistrement, le renouvellement, le transfert de noms de domaine, etc. ;</b></p>
+            <p><b>3.25 Registrar :</b> désigne l’organisation autorisée par le Registry à intervenir dans la base de données de l’extension concernée (par exemple le « .com », le « .net ») pour y effectuer les opérations de gestion telles que l’enregistrement, le renouvellement, le transfert de noms de domaine, etc. ;</p>
 
-            <p><b>3.26 Registry : désigne l’organisme habilité par l’Autorité, en particulier l’ICANN, à gérer une ou plusieurs extensions de noms de domaine, à définir les règles de nommage et à gérer la base de données correspondante. Par exemple Afilias pour les « .info », Verisign pour les « .com » et les « .net », Dotmobi pour les « .mobi », etc. ;</b></p>
+            <p><b>3.26 Registry :</b> désigne l’organisme habilité par l’Autorité, en particulier l’ICANN, à gérer une ou plusieurs extensions de noms de domaine, à définir les règles de nommage et à gérer la base de données correspondante. Par exemple Afilias pour les « .info », Verisign pour les « .com » et les « .net », Dotmobi pour les « .mobi », etc. ;</p>
 
-            <p><b>3.27 Réglementation sur les Données Personnelles : désigne la Loi n°78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée le 7 octobre 2016, ainsi que toute réglementation qui viendrait à s’appliquer en matière de données personnelles, en particulier en application du Règlement communautaire du 27 avril 2016 publié au Journal Officiel de l’Union Européenne le 4 mai 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données ;</b></p>
+            <p><b>3.27 Réglementation sur les Données Personnelles :</b> désigne la Loi n°78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée le 7 octobre 2016, ainsi que toute réglementation qui viendrait à s’appliquer en matière de données personnelles, en particulier en application du Règlement communautaire du 27 avril 2016 publié au Journal Officiel de l’Union Européenne le 4 mai 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données ;</p>
 
-            <p><b>3.28 Ressources Système : désignent la capacité de stockage, de mémoire vive (RAM) et de mémoire morte (ROM) du Serveur, ainsi que de son processeur, les Logiciels qui y sont associés, ainsi que la capacité en Bande Passante mis à la disposition des Clients par Made-in-World dans le cadre du Service ;</b></p>
+            <p><b>3.28 Ressources Système :</b> désignent la capacité de stockage, de mémoire vive (RAM) et de mémoire morte (ROM) du Serveur, ainsi que de son processeur, les Logiciels qui y sont associés, ainsi que la capacité en Bande Passante mis à la disposition des Clients par Made-in-World dans le cadre du Service ;</p>
 
-            <p><b>3.29 Restrictions Techniques : désignent les restrictions techniques d’utilisation et d’exploitation du Service fixées par Made-in-World du fait notamment des caractéristiques du Serveur/des Plateformes, de la politique commerciale d’Made-in-World, des choix technologiques d’Made-in-World et des évolutions technologiques, etc. ;</b></p>
+            <p><b>3.29 Restrictions Techniques :</b> désignent les restrictions techniques d’utilisation et d’exploitation du Service fixées par Made-in-World du fait notamment des caractéristiques du Serveur/des Plateformes, de la politique commerciale d’Made-in-World, des choix technologiques d’Made-in-World et des évolutions technologiques, etc. ;</p>
              
-            <p><b>3.30 Revendeur(s) : désigne toute personne physique ou morale exerçant son activité en qualité de professionnel de l’Internet, à l’exclusion de tout consommateur, qui contracte en son nom auprès de la société Made-in-World et pour le compte de ses propres clients finaux. Dans le cadre des présentes CGS, il souscrit aux mêmes engagements et obligations que ceux impartis au Client ;</b></p>
+            <p><b>3.30 Revendeur(s) :</b> désigne toute personne physique ou morale exerçant son activité en qualité de professionnel de l’Internet, à l’exclusion de tout consommateur, qui contracte en son nom auprès de la société Made-in-World et pour le compte de ses propres clients finaux. Dans le cadre des présentes CGS, il souscrit aux mêmes engagements et obligations que ceux impartis au Client ;</p>
 
-            <p><b>3.31 Serveur(s) : désigne(nt) le(s) serveur(s) informatique(s), à l’exception des Logiciels, permettant à Made-in-World d’assurer le(s) Service(s) ;</b></p>
+            <p><b>3.31 Serveur(s) :</b> désigne(nt) le(s) serveur(s) informatique(s), à l’exception des Logiciels, permettant à Made-in-World d’assurer le(s) Service(s) ;</p>
 
-            <p><b>3.32 Service(s) : désigne(nt) l’ensemble des prestations et services fournis par Made-in-World, décrits sur son site Internet www.Made-in-World.fr et dont la souscription et l’utilisation sont régies par les présentes CGS et les CP spécifiques applicables ;</b></p>
+            <p><b>3.32 Service(s) :</b> désigne(nt) l’ensemble des prestations et services fournis par Made-in-World, décrits sur son site Internet www.Made-in-World.fr et dont la souscription et l’utilisation sont régies par les présentes CGS et les CP spécifiques applicables ;</p>
 
-            <p><b>3.33 Service(s) Additionnel(s) : désigne(nt) les prestations non fournies dans le cadre du Service et dont le Client souhaiterait bénéficier. Ils font alors l’objet d’une commande spécifique ou complémentaire de la part du Client auprès d’Made-in-World et sont régis par des CP spécifiques ;</b></p>
+            <p><b>3.33 Service(s) Additionnel(s) :</b> désigne(nt) les prestations non fournies dans le cadre du Service et dont le Client souhaiterait bénéficier. Ils font alors l’objet d’une commande spécifique ou complémentaire de la part du Client auprès d’Made-in-World et sont régis par des CP spécifiques ;</p>
 
-            <p><b>3.34 Service(s) Gratuit(s) : désigne(nt) les prestations fournies par Made-in-World ou son sous-traitant sans contrepartie financière dans le cadre du Service ;</b></p>
+            <p><b>3.34 Service(s) Gratuit(s) :</b> désigne(nt) les prestations fournies par Made-in-World ou son sous-traitant sans contrepartie financière dans le cadre du Service ;</p>
 
-            <p><b>3.35 Services d’Hébergements Dédiés : désignent les services par lesquels Made-in-World fournit des prestations de stockage des Données Client par la mise à disposition d’un Serveur de Ressources Système, de Logiciels et de Bande Passante à un seul Client qui en est l’administrateur unique, permettant de rendre accessible les Données Client sur le réseau Internet. Les Services d’Hébergements Dédiés sont régis par les CP accessibles en cliquant ici : https://www.Made-in-World.fr/a-propos/information-legale/conditions-particulieres-serveur-virtuel/ et https://www.Made-in-World.fr/a-propos/information-legale/conditions-particulieres-serveur-dedie/ ;</b></p>
+            <p><b>3.35 Services d’Hébergements Dédiés :</b> désignent les services par lesquels Made-in-World fournit des prestations de stockage des Données Client par la mise à disposition d’un Serveur de Ressources Système, de Logiciels et de Bande Passante à un seul Client qui en est l’administrateur unique, permettant de rendre accessible les Données Client sur le réseau Internet. Les Services d’Hébergements Dédiés sont régis par les CP accessibles en cliquant ici : https://www.Made-in-World.fr/a-propos/information-legale/conditions-particulieres-serveur-virtuel/ et https://www.Made-in-World.fr/a-propos/information-legale/conditions-particulieres-serveur-dedie/ ;</p>
 
-            <p><b>3.36 Service(s) d’Hébergement Mutualisé : désigne(nt) le(s) service(s) par le(s)quel(s) Made-in-World met à disposition du Client un espace de stockage, tel que défini dans le Bon de Commande, sur le Serveur/les Plateformes de la société Made-in-World, auquel sont associées des Ressources Système, dont l’utilisation est partagée par plusieurs Clients, permettant de rendre accessible les Données Client sur le réseau Internet. Le(s) Service(s) d’Hébergement Mutualisé est/sont régi(s) par les CP accessibles en cliquant ici : https://www.Made-in-World.fr/a-propos/information-legale/conditions-particulieres-hebergement/ ;</b></p>
+            <p><b>3.36 Service(s) d’Hébergement Mutualisé :</b> désigne(nt) le(s) service(s) par le(s)quel(s) Made-in-World met à disposition du Client un espace de stockage, tel que défini dans le Bon de Commande, sur le Serveur/les Plateformes de la société Made-in-World, auquel sont associées des Ressources Système, dont l’utilisation est partagée par plusieurs Clients, permettant de rendre accessible les Données Client sur le réseau Internet. Le(s) Service(s) d’Hébergement Mutualisé est/sont régi(s) par les CP accessibles en cliquant ici : https://www.Made-in-World.fr/a-propos/information-legale/conditions-particulieres-hebergement/ ;</p>
 
-            <p><b>3.37 Services de courrier électronique : désigne(nt) le(s) service(s) de courrier électronique fournis par Made-in-World, à l’exception du Service de Redirection ;</b></p>
+            <p><b>3.37 Services de courrier électronique :</b> désigne(nt) le(s) service(s) de courrier électronique fournis par Made-in-World, à l’exception du Service de Redirection ;</p>
 
-            <p><b>3.38 Service de Redirection : désigne le service de redirection automatique d’un Nom de Domaine vers une adresse Internet ou une URL (Uniform Ressource Locator) déterminée par le Client et/ou d’une adresse de courrier électronique établie sur la base d’un Nom de Domaine vers une autre adresse de courrier électronique ;</b></p>
+            <p><b>3.38 Service de Redirection : </b>désigne le service de redirection automatique d’un Nom de Domaine vers une adresse Internet ou une URL (Uniform Ressource Locator) déterminée par le Client et/ou d’une adresse de courrier électronique établie sur la base d’un Nom de Domaine vers une autre adresse de courrier électronique ;</p>
 
-            <p><b>3.39 Spam : désigne la communication électronique non sollicitée par son destinataire envoyée par mail, en masse ou isolé, le plus souvent à des fins publicitaires, frauduleuses, commerciales, etc., dont l’envoi est notamment et pour partie réprimé par les dispositions de l’article L.34-5 du Code des postes et communications électroniques ;</b></p>
+            <p><b>3.39 Spam :</b> désigne la communication électronique non sollicitée par son destinataire envoyée par mail, en masse ou isolé, le plus souvent à des fins publicitaires, frauduleuses, commerciales, etc., dont l’envoi est notamment et pour partie réprimé par les dispositions de l’article L.34-5 du Code des postes et communications électroniques ;</p>
 
-            <p><b>3.40 Trafic : désigne la quantité de données informatiques transmises ou reçues par le Client sur ou en provenance du Serveur et/ou du Site Internet pour une période donnée. Le trafic mensuel est mesuré en quantité de données transférées depuis et vers le Site Internet ou le Serveur du Client et exprimé en Méga Octets (Mo), en Giga Octets (Go) ou en Téra Octets (To).</b></p>
+            <p><b>3.40 Trafic :</b> désigne la quantité de données informatiques transmises ou reçues par le Client sur ou en provenance du Serveur et/ou du Site Internet pour une période donnée. Le trafic mensuel est mesuré en quantité de données transférées depuis et vers le Site Internet ou le Serveur du Client et exprimé en Méga Octets (Mo), en Giga Octets (Go) ou en Téra Octets (To).</b></p>
              
             <p><b>4 Durée – Renouvellement des Services</b></p>
 
@@ -595,7 +695,7 @@ include("header.php");
              avocats, cabinet d’audit, etc.), lesquels sont liés avec Made-in-World par des clauses contractuelles de confidentialité et/ou soumis au secret professionnel
              permettant de garantir la sécurité et la confidentialité desdites informations.</p>
 
-            <p><b>18 Divers
+            <p><b>18 Divers</b></p>
 
             <p><b>18.1 Non validité partielle</b></p>
 

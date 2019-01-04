@@ -16,10 +16,12 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css"> <!-- Inscrustation des carousel -->
     <link rel="stylesheet" href="css/style.css">
 
-
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  
   </head>
 
   <body>
+
     <div class="site-wrap">
 
       <!-- Menu Version Mobile-->
