@@ -10,7 +10,7 @@ require_once "config.php";
 $identifiant = $mdp = $mdp2 = "";
 $identifiant_err = $mdp_err = $mdp2_err = "";
 
-// Processing form data when form is submitted
+// Execution du formulaire
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Validation du nom d'utilisateur

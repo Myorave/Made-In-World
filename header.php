@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,14 +21,14 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  
+
   </head>
 
   <body>
 
     <div class="site-wrap">
 
-      <!-- Menu Version Mobile-->
+      <!-- Menu en Version Mobile-->
       <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
@@ -47,12 +51,17 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li><a href="index.php">Accueil</a></li>
+                      <li><a href="produits.php">Nos Boxs</a></li>
                       <li><a href="apropos.php">Qui-sommes nous</a></li>
-                      <li><a href="produits.php">Produits</a></li>
                       <li><a href="livredor.php">Livre d'or</a></li>
                       <li><a href="contact.php">Contact</a></li>
-                      <li><i class="fas fa-user"></i><a href="inscription.php">S'inscrire/Login</a></li>
+
+                      <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
+                        ?><li><i class="fas fa-user"></i><a href="logout.php">Deconnexion</a></li><?php
+                      } else{ // Sinon, afficher le bouton d'inscription / connexion
+                        ?><li><i class="fas fa-user"></i><a href="inscription.php">S'inscrire/Login</a></li><?php
+                      }?>
+
                     </ul>
 
                   </div>
