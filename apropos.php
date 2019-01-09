@@ -1,8 +1,7 @@
 <?php
-include("header.php")
+include("header2.php")
 ?>
-
-<div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover inner-page " style="background-image: url(images/decembre3.jpg);" >
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-7 text-center">
@@ -12,7 +11,7 @@ include("header.php")
     </div>
   </div>
 </div>
-
+<!--
 <div class="site-section site-block-3 bg-light">
   <div class="row mb-5 justify-content-center">
     <div class="col-md-6 text-center">
@@ -71,18 +70,18 @@ include("header.php")
     </div>
   </div>
 </div>
-
+-->
 <div class="site-section section-about">
   <div class="container">
     <div class="row mb-5 justify-content-center">
       <div class="col-md-6 text-center">
-        <h2 class="display-4 text-black mb-5">Notre équipe</h2>
+        <h1 class="display-4 text-black1 mb-5">NOTRE EQUIPE</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 ">
+      <div class="col-md-4">
         <div>
-          <img src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded">
+          <img class="imgprod"src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded">
           <h3>Adélaide BRELEUX</h3>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
@@ -135,7 +134,7 @@ include("header.php")
       </div>
     </div>
 </div>
-
+</div>
 <?php
 include("footer.php");
 ?>

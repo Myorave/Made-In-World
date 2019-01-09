@@ -1,13 +1,13 @@
 <?php
-include("header.php")
+include("header2.php")
 ?>
 
-<div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover inner-page overlay" style="background-image: url(images/decembre2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-7 text-center">
         <span class="sub-text">Présentation de nos boîtes</span>
-        <h1 class="mb-5">The <strong>News</strong></h1>
+        <h1 class="mb-5" >AVIS  <strong>& Temoignages</strong></h1>
       </div>
     </div>
   </div>
