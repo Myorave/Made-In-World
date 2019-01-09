@@ -4,7 +4,7 @@ include("header.php");
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: login.php");
+    header("location: index.php");
     exit;
 }
 
@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation des identifiants
     if(empty($identifiant_err) && empty($mdp_err)){
         // Preparation de la requete SELECT
-        $sql = "SELECT id, identifiant, password FROM users WHERE identifiant = :identifiant";
+        $sql = "SELECT id, identifiant, password, admin FROM users WHERE identifiant = :identifiant";
 
         if($stmt = $pdo->prepare($sql)){
             // Liaison des variables à la requete comme parametres
@@ -48,11 +48,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if($stmt->execute()){
                 // Verification si le mdp existe, si oui verification du mdp
                 if($stmt->rowCount() == 1){
+
                     if($row = $stmt->fetch()){ // récupérer le nom des label dans la table users de la BDD
                         $id = $row["id"];
                         $identifiant = $row["identifiant"];
                         $hashed_mdp = $row["password"];
                         $droit_admin =$row["admin"];
+
                         if(password_verify($mdp, $hashed_mdp)){
                             // Le MDP est correct, donc initialisation d'une session
                             session_start();
@@ -87,7 +89,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($pdo);
 }
 ?>
-
 
 <div class="container">
   <div class="row">

@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css"> <!-- Inscrustation des carousel -->
     <link rel="stylesheet" href="css/style.css">
 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -29,14 +27,14 @@
     <div class="site-wrap">
 
       <!-- Menu en Version Mobile-->
-      <div class="site-mobile-menu">
+      <!-- <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
             <span class="icon-close2 js-menu-toggle"></span>
           </div>
         </div>
         <div class="site-mobile-menu-body"></div>
-      </div>
+      </div> -->
 
       <div class="site-navbar-wrap bg-white">
         <div class="site-navbar bg-light">
@@ -61,7 +59,10 @@
                       } else{ // Sinon, afficher le bouton d'inscription / connexion
                         ?><li><i class="fas fa-user"></i><a href="inscription.php">S'inscrire/Login</a></li><?php
                       }?>
-
+                      <?php if(isset($_SESSION['admin'])){ // Si le compte utilisateur est un admin
+                        ?><li><i class="fas fa-tools"></i><a href="admincommentaire.php">Administration</a></li><?php
+                      }
+                      ?>
                     </ul>
 
                   </div>

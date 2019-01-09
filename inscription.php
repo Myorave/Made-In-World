@@ -1,9 +1,14 @@
 <?php
 include("header.php");
-?>
 
-<?php
-// Include config file
+// Verification si l'utilisateur est deja loggé,
+// Si oui, redirection vers la page d'accueil
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: index.php");
+    exit;
+}
+
+// Inclusion du fichier config
 require_once "config.php";
 
 // Je définis les variables et les initialisent avec des valeurs vides

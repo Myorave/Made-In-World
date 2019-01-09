@@ -18,6 +18,8 @@
               <th>Titre</th>
               <th>Contenu</th>
               <th>Auteur</th>
+              <th>Notation</th>
+              <th>Date de publication</th>
             </tr>
           </thead>
 
@@ -32,11 +34,15 @@
               <td><?php echo $commentaire['titre']; ?></td>
               <td><?php echo $commentaire['contenu']; ?></td>
               <td><?php echo $commentaire['auteur']; ?></td>
-                <td>
+              <td><?php echo $commentaire['note']; ?></td>
+              <td><?php echo $commentaire['date']; ?></td>
+
+              <td>
                 <a href="" class="btn btn-warning event-edit">Edition</a><br><br>
                 <a href="" class="btn btn-danger event-delete">Supprimer</a>
-                </td>
+              </td>
             </tr>
+
             <?php }
             ?>
           </tbody>
@@ -51,8 +57,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" >test
-        </h4>
+        <h4 class="modal-title" >Edition de Commentaire</h4>
       </div>
       <div class="modal-body">
 
@@ -71,11 +76,10 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
 
 <!-- include the script -->
 <script src="js/alertify.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
   $(document).ready(function(){
@@ -112,5 +116,7 @@
         });
     });
 </script>
-</body>
-</html>
+
+<?php
+  include("footer.php");
+?>
