@@ -3,7 +3,7 @@ include("header.php");
 
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+if(!isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] !== true){
     header("location: index.php");
     exit;
 }

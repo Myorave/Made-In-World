@@ -55,7 +55,7 @@
                       <li><a href="contact.php">Contact</a></li>
 
                       <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
-                        ?><li><i class="fas fa-user"></i><a href="logout.php">Deconnexion</a></li><?php
+                        ?><li><i class="fas fa-user"></i><a href="compte.php"><?php echo htmlspecialchars($_SESSION["identifiant"]); ?></a></li><?php
                       } else{ // Sinon, afficher le bouton d'inscription / connexion
                         ?><li><i class="fas fa-user"></i><a href="inscription.php">S'inscrire/Login</a></li><?php
                       }?>

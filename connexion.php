@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["admin"] = $droit_admin;
 
                             // Redirection vers la page de login
-                            header("location: login.php");
+                            header("location: compte.php");
                         } else{
                             // Affichage d'une message d'erreur si le MDP n'est pas valide
                             $mdp_err = "Le mot de passe que vous avez entré n'est pas valide";
