@@ -16,6 +16,14 @@ function bdd_user(){ // Récupère tous les clients en BDD
 
 }
 
+function bdd_compte(){ // Récupère tous les clients en BDD
+
+    require_once "config.php";
+
+    return $pdo->query("SELECT * FROM users WHERE id ='{$_SESSION['id']}'");
+
+}
+
 function bdd_commande(){ // Récupère toutes les commandes en BDD
 
     require_once "config.php";
