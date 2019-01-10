@@ -1,5 +1,5 @@
 <?php
-include("header.php");
+include("header2.php");
 
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil

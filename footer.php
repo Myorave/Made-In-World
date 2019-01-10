@@ -32,8 +32,8 @@
   </div>
   </div>
   </div>
- <!-- 
- 
+ <!--
+
 
   <div class="footer-top">
     <ul class="socials">
@@ -54,6 +54,7 @@
       </li>
     </ul>
   </div>
+-->
 
 </footer>
 
