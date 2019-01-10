@@ -71,7 +71,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($identifiant_err) && empty($mdp_err) && empty($mdp2_err)){
 
       // Préparation d'une requete INSERT
-        $sql = "INSERT INTO users (identifiant, password, prenom, nom, email) VALUES (:identifiant, :password, :prenom, :nom, :email)";
+        $sql = "INSERT INTO users (identifiant, password, prenom, nom, email, token) VALUES (:identifiant, :password, :prenom, :nom, :email, :token)";
 
         if($stmt = $pdo->prepare($sql)){
             // Liaison des variables à la requete comme parametres
@@ -80,13 +80,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->bindParam(":prenom", $param_prenom, PDO::PARAM_STR);
             $stmt->bindParam(":nom", $param_nom, PDO::PARAM_STR);
             $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
+            $stmt->bindParam(":token", $param_token, PDO::PARAM_STR);
 
             // Set des parametres
             $param_identifiant = $identifiant;
             $param_password = password_hash($mdp, PASSWORD_DEFAULT); // Creates a password hash
-            $param_prenom = trim($_POST["prenom"]);;
-            $param_nom = trim($_POST["nom"]);;
-            $param_email = trim($_POST["email"]);;
+            $param_prenom = trim($_POST["prenom"]);
+            $param_nom = trim($_POST["nom"]);
+            $param_email = trim($_POST["email"]);
+            $param_token = bin2hex(openssl_random_pseudo_bytes(16));
 
             // Tentative d'execution de la requete
             if($stmt->execute()){

@@ -30,31 +30,6 @@
 
     </div>
   </div>
-  </div>
-  </div>
- <!--
-
-
-  <div class="footer-top">
-    <ul class="socials">
-      <li class="facebook">
-        <a href="#" data-hover="Facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
-      </li>
-      <li class="twitter">
-        <a href="#" data-hover="Twitter"><i class="fab fa-twitter"></i>Twitter</a>
-      </li>
-      <li class="Pinterest">
-        <a href="#" data-hover="Pinterest"><i class="fab fa-pinterest"></i>Pinterest</a>
-      </li>
-      <li class="Mentions légals">
-        <a href="mentionslegales.php" data-hover="Mentions légales">Mentions </a>
-      </li>
-      <li class="CGV">
-        <a href="cgv.php" data-hover="Contrat CGV">Contrat CGV</a>
-      </li>
-    </ul>
-  </div>
--->
 
 </footer>
 
@@ -62,13 +37,11 @@
 
 </div>
 
-
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/aos.js"></script>

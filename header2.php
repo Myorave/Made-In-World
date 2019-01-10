@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css"> <!-- Permet le zoom au survol de souris -->
     <link rel="stylesheet" href="css/aos.css"> <!-- Permet les apparitions des blocs par progression du scroll -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css"> <!-- Inscrustation des carousel -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -43,7 +42,7 @@
                     <li><a href="apropos.php">Qui-sommes nous</a></li>
                     <li><a href="livredor.php">Livre d'or</a></li>
                     <li><a href="contact.php">Contact</a></li>
-
+                    <br/>
                     <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
                       ?><li><i class="fas fa-user"></i><a href="compte.php"><?php echo htmlspecialchars($_SESSION["identifiant"]); ?></a></li><?php
                     } else{ // Sinon, afficher le bouton d'inscription / connexion
