@@ -23,7 +23,8 @@ html {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+   }
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
@@ -51,7 +52,10 @@ html {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px; }
+  margin-left: -15px; 
+  background-color: blue;
+  
+}
 
 .no-gutters {
   margin-right: 0;

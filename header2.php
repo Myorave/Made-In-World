@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Made in World &mdash; Le monde à portée d'une boite</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css"> <!-- Permet le zoom au survol de souris -->
+    <link rel="stylesheet" href="css/aos.css"> <!-- Permet les apparitions des blocs par progression du scroll -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css"> <!-- Inscrustation des carousel -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="./css/style2.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+ 
+ <h2 class="logo"><a href="index.php"><img class="logo" src="images/logo.png" align="center"></a></h2>
+ 
+
+            
+ 
+    <nav role='navigation'>
+        <div id="menuToggle">
+      
+            <input type="checkbox" />
+
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+     
+            <ul id="menu">
+                <div class="container yellow pullRight">
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="apropos.php">Qui-sommes nous</a></li>
+                    <li><a href="produits.php">Produits</a></li>
+                    <li><a href="news.php">Livre d'or</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="inscription.php">S'inscrire/Login</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <script> </script>
+</body>
