@@ -1,139 +1,143 @@
 <?php
 include("header2.php")
 ?>
-<div class="site-blocks-cover inner-page " style="background-image: url(images/decembre3.jpg);" >
-  <div class="container">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-md-7 text-center">
-        <span class="sub-text">Notre entreprise</span>
-        <h1 class="mb-5">Qui Sommes <strong>Nous ?</strong></h1>
-      </div>
-    </div>
-  </div>
-</div>
-<!--
+
+
 <div class="site-section site-block-3 bg-light">
+
+
   <div class="row mb-5 justify-content-center">
-    <div class="col-md-6 text-center">
-      <h2 class="display-4 text-black mb-5">Notre structure</h2>
-    </div>
+
+
   </div>
   <div class="container">
+
     <div class="row align-items-stretch">
-      <div class="col-lg-6 mb-5 mb-lg-0 bg-image bg-md-height" style="background-image: url('images/img_1_colored.jpg')"></div>
-      <div class="col-lg-6 h-100">
+      <h2 class="display-4 text-black mb-5 paddingbox">NOS SPECIALITES </h2>
+      <div class="col-lg-12 ">
         <div class="row row-items">
+
           <div class="col-md-6 mb-5 mb-md-0">
-            <a href="#" class="d-flex text-center feature active p-4 mb-4 bg-white">
+            <div class=" d-flex text-center feature1 active p-4 mb-4 bg-white">
               <span class="align-self-center w-100">
                 <span class="d-block mb-3">
-                  <span class="flaticon-industry display-3"></span>
+
                 </span>
-                <h3><strong class="d-block">100+</strong> Companies</h3>
+                <h3> Des saveurs insoupçonnés</h3>
+                <p class="sdesc">Des terres ensoleillées de sierra Leone avec un plat des bananes plantains frites accompagnées de riz, aux grandes plaines sauvages de Mongolie avec ses khuchuur de moutons. Vos sens seront transportés a chaque bouchées. </p>
               </span>
-            </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-5 mb-md-0">
+            <div class="d-flex text-center feature2 p-4 mb-4 bg-white colorb">
+              <span class="align-self-center w-100">
+                <span class="d-block mb-3">
+
+                </span>
+                <h3>Recette du chef</h3>
+                <p class="sdesc">Un livre de recettes vous sera fournis dans chaque coffret, spécialement écris par nos chefs dans le respect de la culture culinaires du pays représenté. Dans le souci de toujours vous apportez une expérience authentique.</p>
+              </span>
+            </div>
           </div>
           <div class="col-md-6 mb-5 mb-md-0">
-            <a href="#" class="d-flex text-center feature p-4 mb-4 bg-white">
+            <div class="d-flex text-center feature3 p-4 mb-4 bg-white colorb">
               <span class="align-self-center w-100">
                 <span class="d-block mb-3">
-                  <span class="flaticon-worker display-3"></span>
+
                 </span>
-                <h3><strong class="d-block">7000+</strong> Employees</h3>
+                <h3>La qualité avant tout</h3>
+                <p class="sdesc">Tout nos produits sont rigoureusement choisis et testés pour garantir une expérience inoubliable et riche en saveur. Votre santé et votre plaisir, est le pilier de notre entreprise, et jamais nous ne limiteront ces contrôles dans l’objectif d’économiser de l’argent à votre dépend.</p>
               </span>
-            </a>
-          </div>
-        </div>
-        <div class="row row-items last">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <a href="#" class="d-flex text-center feature p-4 mb-4 bg-white">
-              <span class="align-self-center w-100">
-                <span class="d-block mb-3">
-                  <span class="flaticon-planet-earth display-3"></span>
-                </span>
-                <h3><strong class="d-block">90+</strong> Countries</h3>
-              </span>
-            </a>
+            </div>
           </div>
           <div class="col-md-6 mb-5 mb-md-0">
-            <a href="#" class="d-flex text-center active feature p-4 mb-4 bg-white">
+            <div class="d-flex text-center feature1 p-4 mb-4 bg-white colorb">
               <span class="align-self-center w-100">
                 <span class="d-block mb-3">
-                  <span class="flaticon-excavator display-3"></span>
+
                 </span>
-                <h3><strong class="d-block">29+</strong> On Going Projects</h3>
+                <h3>Chaque mois une nouvelle expérience</h3>
+                <p class="sdesc">Une nouvelle expérience tous les mois avec nos coffrets, pour un tour du monde gastronomique en famille, dans votre salon. Plats d’hivers pour réchauffer le cœur ou estivaux pour cette sensation de fraicheur tant recherchée. Vous ne serez pas déçu de ce que nous avons à vous offrir.</p>
               </span>
-            </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
--->
-<div class="site-section section-about">
+
+
+<div class="site-section section-about ">
+
   <div class="container">
+    <h1 class="display-12 text-black1 titree">NOTRE EQUIPE</h1>
     <div class="row mb-5 justify-content-center">
       <div class="col-md-6 text-center">
-        <h1 class="display-4 text-black1 mb-5">NOTRE EQUIPE</h1>
+
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
-        <div>
-          <img class="imgprod"src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded">
-          <h3>Adélaide BRELEUX</h3>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
+        <div class="cadrage">
+          <img src="images/equipe-03.png" alt="Image" class="w-50 mb-5 rounded">
+          <h3>Mehdi CHOUANIA</h3>
+          <p class="lead">Lorem ipsum dolor sit amet, .</p>
+          <p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae
+            dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident
+            deserunt placeat.</p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
             <a href="#" class="py-4 pl-2 pr-2"><span class="icon-twitter"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-instagram"></span></a>
             <a href="#" class="py-4 pl-2 pr-2"><span class="icon-linkedin"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
+
           </p>
         </div>
+
+      </div>
+
+      <div class="col-md-4">
+        <div class="cadrage">
+          <img src="images/equipe-02.png" alt="Image" class="w-50 mb-5 rounded">
+          <h3>Aurélie Saurel</h3>
+          <p class="lead">Lorem ipsum dolor sit amet, </p>
+          <p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae
+            dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident
+            deserunt placeat.</p>
+
+          <p class="mt-5">
+            <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
+            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-twitter"></span></a>
+            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-linkedin"></span></a>
+
+          </p>
+        </div>
+
       </div>
 
 
 
       <div class="col-md-4">
-        <div>
-          <img src="images/person_3.jpg" alt="Image" class="w-50 mb-5 rounded">
-          <h3>Mehdi CHOUANIA</h3>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
+        <div class="cadrage">
+          <img src="images/equipe-01.png" alt="Image" class="w-50 mb-5 rounded">
+          <h3 class="nomb">Adélaïde Breuleux</h3>
+          <p class="lead">Lorem ipsum dolor sit amet, </p>
+          <p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae
+            dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident
+            deserunt placeat.</p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
             <a href="#" class="py-4 pl-2 pr-2"><span class="icon-twitter"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-instagram"></span></a>
             <a href="#" class="py-4 pl-2 pr-2"><span class="icon-linkedin"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
-          </p>
-        </div>
 
-    </div>
-
-    <div class="col-md-4">
-        <div>
-          <img src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded">
-          <h3>Aurélie SAUREL </h3>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-
-          <p class="mt-5">
-            <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-twitter"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-instagram"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-linkedin"></span></a>
-            <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
           </p>
         </div>
       </div>
     </div>
-</div>
+  </div>
 </div>
 <?php
 include("footer.php");
