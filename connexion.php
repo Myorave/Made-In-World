@@ -12,37 +12,37 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 require_once "config.php";
 
 // Je définis les variables et les initialisent avec des valeurs vides
-$identifiant = $mdp = "";
-$identifiant_err = $mdp_err = "";
+$identite = $password = "";
+$id_err = $password_err = "";
 
 // Execution du formulaire
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Validation du nom d'utilisateur
     if(empty(trim($_POST["identifiant"]))){
-        $identifiant_err = "Veuillez entrer votre identifiant.";
+        $id_err = "Veuillez entrer votre identifiant.";
     } else{
-        $identifiant = trim($_POST["identifiant"]);
+        $identite = trim($_POST["identifiant"]);
     }
 
     // Verification si le mdp est vide
     if(empty(trim($_POST["mdp"]))){
-        $mdp_err = "Veuillez entrer votre mot de passe.";
+        $password_err = "Veuillez entrer votre mot de passe.";
     } else{
-        $mdp = trim($_POST["mdp"]);
+        $password = trim($_POST["mdp"]);
     }
 
     // Validation des identifiants
-    if(empty($identifiant_err) && empty($mdp_err)){
+    if(empty($id_err) && empty($password_err)){
         // Preparation de la requete SELECT
         $sql = "SELECT id, identifiant, password, admin FROM users WHERE identifiant = :identifiant";
 
         if($stmt = $pdo->prepare($sql)){
             // Liaison des variables à la requete comme parametres
-            $stmt->bindParam(":identifiant", $param_identifiant, PDO::PARAM_STR);
+            $stmt->bindParam(":identifiant", $param_id, PDO::PARAM_STR);
 
             // Set des parametres
-            $param_identifiant = trim($_POST["identifiant"]);
+            $param_id = trim($_POST["identifiant"]);
 
             // Tentative d'execution de la requete préparée
             if($stmt->execute()){
@@ -51,30 +51,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                     if($row = $stmt->fetch()){ // récupérer le nom des label dans la table users de la BDD
                         $id = $row["id"];
-                        $identifiant = $row["identifiant"];
+                        $identite = $row["identifiant"];
                         $hashed_mdp = $row["password"];
                         $droit_admin =$row["admin"];
 
-                        if(password_verify($mdp, $hashed_mdp)){
+                        if(password_verify($password, $hashed_mdp)){
                             // Le MDP est correct, donc initialisation d'une session
                             session_start();
 
                             // Enregistrement des données dans les variables de sessions
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["identifiant"] = $identifiant;
+                            $_SESSION["identifiant"] = $identite;
                             $_SESSION["admin"] = $droit_admin;
 
                             // Redirection vers la page de login
                             header("location: compte.php");
                         } else{
                             // Affichage d'une message d'erreur si le MDP n'est pas valide
-                            $mdp_err = "Le mot de passe que vous avez entré n'est pas valide";
+                            $password_err = "Le mot de passe que vous avez entré n'est pas valide";
                         }
                     }
                 } else{
                     // Display an error message if identifiant doesn't exist
-                    $identifiant_err = "Aucun compte trouvé avec cet identifiant.";
+                    $id_err = "Aucun compte trouvé avec cet identifiant.";
                 }
             } else{
                 echo "Une erreur est survenue. Veuillez recommencer.";
@@ -96,24 +96,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
   			<h2>Se connecter <small>sur Made in World</small></h2>
 
-        <div class="form-group <?php echo (!empty($identifiant_err)) ? 'has-error' : ''; ?>">
-          <input type="text" name="identifiant" id="identifiant" class="form-control input-lg" placeholder="Identifiant" tabindex="1" value="<?php echo $identifiant; ?>">
-          <span class="help-block"><?php echo $identifiant_err; ?></span>
+        <div class="form-group <?php echo (!empty($id_err)) ? 'has-error' : ''; ?>">
+          <input type="text" name="identifiant" id="identifiant" class="form-control input-lg" placeholder="Identifiant" tabindex="1" value="<?php echo $identite; ?>">
+          <span class="help-block"><?php echo $id_err; ?></span>
         </div>
 
-  			<div class="form-group <?php echo (!empty($mdp_err)) ? 'has-error' : ''; ?>">
+  			<div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
   				<input type="password" name="mdp" id="mdp" class="form-control input-lg" placeholder="Mot de passe" tabindex="2">
-          <span class="help-block"><?php echo $mdp_err; ?>
+          <span class="help-block"><?php echo $password_err; ?>
         </div>
 
   			<div class="row">
   				<div class="col-xs-12 col-md-6"><input type="submit" value="Connexion" class="btn btn-primary btn-block btn-lg" tabindex="3"></div>
-  				<div class="col-xs-12 col-md-6"><a href="inscription.php" class="btn btn-success btn-block btn-lg">S'inscrire</a></div>
   			</div>
         <br />
-        <p>Mot de passe <a href="resetmdp.php">oublié</a> ?</p>
+        <p><a href="requetemdp.php">Mot de passe oublié ?</a></p>
   		</form>
   	</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+          <h2>Pas encore inscrit sur <b>Made in World</b> ?</h2>
+  	</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6"><a href="inscription.php" class="btn btn-success btn-block btn-lg" tabindex="8">S'inscrire</a></div>
   </div>
 </div>
 
