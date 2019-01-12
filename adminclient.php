@@ -5,8 +5,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar">
-    </div>
+    <div class="col-sm-3 col-md-2 sidebar"></div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1 class="page-header">Administration du site
       <h2 class="sub-header">Liste des utilisateurs</h2>
@@ -66,19 +65,12 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
         <button type="button" class="btn btn-primary">Modifier</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
 
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
-
-<!-- include the script -->
 <script src="js/alertify.min.js"></script>
 
 <script type="text/javascript">
@@ -93,7 +85,7 @@
           alertify.confirm('Confirmez-vous la suppression ?', 'Êtes-vous sûr de vouloir supprimer ce commentaire ?', function(){
              $.ajax({
               method: "POST",
-              url: "supprimerCommentaire.php",
+              url: "supprimerClient.php",
               data: { id_commentaire: id },
               dataType: 'json'
             })

@@ -1,8 +1,8 @@
 <?php
   session_start();
 
-if(!isset($_SESSION['admin'])){ // Si le compte utilisateur est un admin
-  header("Location:index.php");
+if(!isset($_SESSION['admin'])){ // Si le compte utilisateur n'est pas un admin
+  header("Location:index.php"); // Retour à la page d'accueil
 }
 ?>
 
