@@ -1,9 +1,10 @@
 <?php
 include("header2.php")
 ?>
+<div class="site-section  ">
 
-
-<div class="site-section site-block-3 bg-light">
+</div> 
+<div class="site-section site-block-3">
 
 
   <div class="row mb-5 justify-content-center">
@@ -69,7 +70,7 @@ include("header2.php")
 </div>
 
 
-<div class="site-section section-about ">
+<div class="site-section section-about bg-light ">
 
   <div class="container">
     <h1 class="display-12 text-black1 titree">NOTRE EQUIPE</h1>

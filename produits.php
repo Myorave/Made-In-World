@@ -4,9 +4,9 @@ include("header2.php")
 
 <head>
 </head>
-
-
-<div class="site-section">
+<div class="ligne"></div>
+<div class="site-section"></div>  
+<div class="site-section3">
   <div class="container">
       
       <p class="explications" ><b>Une Box qui vous fait voyager loin… </b></p>
@@ -35,7 +35,7 @@ include("header2.php")
           <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> 3 ingrédients choisis par notre chef étoilé</li>
           <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> Recommandé par notre équipe de professionnels </li>
         </ul>
-        <p><a href="#" class="boutonprod">Voir le contenu </a></p>
+        <p><a href="produit1.php" class="boutonprod">Voir le contenu </a></p>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@ include("header2.php")
          <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> 2 ingrédients supplémentaires des meilleurs ventes</li>
          <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> Sélectioné par notre équipe de professionels</li>
         </ul>
-        <p><a href="#" class="boutonprod">Voir le contenu</a></p>
+        <p><a href="produit2.php" class="boutonprod">Voir le contenu</a></p>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@ include("header2.php")
           <li><img src="images/c2.png" alt="liste round" height="25" width="25">  2 ingrédients choisis par otre chef étoilé</li>
           <li><img src="images/c2.png" alt="liste round" height="25" width="25"> Cuisinnez facilement à petit </li>
         </ul>
-        <p><a href="#" class="boutonprod">Voir le contenu</a></p>
+        <p><a href="produit3.php" class="boutonprod">Voir le contenu</a></p>
       </div>
     </div>
   </div>

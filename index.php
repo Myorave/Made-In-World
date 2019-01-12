@@ -127,7 +127,7 @@ aux grandes plaines sauvages de Mongolie avec ses khuchuur de moutons. Vos sens 
     <div class="row">
       <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2" style="background-image: url('images/fond1.png');" data-aos="fade-up"></div>
       <div class="col-md-6 pr-md-5 order-md-1">
-        <h2 class="display-3 line-height-xs text-black3 mb-4"><strong>LA BOX</strong> </br> Made in World</h2>
+        <h2 class="display-4 text-white "><strong>LA BOX</strong> </br> Made in World</h2>
         <p class=" commentaire">Made in World vous propose un voyage culinaire exceptionnel pour savourer des plats typiques, cuisiner des recettes originales et découvrir avec curiosité et étonnement la cuisine du monde.</p>
         <ul class="site-block-check">
           <li> <strong>1</strong>  Je choisis la box qui me convient</li>
@@ -152,9 +152,10 @@ aux grandes plaines sauvages de Mongolie avec ses khuchuur de moutons. Vos sens 
     <div class="row">
       <div class="col-md-4">
         <div class="CarteP">
-          <img src="images/boite classique2.jpg" alt="Image" class="w-50 mb-4 rounded">
+          <img src="images/boite classique2.jpg" alt="Image" class="w-50 mb-4 rounded" data-aos="fade" data-aos-delay="0">
           <h4>La classique</h4>
-          
+          <div class="prix">30€</div>
+          <a href="produit1.php" class="boutonprod">Acheter</a>
           
 
           
@@ -166,9 +167,10 @@ aux grandes plaines sauvages de Mongolie avec ses khuchuur de moutons. Vos sens 
    
       <div class="col-md-4 ">
         <div class="CarteP">
-          <img src="images/boite sur mesure2.jpg" alt="Image" class="w-50 mb-4 rounded">
-          <h4>Sur mesure</h4>
-          
+          <img src="images/boite sur mesure2.jpg" alt="Image" class="w-50 mb-4 rounded" data-aos="fade" data-aos-delay="300">
+         <h4>La sur mesure</h4>
+          <div class="prix">40€</div>
+          <a href="produit2.php" class="boutonprod">Acheter</a>
           
           
         </div>
@@ -177,9 +179,11 @@ aux grandes plaines sauvages de Mongolie avec ses khuchuur de moutons. Vos sens 
 
     <div class="col-md-4">
         <div class="CarteP">
-          <img src="images/boite eco2.jpg" alt="Image" class="w-50 mb-4 rounded">
+          <img src="images/boite eco2.jpg" alt="Image" class="w-50 mb-4 rounded" data-aos="fade" data-aos-delay="700">
           <h4>L'économique </h4>
-          
+         
+          <div class="prix">20€</div>
+          <a href="produit3.php" class="boutonprod">Acheter</a>
           
         </div>
       </div>

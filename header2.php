@@ -26,7 +26,7 @@
 <body>
 
 
-    <h2 class="logo"><a href="index.php"><img class="logo" src="images/logob.png" align="center"></a></h2>
+    <h2 class="logo"><a href="index.php"><img class="logo" src="images/logo.png" align="center"></a></h2>
 
 
 

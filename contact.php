@@ -1,7 +1,9 @@
 <?php
 include("header2.php")
 ?>
+<div class="site-section  ">
 
+</div>    
 <div class="site-section bg-light">
 <div class=" container titre">
 <h3> Nous contacter </h3>
