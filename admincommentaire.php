@@ -111,9 +111,16 @@
       });
 
       $('.event-edit').on('click',function(e){
-        e.preventDefault();
-        $('#modal-edit').modal('show');
-        });
+            e.preventDefault();
+            $('#modal-edit').modal('show');
+
+                 $.ajax({
+                 method: "POST",
+                 url: "form-modifierCommentaire.php",
+                 data: { id_commentaire: id },
+                 dataType: 'json'
+               })
+            });
     });
 </script>
 

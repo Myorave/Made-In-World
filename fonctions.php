@@ -72,4 +72,27 @@ function deleteCommentaire($id_commentaire){
 
 }
 
+function deleteClient($id_client){
+
+  require_once "config.php";
+
+  $stmt = $pdo->prepare("DELETE FROM users
+    WHERE id = :id");
+
+    $stmt->bindParam(':id', $id_client);
+    return $stmt->execute();
+
+}
+
+function deleteCommande($id_commande){
+
+  require_once "config.php";
+
+  $stmt = $pdo->prepare("DELETE FROM commande
+    WHERE num_commande = :id");
+
+    $stmt->bindParam(':id', $id_client);
+    return $stmt->execute();
+
+}
 ?>

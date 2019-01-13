@@ -86,7 +86,7 @@
              $.ajax({
               method: "POST",
               url: "supprimerClient.php",
-              data: { id_commentaire: id },
+              data: { id_client: id },
               dataType: 'json'
             })
               .done(function(result) {

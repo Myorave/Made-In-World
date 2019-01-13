@@ -95,8 +95,8 @@
           alertify.confirm('Confirmez-vous la suppression ?', 'Êtes-vous sûr de vouloir supprimer ce commentaire ?', function(){
              $.ajax({
               method: "POST",
-              url: "supprimerCommentaire.php",
-              data: { id_commentaire: id },
+              url: "supprimerCommande.php",
+              data: { id_commande: id },
               dataType: 'json'
             })
               .done(function(result) {
