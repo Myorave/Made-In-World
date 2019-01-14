@@ -68,9 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lien de reset
     $linkToSend = $verifyScript . '?uid=' . $userId . '&id=' . $passwordRequestId . '&t=' . $token;
 
-    // Test du lien de reset sur le site
-    echo $linkToSend;
-
     $body_html = "Vous avez reçu un email de Made in World<br/><br/> 
                   Voici votre de reset de mot de passe : <br/><br/>
                   <a href='$linkToSend'>$linkToSend</a>";
