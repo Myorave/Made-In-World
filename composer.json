@@ -1,0 +1,7 @@
+{
+    "name": "user/made-in-world",
+    "require-dev": {
+        "phpmailer/phpmailer": "^6.0"
+    },
+    "require": {}
+}

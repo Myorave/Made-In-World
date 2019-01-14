@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 /* Informations de la BDD. */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
