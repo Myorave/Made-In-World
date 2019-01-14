@@ -1,7 +1,6 @@
 <?php
 include("header2.php");
 
-var_dump($_SESSION["reset_mdp"]);
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
 if(!isset($_SESSION["reset_mdp"])){
@@ -44,13 +43,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "UPDATE users SET password = :password WHERE id = :id";
 
         if($stmt = $pdo->prepare($sql)){
+
+            // Set des parametres
+            $param_password = password_hash($new_mdp, PASSWORD_DEFAULT);
+            $param_id = $_SESSION["reset_mdp"];
+
             // Liaison des variables à la requete comme parametres
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
             $stmt->bindParam(":id", $param_id, PDO::PARAM_INT);
 
-            // Set des parametres
-            $param_password = password_hash($new_mdp, PASSWORD_DEFAULT);
-            $param_id = $_SESSION["user_mdp"];
 
             // Tentative d'execution de la requete
             if($stmt->execute()){

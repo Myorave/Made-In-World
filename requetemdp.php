@@ -67,6 +67,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   // Test du lien de reset sur le site
   echo $linkToSend;
+
+  if(isset($_POST['submit'])) {
+
+    $sujet = "Nouveau Mot de Passe - Made in World";
+
+    $headers = "De: Made in World";
+    $txt = "Vous avez reçu un email de Made in World \n\n";
+    $txt .= "Voici votre de reset de mot de passe :".$nom.". \n\n";
+    $txt .= $linkToSend;
+
+    mail($userEmail, $sujet, $txt, $headers);
+    header("Location: login.php?mailenvoye");
+  }
 }
 ?>
 
