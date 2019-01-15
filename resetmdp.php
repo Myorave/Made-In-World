@@ -72,7 +72,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-
+<div class="ligne"></div>
+<div class="site-section  "></div>
 <div class="wrapper">
     <h2>Réinitialisation du mot de passe</h2>
     <p>Veuillez remplir le formulaire pour réinitaliser votre mot de passe.</p>

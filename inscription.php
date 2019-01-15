@@ -135,6 +135,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($pdo);
 }
 ?>
+<div class="ligne"></div>
+<div class="site-section"></div>
 
 <div class="container">
   <div class="row">

@@ -25,7 +25,7 @@ include("header2.php")
             </div>
 
             <div class="col-md-4  order-md-1 prixdesc">
-                <h2 class="display-3 mb-5 prixs"><strong>25 €</br></strong> </h2>
+                <h2 class="display-3 mb-5 prixs"><strong>30 €</br></strong> </h2>
                 <p><a href="#" class="boutonprod1">Acheter la box</a></p>
 
 

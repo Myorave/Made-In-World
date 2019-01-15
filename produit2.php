@@ -1,12 +1,8 @@
 <?php
 include("header2.php")
 ?>
-<div class="ligne">
-
-</div>
-<div class="site-section  ">
-
-</div>
+<div class="ligne"></div>
+<div class="site-section  "></div>
 <div class="site-section3">
     <div class="container">
         <div class="row">
@@ -25,7 +21,7 @@ include("header2.php")
             </div>
 
             <div class="col-md-4  order-md-1 prixdesc">
-                <h2 class="display-3 mb-5 prixs"><strong>30 €</br></strong> </h2>
+                <h2 class="display-3 mb-5 prixs"><strong>40 €</br></strong> </h2>
                 <p><a href="#" class="boutonprod1">Acheter la box</a></p>
 
 

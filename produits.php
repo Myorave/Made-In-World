@@ -18,7 +18,7 @@ include("header2.php")
       
       
     </p>
-    <h2 class="explications2"> Toute les boites contiennent <b>un livre de recette et des anecdotes !</b> </h2>
+    <div class="explications2"> Toute les boites contiennent <b>un livre de recette et des anecdotes !</b> </div>
 </div>
 </div>
     
@@ -30,12 +30,12 @@ include("header2.php")
       <div class="col-md-6 pr-md-5 order-md-2">
         <h2 class="display-3m ">La boîte <strong>classique</strong></h2>
 
-        <ul class="site-block-check">
-          <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> 1 livre de Recettes</li>
-          <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> 3 ingrédients choisis par notre chef étoilé</li>
-          <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> Recommandé par notre équipe de professionnels </li>
+        <ul class="site-block-check2">
+          <li> <img src="images/c2.png" alt="liste round" height="20" width="20"> 1 livre de Recettes</li>
+          <li> <img src="images/c2.png" alt="liste round" height="20" width="20"> 3 ingrédients choisis par notre chef étoilé</li>
+          <li> <img src="images/c2.png" alt="liste round" height="20" width="20"> Recommandé par notre équipe de professionnels </li>
         </ul>
-        <p><a href="produit1.php" class="boutonprod">Voir le contenu </a></p>
+        <p><a href="produit1.php" class="boutonprod3">Voir le contenu </a></p>
       </div>
     </div>
   </div>
@@ -49,13 +49,13 @@ include("header2.php")
       <div class="col-md-6 pr-md-5 order-md-1">
         <h2 class="display-3m ">La boîte <br><strong>sur mesure</strong></h2>
 
-        <ul class="site-block-check">
-        <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> 1 livre de Recettes</li>
-        <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> 3 ingrédiets choisis par notre chez étoilé</li>
-         <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> 2 ingrédients supplémentaires des meilleurs ventes</li>
-         <li> <img src="images/c2.png" alt="liste round" height="25" width="25"> Sélectioné par notre équipe de professionels</li>
+        <ul class="site-block-check2">
+        <li> <img src="images/c2.png" alt="liste round" height="20" width="20"> 1 livre de Recettes</li>
+        <li> <img src="images/c2.png" alt="liste round" height="20" width="20"> 3 ingrédiets choisis par notre chez étoilé</li>
+         <li> <img src="images/c2.png" alt="liste round" height="20" width="20"> 2 ingrédients supplémentaires des meilleurs ventes</li>
+         <li> <img src="images/c2.png" alt="liste round" height="20" width="20"> Sélectioné par notre équipe de professionels</li>
         </ul>
-        <p><a href="produit2.php" class="boutonprod">Voir le contenu</a></p>
+        <p><a href="produit2.php" class="boutonprod3">Voir le contenu</a></p>
       </div>
     </div>
   </div>
@@ -70,12 +70,12 @@ include("header2.php")
       <div class="col-md-6 pr-md-5 order-md-1">
         <h2 class="display-3m ">La boite <strong>économique</strong></h2>
 
-        <ul class="site-block-check">
-          <li> <img src="images/c2.png" alt="liste round" height="25" width="25">  1 livre de Recettes </li>
-          <li><img src="images/c2.png" alt="liste round" height="25" width="25">  2 ingrédients choisis par otre chef étoilé</li>
-          <li><img src="images/c2.png" alt="liste round" height="25" width="25"> Cuisinnez facilement à petit </li>
+        <ul class="site-block-check2">
+          <li> <img src="images/c2.png" alt="liste round" height="20" width="20">  1 livre de Recettes </li>
+          <li><img src="images/c2.png" alt="liste round" height="20" width="20">  2 ingrédients choisis par otre chef étoilé</li>
+          <li><img src="images/c2.png" alt="liste round" height="20" width="20"> Cuisinnez facilement à petit </li>
         </ul>
-        <p><a href="produit3.php" class="boutonprod">Voir le contenu</a></p>
+        <p><a href="produit3.php" class="boutonprod3">Voir le contenu</a></p>
       </div>
     </div>
   </div>

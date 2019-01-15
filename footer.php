@@ -15,8 +15,8 @@
               <ul class="list-unstyled2">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="apropos.php">Qui-sommes nous</a></li>
-                <li><a href="produits.php">Produits</a></li>
-                <li><a href="news.php">Livre d'or</a></li>
+                <li><a href="produits.php">Produits</a></li></br>
+                <li><a href="news.php">Livre d'or</a></li> </br>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
             </div>
@@ -46,6 +46,7 @@
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/aos.js"></script>
 <script src="js/retour.js"></script>
+<script src="js/spécialisation.js"></script>
 
 <script src="js/main.js"></script>
 
