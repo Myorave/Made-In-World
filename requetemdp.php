@@ -107,22 +107,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<div class="site-section"></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+<div class="site-section bg-light">
+    <div class="row mb-5 justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="font-weight-light text-black display-4">Réinitialisation de mot de passe</h2>
+        </div>
 
-        <form class="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <h2 class="form-title">Réinitialisation de mot de passe</h2>
-            <div class="form-group">
-                <label>Votre adresse mail</label>
-                <input type="email" name="email">
-            </div>
-            <div class="form-group">
-                <button type="submit" name="reset-password" class="login-btn">Envoyer</button>
-            </div>
-        </form>
+        <div class="col-md-7 text-center">
+            <p>Veuillez entrer votre adresse mail pour recevoir un lien de réinitialisation de mot de passe.</p>
+
+
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <div>
+                    <label>Votre adresse mail</label>
+                    <input type="email" name="email">
+                </div><br/>
+                <div>
+                    <button type="submit" name="reset-password" class="login-btn">Envoyer</button>
+                </div>
+            </form>
 
         </div>
     </div>
+
+
+
 </div>
+

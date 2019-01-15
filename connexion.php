@@ -89,10 +89,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($pdo);
 }
 ?>
+<div class="site-section"></div>
 
 <div class="container">
   <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <div class="col-md-7 col-lg-7 mb-4">
   		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
   			<h2>Se connecter <small>sur Made in World</small></h2>
 
@@ -118,7 +119,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <div class="container">
   <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <div class="col-lg-4">
           <h2>Pas encore inscrit sur <b>Made in World</b> ?</h2>
   	</div>
   </div>

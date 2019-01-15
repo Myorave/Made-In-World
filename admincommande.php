@@ -2,6 +2,7 @@
   include("header-admin.php");
   include("fonctions.php");
 ?>
+<div class="site-section"></div>
 
 <div class="container-fluid">
   <div class="row">
