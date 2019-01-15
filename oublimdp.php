@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "config.php";
 
 // l'ID de l'utilisateur, présent dans le GET via la variable "uid"

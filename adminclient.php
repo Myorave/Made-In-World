@@ -2,8 +2,8 @@
   include("header-admin.php");
   include("fonctions.php");
 ?>
-<div class="ligne"></div>
-<div class="site-section  "></div>
+<div class="site-section"></div>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-3 col-md-2 sidebar"></div>
@@ -87,7 +87,7 @@
              $.ajax({
               method: "POST",
               url: "supprimerClient.php",
-              data: { id_commentaire: id },
+              data: { id_client: id },
               dataType: 'json'
             })
               .done(function(result) {

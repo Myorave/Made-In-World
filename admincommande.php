@@ -2,8 +2,8 @@
   include("header-admin.php");
   include("fonctions.php");
 ?>
-<div class="ligne"></div>
-<div class="site-section  "></div>
+<div class="site-section"></div>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-3 col-md-2 sidebar">
@@ -96,8 +96,8 @@
           alertify.confirm('Confirmez-vous la suppression ?', 'Êtes-vous sûr de vouloir supprimer ce commentaire ?', function(){
              $.ajax({
               method: "POST",
-              url: "supprimerCommentaire.php",
-              data: { id_commentaire: id },
+              url: "supprimerCommande.php",
+              data: { id_commande: id },
               dataType: 'json'
             })
               .done(function(result) {
