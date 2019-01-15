@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="email" name="email">
                 </div><br/>
                 <div>
-                    <button type="submit" name="reset-password" class="login-btn">Envoyer</button>
+                    <button type="submit" name="reset-password" class="btn btn-success btn-lg">Envoyer</button>
                 </div>
             </form>
 
