@@ -24,14 +24,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64';
 
-    $mail->From = $email;
+    $mail->From = 'hello@chouania-mehdi.fr';
     $mail->FromName = $nom;
     $mail->AddAddress('chouania.mehdi@hotmail.fr');                         // Name is optional
 
     $mail->IsHTML(true);                             // Set email format to HTML
 
     $mail->Subject = "Contact - Made in World";
-    $mail->Body = "Vous avez reçu un email de ". $nom .":<br/><br/>".$message;
+    $mail->Body = "Vous avez reçu un email de <strong>"
+                . $nom ."</strong><br/>via l'adresse mail : <strong>". $email ."
+                <br/></strong><br/>Message : ".$message;
 
     if (!$mail->Send()) {
     echo 'Le message n\'a pas pu être envoyé.';
