@@ -12,8 +12,8 @@ include("header2.php")
 
   <h4 class="spe"> -NOS SPECIALITES-</h4>
   <div class="flip">
-    <div class="front" style="background-image: url(images/saveurs.jpg)">
-      <h1 class="  text-shadow">LES SAVEURS</hi>
+    <div class="front" style="background-image: url(images/visu1.png)">
+     
     </div>
     <div class="back">
       <h2>Des saveurs insoupçonnés</h2>
@@ -24,8 +24,8 @@ include("header2.php")
     </div>
   </div>
   <div class="flip">
-    <div class="front" style="background-image: url(images/recipes.jpg)">
-      <h1 class=" text-shadow">LES RECETTES</hi>
+    <div class="front" style="background-image: url(images/visu2.png)">
+      
     </div>
     <div class="back ">
       <h2>Les Recettes de notre chef étoilé</h2>
@@ -36,8 +36,8 @@ include("header2.php")
     </div>
   </div>
   <div class="flip">
-    <div class="front" style="background-image: url(images/qualite.jpg)">
-      <h1 class=" text-shadow">LA QUALITE</hi>
+    <div class="front" style="background-image: url(images/visu3.png)">
+  
     </div>
 
     <div class="back ">
