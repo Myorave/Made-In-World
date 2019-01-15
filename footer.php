@@ -6,18 +6,19 @@
         <div class="row">
 
           <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
-            <img class="logo1" src="images/logo.png">
+              <a href="index.php"><img class="logo1" src="images/logo.png"></a>
           </div>
 
           <div class="col-3">
             <div class="Agence">
               <h3 class="footer-heading mb-3">Notre Agence</h3>
               <ul class="list-unstyled2">
-                <li><a href="index.php">Accueil</a></li>
                 <li><a href="apropos.php">Qui-sommes nous</a></li>
                 <li><a href="produits.php">Produits</a></li>
                 <li><a href="news.php">Livre d'or</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                  <li><a href="mentionslegales.php">Mentions légales</a></li>
+                  <li><a href="cgv.php">CGV</a></li>
               </ul>
             </div>
           </div>

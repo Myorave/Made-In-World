@@ -75,27 +75,32 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-<div class="wrapper">
-    <h2>Réinitialisation du mot de passe</h2>
-    <p>Veuillez remplir le formulaire pour réinitaliser votre mot de passe.</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="form-group <?php echo (!empty($new_mdp_err)) ? 'has-error' : ''; ?>">
-            <label>Nouveau mot de passe</label>
-            <input type="password" name="new_mdp" class="form-control" value="<?php echo $new_mdp; ?>">
-            <span class="help-block"><?php echo $new_mdp_err; ?></span>
-        </div>
-        <div class="form-group <?php echo (!empty($confirm_mdp_err)) ? 'has-error' : ''; ?>">
-            <label>Confirmation du mot de passe</label>
-            <input type="password" name="confirm_mdp" class="form-control">
-            <span class="help-block"><?php echo $confirm_mdp_err; ?></span>
-        </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Réinitialiser">
-            <a class="btn btn-link" href="index.php">Annuler</a>
-        </div>
-    </form>
-</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 
+        <div class="wrapper">
+            <h2>Réinitialisation du mot de passe</h2>
+            <p>Veuillez remplir le formulaire pour réinitaliser votre mot de passe.</p>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <div class="form-group <?php echo (!empty($new_mdp_err)) ? 'has-error' : ''; ?>">
+                    <label>Nouveau mot de passe</label>
+                    <input type="password" name="new_mdp" class="form-control" value="<?php echo $new_mdp; ?>">
+                    <span class="help-block"><?php echo $new_mdp_err; ?></span>
+                </div>
+                <div class="form-group <?php echo (!empty($confirm_mdp_err)) ? 'has-error' : ''; ?>">
+                    <label>Confirmation du mot de passe</label>
+                    <input type="password" name="confirm_mdp" class="form-control">
+                    <span class="help-block"><?php echo $confirm_mdp_err; ?></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Réinitialiser">
+                    <a class="btn btn-link" href="index.php">Annuler</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <?php
 include("footer.php");
 ?>

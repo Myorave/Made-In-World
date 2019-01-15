@@ -28,16 +28,6 @@ if(!isset($_SESSION['admin'])){ // Si le compte utilisateur n'est pas un admin
 
     <div class="site-wrap">
 
-      <!-- Menu en Version Mobile-->
-      <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-          <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
-          </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-      </div>
-
       <div class="site-navbar-wrap bg-white">
         <div class="site-navbar bg-light">
           <div class="container py-1">
