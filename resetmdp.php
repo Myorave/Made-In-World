@@ -94,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Réinitialiser">
-                    <a class="btn btn-link" href="index.php">Annuler</a>
+                    <a class="btn btn-success btn-lg" href="index.php">Annuler</a>
                 </div>
             </form>
         </div>

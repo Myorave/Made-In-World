@@ -192,6 +192,8 @@ aux grandes plaines sauvages de Mongolie avec ses khuchuur de moutons. Vos sens 
 </div>
 </div>
 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+
 <div class="site-section bg-light">
   <div class="row mb-5 justify-content-center">
     <div class="col-12 text-center">
