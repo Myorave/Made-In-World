@@ -24,7 +24,7 @@
 /* BASE COMMUNE*/
 body {
   line-height: 1.7;
-  color: #4d4d4d;
+  color: #000000;
   font-weight: 400;
   font-size: 0.9rem;
   overflow-x: hidden;
@@ -33,6 +33,15 @@ body {
 ::-moz-selection {
   background: #000;
   color: #fff;
+}
+
+.fondjaune {
+  margin-top: 6rem;
+  margin-left: 40px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  -webkit-transform: scale(1.5) !important;
+          transform: scale(1.5) !important;
 }
 
 /* SURLIGNEMENT DU DOCUMENT*/
@@ -242,14 +251,17 @@ a :hover {
   background: #F4274C;
 }
 
-.site-section1 {
+.site-section3 {
   padding: 3em 0;
-  background-color: #26C6F4;
+}
+
+.site-section1 {
+  background-color: #27CDF4;
 }
 
 @media (min-width: 768px) {
   .site-section1 {
-    padding: 7em 0;
+    padding: 15em 0;
   }
 }
 
@@ -283,6 +295,14 @@ a :hover {
   width: 40px;
   height: 2px;
   background: #F4274C;
+}
+
+p .commentaire {
+  color: #fff !important;
+  text-align: left;
+  width: 470px;
+  margin-top: 50px;
+  font-size: 16px;
 }
 
 /*SECTIONN PRODUIT*/
@@ -1380,7 +1400,7 @@ footer ul.social li {
   background-color: white;
   background-image: none;
   border: solid 2px #1a1a1a;
-  padding: 8px 40px;
+  padding: 8px 50px;
   border-radius: 10px;
   text-transform: initial;
   font-weight: 400;
@@ -1389,7 +1409,7 @@ footer ul.social li {
 .boutonprod:hover {
   color: #fff;
   background-color: #1a1a1a;
-  border-color: white;
+  border-color: transparent;
   text-decoration: none;
 }
 
@@ -1398,19 +1418,20 @@ footer ul.social li {
 }
 
 .boutonprod1 {
-  color: white;
-  background-color: #FDCF04;
-  border: solid 2px #FDCF04;
-  padding: 8px 40px;
-  border-radius: 10px;
-  text-transform: initial;
-  font-weight: 400;
-}
-
-.boutonprod1:hover {
   color: #FDCF04;
   background-color: white;
   border: solid 2px #FDCF04;
+  padding: 8px 28px;
+  border-radius: 10px;
+  text-transform: initial;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.boutonprod1:hover {
+  color: white;
+  background-color: #FDCF04;
+  border: solid 2px transparent;
   text-decoration: none;
 }
 
@@ -1432,7 +1453,7 @@ footer ul.social li {
 .boutonprod3:hover {
   color: #fff;
   background-color: #F4274C;
-  border-color: white;
+  border-color: transparent;
   text-decoration: none;
 }
 
@@ -1453,22 +1474,6 @@ footer ul.social li {
   color: #F4274C;
   font-weight: 500;
   font-size: 40px;
-}
-
-.explications2 {
-  text-align: justify;
-  font-size: 28px;
-  color: #303030 !important;
-  font-weight: 500;
-}
-
-/* Commentaire la box voyageuse*/
-.commentaire {
-  color: #fff;
-  text-align: left;
-  width: 470px;
-  margin-top: 50px;
-  font-size: 14px;
 }
 
 .numero {
@@ -1572,7 +1577,7 @@ a:hover {
 
 #menuToggle {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 50px;
   z-index: 1;
@@ -1632,8 +1637,8 @@ a:hover {
   */
 #menuToggle input:checked ~ span {
   opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
+  -webkit-transform: rotate(45deg) translate(-3px, -1px);
+          transform: rotate(45deg) translate(-3px, -1px);
   background: #232323;
 }
 
@@ -1659,9 +1664,16 @@ a:hover {
   * Make this absolute positioned
   * at the top left of the screen
   */
+.burgerm {
+  position: fixed;
+}
+
 #menu {
+  -webkit-box-shadow: 0 -0.2rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 -0.2rem 1rem rgba(0, 0, 0, 0.15);
   position: absolute;
   width: 500px;
+  min-height: calc(100vh + 2rem);
   margin: -100px 0 0 0;
   padding: 50px;
   padding-top: 125px;
@@ -1679,6 +1691,29 @@ a:hover {
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%) scaleX(0);
+          transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(36, 36, 36, 0.8);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+#menu a:hover::after {
+  -webkit-transform: translateX(-50%) scaleX(1);
+          transform: translateX(-50%) scaleX(1);
 }
 
 #menu li {
@@ -1726,32 +1761,8 @@ li {
 
 a {
   position: relative;
-  margin: 0 1.5rem;
   color: #1b1b1b;
   text-decoration: none !important;
-}
-
-a::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  -webkit-transform: translateX(-50%) scaleX(0);
-          transform: translateX(-50%) scaleX(0);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(36, 36, 36, 0.8);
-  -webkit-transition: -webkit-transform 250ms;
-  transition: -webkit-transform 250ms;
-  transition: transform 250ms;
-  transition: transform 250ms, -webkit-transform 250ms;
-}
-
-a:hover::after {
-  -webkit-transform: translateX(-50%) scaleX(1);
-          transform: translateX(-50%) scaleX(1);
 }
 
 /*fin header*/
@@ -1952,8 +1963,8 @@ a:hover::after {
 }
 
 .text-wrapper:hover {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   background: rgba(255, 255, 255, 0.9);
   opacity: 1;
   -webkit-box-shadow: 9px 0px 21px -8px rgba(179, 175, 179, 0.77);
@@ -2036,19 +2047,20 @@ a:hover::after {
 }
 
 .site-section4 .spe {
-  text-align: center;
+  text-align: left;
   font-size: 50px;
   font-weight: 300;
   padding-bottom: 150px;
-  margin-top: 90px;
+  margin-top: 50px;
+  padding-left: 110px;
 }
 
 .site-section4 .spe2 {
-  text-align: center;
+  text-align: left;
   font-size: 50px;
   font-weight: 300;
-  padding-bottom: 20px;
-  margin-top: 140px;
+  margin-top: 200px;
+  padding-left: 110px;
 }
 
 * {
@@ -2067,8 +2079,8 @@ a:hover::after {
   display: block;
   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
           transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
@@ -2155,5 +2167,22 @@ a:hover::after {
 
 .text-shadow {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+
+textarea:focus {
+  background: none repeat scroll 0 0 #FFFFFF;
+  outline-width: 0;
+}
+
+.boxshadow {
+  -webkit-box-shadow: 9px 0px 21px -8px rgba(179, 175, 179, 0.77);
+          box-shadow: 9px 0px 21px -8px rgba(179, 175, 179, 0.77);
+}
+
+.bg-white4 {
+  width: 900px;
+  -webkit-box-shadow: 2px 4px 5px #cccccc;
+          box-shadow: 2px 4px 5px #cccccc;
+  background-color: #fff !important;
 }
 /*# sourceMappingURL=style.css.map */

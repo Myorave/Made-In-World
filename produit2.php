@@ -61,7 +61,7 @@ include("header2.php")
             <div class="gallery-item"><img src="images/bananej.png" alt="Le sachet de banane "><span class="text-wrapper"><span
                         class="name">Le sachet de banane </span><span class="title">Aliment aux grandes qualités nutritives, pour les recettes sucré et salé</span></span></div>
 
-            <div class="gallery-item"><img src="images/thér.png" alt="La boite de thé"><span class="text-wrapper"><span
+            <div class="gallery-item"><img src="images/the.png" alt="La boite de thé"><span class="text-wrapper"><span
                         class="name">La boite de Thé </span><span class="title"> Un Thés d’excellence et de douceurs pour voyager à travers les saveurs</span></span></div>
 
         </div>

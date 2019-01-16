@@ -10,7 +10,7 @@ include("header2.php")
 
 <div class="site-section4 ">
 
-  <h4 class="spe"> -NOS SPECIALITES-</h4>
+  <h4 class="spe"> NOS SPECIALITES</h4>
   <div class="flip">
     <div class="front" style="background-image: url(images/visu1.png)">
      
@@ -51,7 +51,7 @@ include("header2.php")
   </div>
 
 
-<h4 class="spe2"> -NOTRE EQUIPE-</h4>
+<h4 class="spe2"> NOTRE EQUIPE</h4>
 
 </div>
 
