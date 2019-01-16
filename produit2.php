@@ -20,7 +20,7 @@ include("header2.php")
                 <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
                   ?><p><a href="produitachat.php" class="boutonprod1">Acheter la box</a></p><?php
                 } else{ // Sinon, afficher le bouton d'inscription / connexion
-                  ?><p><a href="inscription.php" class="boutonprod1">Connectez-vous</a></p><?php
+                  ?><p><a href="connexion.php?achat=1" class="boutonprod1">Connectez-vous</a></p><?php
                 }?>
             </div>
         </div>

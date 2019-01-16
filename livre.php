@@ -1,7 +1,6 @@
 <?php
 include("header2.php");
 include("config.php");
-session_start();
 ?>
 
 <div class="ligne"></div>

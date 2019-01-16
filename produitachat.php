@@ -45,13 +45,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $type_err = "Veuillez choisir une box.";
     } else {
         $type = trim($_POST["type_boite"]);
-        if($type = "57932"){
+        if($type == "57932"){
           $description = "Boite Classique";
           $prix = 25;
-        } else if ($type = "1987") {
+        } else if ($type == "1987") {
           $description = "Boite Economique";
           $prix = 20;
-        } else if ($type = "984") {
+        } else if ($type == "984") {
           $description = "Boite Sur Mesure";
           $prix = 40;
         }
@@ -173,9 +173,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 <div class="form-group <?php echo (!empty($type_err)) ? 'has-error' : ''; ?>">
                     <label>Format de boïte à commander :</label><br/>
-                    <input type="radio" name="type_boite" value="100"> Boîte <strong>Classique</strong>   : 25 €<br>
-                    <input type="radio" name="type_boite" value="200"> Boîte <strong>Economique</strong> : 20 €<br>
-                    <input type="radio" name="type_boite" value="300"> Boîte <strong> Sur Mesure</strong> : 40 €
+                    <input type="radio" name="type_boite" value="57932"> Boîte <strong>Classique</strong>   : 25 €<br>
+                    <input type="radio" name="type_boite" value="1987"> Boîte <strong>Economique</strong> : 20 €<br>
+                    <input type="radio" name="type_boite" value="984"> Boîte <strong> Sur Mesure</strong> : 40 €
                     <span class="help-block"><?php echo $type_err; ?></span>
                 </div><br/>
 
