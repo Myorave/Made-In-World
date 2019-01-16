@@ -1,5 +1,6 @@
 <?php
 include("header2.php");
+use PHPMailer\PHPMailer\PHPMailer;
 
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
@@ -44,13 +45,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $type_err = "Veuillez choisir une box.";
     } else {
         $type = trim($_POST["type_boite"]);
-        if($type = "100"){
+        if($type = "57932"){
           $description = "Boite Classique";
           $prix = 25;
-        } else if ($type = "200") {
+        } else if ($type = "1987") {
           $description = "Boite Economique";
           $prix = 20;
-        } else if ($type = "300") {
+        } else if ($type = "984") {
           $description = "Boite Sur Mesure";
           $prix = 40;
         }
@@ -78,9 +79,52 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 // Tentative d'execution de la requete
                 if($stmt->execute()){
-                  // Redirection à la page de connexion
-                    header("location: index.php?commandeeffectué");
+
+                    // Envoi d'un message à l'administrateur pour le prévenir d'une commande
+
+                    $body_html = "Une nouvelle commande à été confirmée<br/><br/> 
+                                  Voici le récapitulatif de la commande: <br/><br/>
+                                  Nom du client : $nom_client<br/>
+                                  Adresse de livraison : $adresse<br/>
+                                  Code Postal : $cp<br/>
+                                  Ville : $ville<br/>
+                                  Identifiant de la box : $type <br/>
+                                  Description : $description <br/>
+                                  Montant de la commande : $prix € 00<br/>";
+
+                    require 'vendor/autoload.php';
+
+                    $mail = new PHPMailer(true);
+
+                    $mail->IsSMTP();                                      // Set mailer to use SMTP
+                    $mail->Host = 'ns0.ovh.net';                          // Specify main and backup server
+                    $mail->Port = 587;                                    // Set the SMTP port
+                    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                    $mail->Username = 'hello@chouania-mehdi.fr';          // SMTP username
+                    $mail->Password = 'Pl@y$t@t10n1';                     // SMTP password
+                    $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
+                    $mail->CharSet = 'UTF-8';
+                    $mail->Encoding = 'base64';
+
+                    $mail->From = 'hello@chouania-mehdi.fr';
+                    $mail->FromName = 'Mehdi CHOUANIA';
+                    $mail->AddAddress('chouania.mehdi@hotmail.fr');                         // Name is optional
+
+                    $mail->IsHTML(true);                             // Set email format to HTML
+
+                    $mail->Subject = "Nouvelle Commande - Made in World";
+                    $mail->Body = $body_html;
+
+                    if (!$mail->Send()) {
+                        echo 'Le message n\'a pas pu être envoyé.';
+                        echo 'Erreur de Mailer: ' . $mail->ErrorInfo;
+                        exit;
+                    }
+
+                    // Redirection à la page d'accueil
+                        header("location: index.php?commandeeffectué");
                 } else{
+
                   echo "Une erreur est survenue. Veuillez recommencer.";
               }
         }

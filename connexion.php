@@ -8,6 +8,12 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     exit;
 }
 
+if (isset($_GET['achat'])){
+    $saucisse = "";
+}
+
+var_dump($saucisse,$_GET['achat']);
+
 // Inclusion du fichier config.php
 require_once "config.php";
 
@@ -46,6 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Tentative d'execution de la requete préparée
             if($stmt->execute()){
+
                 // Verification si le mdp existe, si oui verification du mdp
                 if($stmt->rowCount() == 1){
 
@@ -58,8 +65,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $prenom_client = $row["prenom"];
 
                         if(password_verify($password, $hashed_mdp)){
-                            // Le MDP est correct, donc initialisation d'une session
-                            session_start();
 
                             // Enregistrement des données dans les variables de sessions
                             $_SESSION["loggedin"] = true;
@@ -69,18 +74,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["nom"] = $nom_client;
                             $_SESSION["prenom"] = $prenom_client;
 
+
                             // Redirection vers la page de login
-                            header("location: compte.php");
-                        } else{
+                            if ($_GET['achat'] || !empty($saucisse)){
+                                header("location: produitachat.php");
+                            } else {
+                                header("location: compte.php");
+                            }
+                        } else {
                             // Affichage d'une message d'erreur si le MDP n'est pas valide
                             $password_err = "Le mot de passe que vous avez entré n'est pas valide";
                         }
                     }
-                } else{
+                } else {
                     // Display an error message if identifiant doesn't exist
                     $id_err = "Aucun compte trouvé avec cet identifiant.";
                 }
-            } else{
+            } else {
                 echo "Une erreur est survenue. Veuillez recommencer.";
             }
         }
@@ -93,6 +103,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($pdo);
 }
 ?>
+<div class="ligne"></div>
 <div class="site-section"></div>
 
 <div class="container">

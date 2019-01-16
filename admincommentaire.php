@@ -2,14 +2,10 @@
   include("header-admin.php");
   include("fonctions.php");
 ?>
-<div class="site-section"></div>
-
 <div class="ligne"></div>
-<div class="site-section  "></div>
+<div class="site-section"></div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar">
-    </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1 class="page-header">Administration du site
       <h2 class="sub-header">Liste des commentaires</h2>
@@ -41,7 +37,6 @@
               <td><?php echo $commentaire['date']; ?></td>
 
               <td>
-                <a href="" class="btn btn-warning event-edit">Edition</a><br><br>
                 <a href="" class="btn btn-danger event-delete">Supprimer</a>
               </td>
             </tr>
@@ -54,25 +49,6 @@
     </div>
   </div>
 </div>
-
-<div id="modal-edit" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" >Edition de Commentaire</h4>
-      </div>
-      <div class="modal-body">
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary">Modifier</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -113,17 +89,6 @@
           ,function(){});
       });
 
-      $('.event-edit').on('click',function(e){
-            e.preventDefault();
-            $('#modal-edit').modal('show');
-
-                 $.ajax({
-                 method: "POST",
-                 url: "form-modifierCommentaire.php",
-                 data: { id_commentaire: id },
-                 dataType: 'json'
-               })
-            });
     });
 </script>
 

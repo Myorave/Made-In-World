@@ -138,8 +138,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <div class="ligne"></div>
 <div class="site-section"></div>
 
-<div class="site-section"></div>
-
 <div class="container">
   <div class="row">
 
@@ -172,17 +170,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   			<div class="row">
   				<div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="form-group">
-            <input type="password" name="mdp" id="mdp" class="form-control input-lg" placeholder="Mot de passe" tabindex="5" value="<?php echo $mdp; ?>">
-            <span class="help-block"><?php echo $mdp_err; ?></span>
-          </div>
+                    <div class="form-group">
+                    <input type="password" name="mdp" id="mdp" class="form-control input-lg" placeholder="Mot de passe" tabindex="5" value="<?php echo $mdp; ?>">
+                    <span class="help-block"><?php echo $mdp_err; ?></span>
+                    </div>
   				</div>
   				<div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="form-group">
-            <input type="password" name="mdp2" id="mdp2" class="form-control input-lg" placeholder="Confirmez le Mot de Passe" tabindex="6" value="<?php echo $mdp2; ?>">
-            <span class="help-block"><?php echo $mdp2_err; ?></span>
-          </div>
-  				</div>
+                    <div class="form-group">
+                    <input type="password" name="mdp2" id="mdp2" class="form-control input-lg" placeholder="Confirmez le Mot de Passe" tabindex="6" value="<?php echo $mdp2; ?>">
+                    <span class="help-block"><?php echo $mdp2_err; ?></span>
+                    </div>
+                </div>
   			</div>
 
   			<div class="row">
