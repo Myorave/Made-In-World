@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation des identifiants
     if(empty($id_err) && empty($password_err)){
         // Preparation de la requete SELECT
-        $sql = "SELECT id, identifiant, password, admin FROM users WHERE identifiant = :identifiant";
+        $sql = "SELECT id, identifiant, password, admin, prenom, nom FROM users WHERE identifiant = :identifiant";
 
         if($stmt = $pdo->prepare($sql)){
             // Liaison des variables à la requete comme parametres
@@ -53,7 +53,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $id = $row["id"];
                         $identite = $row["identifiant"];
                         $hashed_mdp = $row["password"];
-                        $droit_admin =$row["admin"];
+                        $droit_admin = $row["admin"];
+                        $nom_client = $row["nom"];
+                        $prenom_client = $row["prenom"];
 
                         if(password_verify($password, $hashed_mdp)){
                             // Le MDP est correct, donc initialisation d'une session
@@ -64,6 +66,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["identifiant"] = $identite;
                             $_SESSION["admin"] = $droit_admin;
+                            $_SESSION["nom"] = $nom_client;
+                            $_SESSION["prenom"] = $prenom_client;
 
                             // Redirection vers la page de login
                             header("location: compte.php");

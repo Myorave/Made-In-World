@@ -2,30 +2,26 @@
 include("header2.php")
 ?>
 <div class="ligne"></div>
-<div class="site-section  "></div>
+<div class="site-section"></div>
 <div class="site-section3">
     <div class="container">
         <div class="row">
             <div class="col-md-4 pr-md-5 order-md-1">
                 <h2 class="display-4">LA BOX <br>sur mesure </h2>
                 <p> Le plus de cette box est de pouvoir recevoir les 2 derniers produits du mois précedents. Les produits selectioné du mois précedents sont les bananes séchés et le thé d'ici et d'ailleurs </p>
-
-
-
             </div>
+
             <div class="col-md-4 order-md-1">
                 <img src="images/box-forfait.png" alt="boite sur mesure" style="width:400px;height:300px; ">
-
-
-
             </div>
 
             <div class="col-md-4  order-md-1 prixdesc">
                 <h2 class="display-3 mb-5 prixs"><strong>40 €</br></strong> </h2>
-                <p><a href="#" class="boutonprod1">Acheter la box</a></p>
-
-
-
+                <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
+                  ?><p><a href="produitachat.php" class="boutonprod1">Acheter la box</a></p><?php
+                } else{ // Sinon, afficher le bouton d'inscription / connexion
+                  ?><p><a href="inscription.php" class="boutonprod1">Connectez-vous</a></p><?php
+                }?>
             </div>
         </div>
     </div>
@@ -57,7 +53,7 @@ include("header2.php")
             <div class="gallery-item"><img src="images/vinb.png" alt="Une bouteille de vin"><span class="text-wrapper"><span
                         class="name">Le vin rouge</span><span class="title"> Un vin en bouche, chaud et velouté
                         selectioné par notre chef</span></span></div>
-           
+
             <div class="gallery-item"><img src="images/bananej.png" alt="Le sachet de banane "><span class="text-wrapper"><span
                         class="name">Le sachet de banane </span><span class="title">Aliment aux grandes qualités nutritives, pour les recettes sucré et salé</span></span></div>
 
