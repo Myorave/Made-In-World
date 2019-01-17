@@ -10,7 +10,7 @@ include("header2.php")
 
 <div class="site-section4 ">
 
-  <h4 class="spe"> NOS SPECIALITES</h4>
+  <h4 class="spe"> NOS SPÉCIALITÉS</h4>
   <div class="flip">
     <div class="front" style="background-image: url(images/visu1.png)">
      
@@ -77,11 +77,8 @@ include("header2.php")
          
           <h3>Mehdi CHOUANIA</h3>
          
-          <p class="lead">Lorem ipsum dolor sit amet, .</p>
-          <p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam
-            repudiandae
-            dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident
-            deserunt placeat.</p>
+          <p class="lead">Gastronomies de qualité, </p>
+          <p class="pdesc">Chef Cuisinier depuis 10 ans. Mehdi met son talent au service des plus grand restaurants du monde. Cette fois-ci c’est à Made In World qui pose sa toque. A travers son expérience, il confectionne des petits plats à reproduire facilement chez soi !</p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
@@ -98,11 +95,9 @@ include("header2.php")
         <div class="cadrage">
           <img src="images/equipe-02.png" alt="Image" class="w-50 mb-5 rounded">
           <h3>Aurélie Saurel</h3>
-          <p class="lead">Lorem ipsum dolor sit amet, </p>
-          <p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam
-            repudiandae
-            dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident
-            deserunt placeat.</p>
+          <p class="lead">Cuisiner de bonnes recettes, </p>
+          <p class="pdesc">Aurélie supervise avec notre chef Mehdi la confection de nos recettes du tour du monde. Son goût de l’esthétique nous permettent d’avoir un livre de recettes au miles et une saveurs !
+</p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
@@ -123,11 +118,8 @@ include("header2.php")
           <img src="images/equipe-01.png" alt="Image" class="w-50 mb-5 rounded">
           
           <h3 class="nomb">Adélaïde Breuleux</h3>
-          <p class="lead">Lorem ipsum dolor sit amet, </p>
-          <p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam
-            repudiandae
-            dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident
-            deserunt placeat.</p>
+          <p class="lead">Développer nos papilles, </p>
+          <p class="pdesc">C’est notre globetrotteuse avertie ! Adélaïde parcours le monde à la recherche de produits locaux qui composeront les box. Pour chaque voyage elle nous partage ces anecdotes et les origines de chaque produit.</p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>

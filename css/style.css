@@ -8,10 +8,26 @@
   padding-left: 10px;
 }
 
+.inscrit {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
 .logo1 {
-  width: 250px;
-  padding-right: 50px;
-  padding-top: 50px;
+  width: 100px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.logob {
+  width: 240px;
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.fa {
+  padding-right: 20px;
 }
 
 /*FORMULAIRE*/
@@ -33,6 +49,24 @@ body {
 ::-moz-selection {
   background: #000;
   color: #fff;
+}
+
+.toque1 {
+  margin-bottom: 90px;
+  position: absolute;
+  height: 70px;
+  margin-left: 70px;
+}
+
+.toque2 {
+  margin-bottom: 90px;
+  position: absolute;
+  height: 70px;
+  margin-left: 120px;
+}
+
+.zone {
+  padding-bottom: 30px;
 }
 
 .fondjaune {
@@ -261,7 +295,7 @@ a :hover {
 
 @media (min-width: 768px) {
   .site-section1 {
-    padding: 15em 0;
+    padding: 10em 0;
   }
 }
 
@@ -337,8 +371,20 @@ p .commentaire {
 }
 
 /* END FOOTER*/
-.site-footer {
-  padding: 4em 0;
+.site-footer .Agence {
+  margin-top: 50px;
+  padding-left: 30px;
+  margin-right: 20px;
+}
+
+.site-footer .col-6 {
+  padding-top: 3rem !important;
+}
+
+@media screen and (max-width: 572px) {
+  .site-footer {
+    padding-top: 3rem !important;
+  }
 }
 
 .site-footer .footer-heading {
@@ -1226,13 +1272,23 @@ p .commentaire {
 
 /*FOOTER */
 .Agence {
-  padding-top: 50px;
+  padding-right: 2rem;
+  line-height: 2.2;
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+}
+
+.AgenceM {
+  padding-left: 2rem;
+  padding-bottom: 50px;
+  line-height: 2.2;
 }
 
 .list-unstyled2 {
   font-weight: lighter;
   list-style-type: none;
   padding-left: 0;
+  text-align: center;
 }
 
 .site-footer {
@@ -1263,123 +1319,6 @@ p .commentaire {
 
 footer p {
   text-align: center;
-}
-
-footer ul.social {
-  margin-left: -40px;
-  text-align: center;
-}
-
-footer ul.social li {
-  padding: 0px 10px 0px 10px;
-}
-
-.socials {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.socials * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.socials li {
-  display: inline-block;
-  list-style: outside none none;
-  float: left;
-  overflow: hidden;
-  width: 20%;
-  font-size: 13px;
-}
-
-.socials a {
-  padding: 0.3em 0.8em;
-  color: rgba(255, 255, 255, 0.7);
-  position: relative;
-  display: inline-block;
-  letter-spacing: 1px;
-  margin: 0;
-  text-decoration: none;
-  padding: 25px 0;
-  width: 100%;
-  font-size: 9.5px;
-}
-
-.socials a:before,
-.socials a:after {
-  position: absolute;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.socials a:before {
-  bottom: 100%;
-  display: block;
-  height: 3px;
-  width: 100%;
-  content: "";
-}
-
-.socials a:after {
-  padding: 0.3em 0.8em;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  content: attr(data-hover);
-  color: white;
-  white-space: nowrap;
-  width: 100%;
-  padding: 25px 0;
-}
-
-.socials li:hover a,
-.socials .current a {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-}
-
-.facebook {
-  background: #1f1616;
-}
-
-.facebook a:after {
-  background-color: #F4274C;
-}
-
-.twitter {
-  background: #2e1111;
-}
-
-.twitter a:after {
-  background-color: #F4274C;
-}
-
-.Pinterest {
-  background: #641919;
-}
-
-.Pinterest a:after {
-  background: #F4274C;
-}
-
-.Mentions {
-  background: #b32222;
-}
-
-.Mentions a:after {
-  background: #F4274C;
-}
-
-.CVG {
-  background: #f31616;
-}
-
-.CVG a:after {
-  background: #F4274C;
 }
 
 /*FOOTER END*/
@@ -1703,8 +1642,8 @@ a:hover {
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   width: 100%;
-  height: 1px;
-  background-color: rgba(36, 36, 36, 0.8);
+  height: 0.16em;
+  background-color: rgba(0, 0, 0, 0.8);
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
@@ -1759,8 +1698,9 @@ li {
   display: inline-flex;
 }
 
-a {
+li a {
   position: relative;
+  list-style: none;
   color: #1b1b1b;
   text-decoration: none !important;
 }
@@ -1769,7 +1709,6 @@ a {
 /* QUI SOMMES NOUS */
 .pdesc {
   width: 60%;
-  text-align: justify;
 }
 
 .tray {
@@ -1803,9 +1742,12 @@ a {
   text-align: justify;
 }
 
-.bg {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(#f6f6f6), color-stop(#ededed), color-stop(#e5e5e5), to(#dcdcdc));
-  background-image: linear-gradient(to bottom, #ffffff, #f6f6f6, #ededed, #e5e5e5, #dcdcdc);
+.hauteur {
+  height: 450px;
+}
+
+.hauteur1 {
+  height: 550px;
 }
 
 .feature1 {

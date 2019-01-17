@@ -7,13 +7,31 @@
   padding-top: 10px;
   padding-left: 10px;
 }
-
+// INSCRIPTION 
+.inscrit{
+  padding-left: 30px;
+  padding-top: 20px;
+  
+}
 // logo footer
 .logo1 {
-  width: 250px;
-  padding-right: 50px;
-  padding-top: 50px;
+  width: 100px;
+  margin-bottom: 30px;
+  text-align: center;
 
+
+}
+
+.logob {
+  width: 240px;
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+// fa
+.fa {
+  padding-right: 20px;
 }
 
 /*FORMULAIRE*/
@@ -35,6 +53,25 @@ body {
 ::-moz-selection {
   background: #000;
   color: #fff;
+}
+
+// PAGE INDEX
+.toque1 {
+  margin-bottom: 90px;
+  position: absolute;
+  height: 70px;
+  margin-left: 70px;
+}
+.toque2{
+  margin-bottom: 90px;
+  position: absolute;
+  height: 70px;
+  margin-left: 120px;
+}
+
+.zone {
+  padding-bottom: 30px;
+
 }
 
 // HOME
@@ -64,6 +101,7 @@ a {
 
 .text-black {
   color: #000 !important;
+
 }
 
 .text-black1 {
@@ -261,13 +299,15 @@ a {
 
 
 }
-.site-section1{
+
+.site-section1 {
   background-color: #27CDF4;
 }
+
 @media (min-width: 768px) {
   .site-section1 {
-    padding: 15em 0;
-    
+    padding: 10em 0;
+
   }
 }
 
@@ -355,7 +395,19 @@ p {
 /* END FOOTER*/
 
 .site-footer {
-  padding: 4em 0;
+  .Agence{
+   margin-top: 50px;
+   padding-left: 30px;
+   margin-right: 20px;
+  }
+  .col-6{
+    padding-top: 3rem !important;
+  }
+}
+@media screen and (max-width: 572px) {
+  .site-footer {
+    padding-top: 3rem !important;
+  }
 }
 
 .site-footer .footer-heading {
@@ -1259,14 +1311,23 @@ p {
 
 /*FOOTER */
 .Agence {
-  padding-top: 50px;
+  padding-right: 2rem;
+  line-height: 2.2;
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+}
 
+.AgenceM {
+  padding-left: 2rem;
+  padding-bottom: 50px;
+  line-height: 2.2;
 }
 
 .list-unstyled2 {
   font-weight: lighter;
   list-style-type: none;
   padding-left: 0;
+  text-align: center;
 }
 
 .site-footer {
@@ -1302,123 +1363,6 @@ footer p {
   text-align: center;
 }
 
-footer ul.social {
-  margin-left: -40px;
-  text-align: center;
-}
-
-footer ul.social li {
-  padding: 0px 10px 0px 10px;
-}
-
-
-.socials {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.socials * {
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.socials li {
-  display: inline-block;
-  list-style: outside none none;
-  float: left;
-  overflow: hidden;
-  width: 20%;
-  font-size: 13px;
-}
-
-.socials a {
-  padding: 0.3em 0.8em;
-  color: rgba(255, 255, 255, 0.7);
-  position: relative;
-  display: inline-block;
-  letter-spacing: 1px;
-  margin: 0;
-  text-decoration: none;
-  padding: 25px 0;
-  width: 100%;
-  font-size: 9.5px;
-}
-
-.socials a:before,
-.socials a:after {
-  position: absolute;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.socials a:before {
-  bottom: 100%;
-  display: block;
-  height: 3px;
-  width: 100%;
-  content: "";
-}
-
-.socials a:after {
-  padding: 0.3em 0.8em;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  content: attr(data-hover);
-  color: white;
-  white-space: nowrap;
-  width: 100%;
-  padding: 25px 0;
-}
-
-.socials li:hover a,
-.socials .current a {
-  transform: translateY(100%);
-}
-
-.facebook {
-  background: #1f1616;
-
-}
-
-
-.facebook a:after {
-  background-color: #F4274C;
-}
-
-.twitter {
-  background: rgb(46, 17, 17);
-}
-
-.twitter a:after {
-  background-color: #F4274C;
-}
-
-.Pinterest {
-  background: #641919;
-}
-
-.Pinterest a:after {
-  background: #F4274C;
-}
-
-.Mentions {
-  background: #b32222;
-}
-
-.Mentions a:after {
-  background: #F4274C;
-}
-
-.CVG {
-  background: #f31616;
-}
-
-.CVG a:after {
-  background: #F4274C;
-}
 
 /*FOOTER END*/
 /* page produit*/
@@ -1450,7 +1394,7 @@ footer ul.social li {
 .boutonprod:hover {
   color: #fff;
   background-color: rgb(26, 26, 26);
-  border-color:transparent;
+  border-color: transparent;
   text-decoration: none;
 }
 
@@ -1466,9 +1410,9 @@ footer ul.social li {
   border-radius: 10px;
   text-transform: initial;
   font-weight: 400;
-  margin-left:10px;
-  
- 
+  margin-left: 10px;
+
+
 }
 
 .boutonprod1:hover {
@@ -1755,8 +1699,8 @@ a:hover {
       transform: translateX(-50%) scaleX(0);
       transform-origin: 50% 50%;
       width: 100%;
-      height: 1px;
-      background-color: rgba(36, 36, 36, 0.8);
+      height: 0.16em;
+      background-color: rgba(0, 0, 0, 0.8);
       transition: transform 250ms;
     }
 
@@ -1810,20 +1754,18 @@ ul {
   padding: 0;
 }
 
+
 li {
   display: inline-flex;
-}
 
-a {
-  position: relative;
-
-
-  color: rgb(27, 27, 27);
-  text-decoration: none !important;
+  a {
+    position: relative;
+    list-style: none;
 
 
-
-
+    color: rgb(27, 27, 27);
+    text-decoration: none !important;
+  }
 
 }
 
@@ -1836,7 +1778,7 @@ a {
 /* QUI SOMMES NOUS */
 .pdesc {
   width: 60%;
-  text-align: justify;
+  
 
 }
 
@@ -1877,8 +1819,12 @@ a {
   text-align: justify;
 }
 
-.bg {
-  background-image: linear-gradient(to bottom, #ffffff, #f6f6f6, #ededed, #e5e5e5, #dcdcdc);
+// BOX PRODUIT
+.hauteur{
+  height :450px;
+}
+.hauteur1{
+  height :550px;
 }
 
 // PAGE A PROPOS DE   BOX1
@@ -2169,7 +2115,7 @@ a {
     text-align: left;
     font-size: 50px;
     font-weight: 300;
-    
+
     margin-top: 200px;
     padding-left: 110px;
 

@@ -12,7 +12,7 @@ if(!isset($_SESSION['admin'])){ // Si le compte utilisateur n'est pas un admin
   <head>
     <title>Administration &mdash; Made in World</title>
     <meta charset="utf-8">
-
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
