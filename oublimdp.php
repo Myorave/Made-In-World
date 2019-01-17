@@ -32,7 +32,7 @@ $statement->execute(array(
 $requestInfo = $statement->fetch(PDO::FETCH_ASSOC);
 
 // Si $requestInfo est vide,alors requete invalide.
-if(empty($requestInfo)){
+if (empty($requestInfo)) {
     echo 'Requete invalide!';
     exit;
 }

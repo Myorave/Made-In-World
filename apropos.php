@@ -3,8 +3,7 @@ include("header2.php")
 ?>
 
 
-
-<div class="ligne">
+    <div class="ligne">
 
 </div>
 
