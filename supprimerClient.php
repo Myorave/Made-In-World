@@ -5,7 +5,7 @@ include("fonctions.php");
 $result = array();
 $result['status'] = false;
 
-if( !isset($_POST['id_client']) or empty($_POST['id_client'])){
+if (!isset($_POST['id_client']) or empty($_POST['id_client'])) {
 
     $result['error'] = "id_client obligatoire";
     echo json_encode($result);

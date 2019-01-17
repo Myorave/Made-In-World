@@ -3,7 +3,7 @@ include("header2.php");
 
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: index.php");
     exit;
 }
@@ -16,16 +16,16 @@ $identifiant = $mdp = $email = $mdp2 = "";
 $identifiant_err = $mdp_err = $email_err = $mdp2_err = "";
 
 // Execution du formulaire
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validation du nom d'utilisateur
-    if(empty(trim($_POST["identifiant"]))){
+    if (empty(trim($_POST["identifiant"]))) {
         $identifiant_err = "Veuillez entrer un mot de passe d'utilisateur.";
     } else {
         // Préparation de la requete SELECT
         $sql = "SELECT id FROM users WHERE identifiant = :identifiant";
 
-        if($stmt = $pdo->prepare($sql)){
+        if ($stmt = $pdo->prepare($sql)) {
             // Liaison des variables à la requete comme parametres
             $stmt->bindParam(":identifiant", $param_identifiant, PDO::PARAM_STR);
 
@@ -33,13 +33,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_identifiant = trim($_POST["identifiant"]);
 
             // Tentative d'execution de la requete
-            if($stmt->execute()){
-                if($stmt->rowCount() == 1){
+            if ($stmt->execute()) {
+                if ($stmt->rowCount() == 1) {
                     $identifiant_err = "This identifiant is already taken.";
-                } else{
+                } else {
                     $identifiant = trim($_POST["identifiant"]);
                 }
-            } else{
+            } else {
                 echo "Oops! Une erreur est survenue. Reessayez plus tard.";
             }
         }
@@ -49,13 +49,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validation de l'email
-    if(empty(trim($_POST["email"]))){
+    if (empty(trim($_POST["email"]))) {
         $email_err = "Veuillez entrer un email.";
     } else {
         // Préparation de la requete SELECT
         $sql = "SELECT email FROM users WHERE email = :email";
 
-        if($stmt = $pdo->prepare($sql)){
+        if ($stmt = $pdo->prepare($sql)) {
             // Liaison des variables à la requete comme parametres
             $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
 
@@ -63,13 +63,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_email = trim($_POST["email"]);
 
             // Tentative d'execution de la requete
-            if($stmt->execute()){
-                if($stmt->rowCount() == 1){
+            if ($stmt->execute()) {
+                if ($stmt->rowCount() == 1) {
                     $email_err = "Cet email est déjà pris.";
-                } else{
+                } else {
                     $email = trim($_POST["email"]);
                 }
-            } else{
+            } else {
                 echo "Oops! Une erreur est survenue. Reessayez plus tard.";
             }
         }
@@ -79,31 +79,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validation du mot de passe
-    if(empty(trim($_POST["mdp"]))){
+    if (empty(trim($_POST["mdp"]))) {
         $mdp_err = "Entrez un mot de passe.";
-    } elseif(strlen(trim($_POST["mdp"])) < 6){
+    } elseif (strlen(trim($_POST["mdp"])) < 6) {
         $mdp_err = "Votre mot de passe doit contenir au moins 6 caractères.";
-    } else{
+    } else {
         $mdp = trim($_POST["mdp"]);
     }
 
     // Validation du mot de passe de confirmation
-    if(empty(trim($_POST["mdp2"]))){
+    if (empty(trim($_POST["mdp2"]))) {
         $mdp2_err = "Confirmez votre mot de passe.";
-    } else{
+    } else {
         $mdp2 = trim($_POST["mdp2"]);
-        if(empty($mdp_err) && ($mdp != $mdp2)){
+        if (empty($mdp_err) && ($mdp != $mdp2)) {
             $mdp2_err = "Le mot de passe de confirmation est différent.";
         }
     }
 
     // Vérification des erreurs d'input avant insertion dans la BDD
-    if(empty($identifiant_err) && empty($mdp_err) && empty($mdp2_err)){
+    if (empty($identifiant_err) && empty($mdp_err) && empty($mdp2_err)) {
 
-      // Préparation d'une requete INSERT
+        // Préparation d'une requete INSERT
         $sql = "INSERT INTO users (identifiant, password, prenom, nom, email) VALUES (:identifiant, :password, :prenom, :nom, :email)";
 
-        if($stmt = $pdo->prepare($sql)){
+        if ($stmt = $pdo->prepare($sql)) {
             // Liaison des variables à la requete comme parametres
             $stmt->bindParam(":identifiant", $param_identifiant, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
@@ -119,11 +119,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_email = trim($_POST["email"]);
 
             // Tentative d'execution de la requete
-            if($stmt->execute()){
-              // Redirection à la page de connexion
+            if ($stmt->execute()) {
+                // Redirection à la page de connexion
                 header("location: connexion.php");
-            } else{
-              echo "Une erreur est survenue. Veuillez recommencer.";
+            } else {
+                echo "Une erreur est survenue. Veuillez recommencer.";
             }
         }
 
@@ -135,6 +135,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     unset($pdo);
 }
 ?>
+
 <div class="ligne"></div>
 <div class="site-section"></div>
 

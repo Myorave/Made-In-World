@@ -38,8 +38,6 @@ include("header2.php")
         <p><a href="produit1.php" class="boutonprod3">Voir le contenu </a></p>
       </div>
     </div>
-  </div>
-</div>
 
 <div class="site-section  back3">
   <div class="container">
@@ -58,8 +56,6 @@ include("header2.php")
         <p><a href="produit2.php" class="boutonprod3">Voir le contenu</a></p>
       </div>
     </div>
-  </div>
-</div>
 
 <div class="site-section back2">
   <div class="container">
@@ -69,19 +65,50 @@ include("header2.php")
       <div class="col-md-6 pr-md-5 order-md-2">
         <h2 class="display-3m ">La box <strong>économique</strong></h2>
 
-        <ul class="site-block-check2">
-          <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 1 livre de Recettes</li>
-          <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 3 ingrédients choisis par notre chef étoilé</li>
-          <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> Cuisinnez facilement à petit </li>
-        </ul>
-        <p><a href="produit1.php" class="boutonprod3">Voir le contenu </a></p>
-      </div>
+                    <ul class="site-block-check2">
+                        <li><img src="images/c2.png" alt="liste round" height="15" width="15"> 1 livre de Recettes</li>
+                        <li><img src="images/c2.png" alt="liste round" height="15" width="15"> 3 ingrédiets choisis par
+                            notre chez étoilé
+                        </li>
+                        <li><img src="images/c2.png" alt="liste round" height="15" width="15"> 2 ingrédients
+                            supplémentaires des meilleurs ventes
+                        </li>
+                        <li><img src="images/c2.png" alt="liste round" height="15" width="15"> Sélectioné par notre
+                            équipe de professionels
+                        </li>
+                    </ul>
+                    <p><a href="produit2.php" class="boutonprod3">Voir le contenu</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-</div>
-</div>
+    <div class="site-section back2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-1"
+                     style="background-image: url('images/boite sur mesure.jpg');"
+                     data-aos="fade-up"></div>
+                <div class="col-md-6 pr-md-5 order-md-2">
+                    <h2 class="display-3m ">La boîte <strong>économique</strong></h2>
+
+                    <ul class="site-block-check2">
+                        <li><img src="images/c2.png" alt="liste round" height="15" width="15"> 1 livre de Recettes</li>
+                        <li><img src="images/c2.png" alt="liste round" height="15" width="15"> 3 ingrédients choisis par
+                            notre chef étoilé
+                        </li>
+                        <li><img src="images/c2.png" alt="liste round" height="15" width="15"> Cuisinnez facilement à
+                            petit
+                        </li>
+                    </ul>
+                    <p><a href="produit1.php" class="boutonprod3">Voir le contenu </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
 
 <?php
 include("footer.php");

@@ -1,6 +1,7 @@
 <?php
 
-function bdd_commentaire(){ // Récupere tout les commentaires en BDD
+function bdd_commentaire()
+{ // Récupere tout les commentaires en BDD
 
     require_once "config.php";
 
@@ -8,7 +9,8 @@ function bdd_commentaire(){ // Récupere tout les commentaires en BDD
 
 }
 
-function bdd_user(){ // Récupère tous les clients en BDD
+function bdd_user()
+{ // Récupère tous les clients en BDD
 
     require_once "config.php";
 
@@ -16,7 +18,8 @@ function bdd_user(){ // Récupère tous les clients en BDD
 
 }
 
-function bdd_compte(){ // Récupère tous les clients en BDD
+function bdd_compte()
+{ // Récupère tous les clients en BDD
 
     require_once "config.php";
 
@@ -24,7 +27,8 @@ function bdd_compte(){ // Récupère tous les clients en BDD
 
 }
 
-function bdd_commande(){ // Récupère toutes les commandes en BDD
+function bdd_commande()
+{ // Récupère toutes les commandes en BDD
 
     require_once "config.php";
 
@@ -32,7 +36,8 @@ function bdd_commande(){ // Récupère toutes les commandes en BDD
 
 }
 
-function insererCommentaire($a_titre,$a_contenu,$a_auteur,$a_note){
+function insererCommentaire($a_titre, $a_contenu, $a_auteur, $a_note)
+{
 
     require_once "config.php";
 
@@ -46,7 +51,45 @@ function insererCommentaire($a_titre,$a_contenu,$a_auteur,$a_note){
 
 }
 
-function modifierCommentaire($a_titre, $a_contenu, $id_commentaire){
+function insererClient($prenom, $nom, $identifiant, $email, $password)
+{
+
+    require_once "config.php";
+
+    $stmt = $pdo->prepare("INSERT INTO users (prenom, nom, identifiant, email, password, created_at) VALUES(:prenom, :nom, :identifiant, :email, :password, NOW())");
+
+    $stmt->bindParam(':prenom', $prenom);
+    $stmt->bindParam(':nom', $nom);
+    $stmt->bindParam(':identifiant', $identifiant);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':password', $password);
+    $stmt->execute();
+
+}
+
+function modifierClient($prenom, $nom, $identifiant, $email, $password, $id)
+{
+
+    require_once "config.php";
+
+    $stmt = $pdo->prepare("UPDATE commentaire SET prenom = :prenom, nom = :nom, identifiant = :identifiant, email = :email, password = :password WHERE id = :id");
+
+    $password = password_hash($password);
+
+    $stmt->bindParam(':prenom', $prenom);
+    $stmt->bindParam(':nom', $nom);
+    $stmt->bindParam(':identifiant', $identifiant);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':id', $id);
+
+
+    return $stmt->execute();
+
+}
+
+function modifierCommentaire($a_titre, $a_contenu, $id_commentaire)
+{
 
     require_once "config.php";
 
@@ -60,11 +103,12 @@ function modifierCommentaire($a_titre, $a_contenu, $id_commentaire){
 
 }
 
-function deleteCommentaire($id_commentaire){
+function deleteCommentaire($id_commentaire)
+{
 
-  require_once "config.php";
+    require_once "config.php";
 
-  $stmt = $pdo->prepare("DELETE FROM commentaire
+    $stmt = $pdo->prepare("DELETE FROM commentaire
     WHERE id = :id");
 
     $stmt->bindParam(':id', $id_commentaire);
@@ -72,11 +116,12 @@ function deleteCommentaire($id_commentaire){
 
 }
 
-function deleteClient($id_client){
+function deleteClient($id_client)
+{
 
-  require_once "config.php";
+    require_once "config.php";
 
-  $stmt = $pdo->prepare("DELETE FROM users
+    $stmt = $pdo->prepare("DELETE FROM users
     WHERE id = :id");
 
     $stmt->bindParam(':id', $id_client);
@@ -84,15 +129,17 @@ function deleteClient($id_client){
 
 }
 
-function deleteCommande($id_commande){
+function deleteCommande($id_commande)
+{
 
-  require_once "config.php";
+    require_once "config.php";
 
-  $stmt = $pdo->prepare("DELETE FROM commande
+    $stmt = $pdo->prepare("DELETE FROM commande
     WHERE num_commande = :id");
 
     $stmt->bindParam(':id', $id_client);
     return $stmt->execute();
 
 }
+
 ?>

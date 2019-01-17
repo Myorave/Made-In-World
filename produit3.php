@@ -18,12 +18,12 @@ include("header2.php")
             </div>
 
             <div class="col-md-4  order-md-1 prixdesc">
-                <h2 class="display-3 mb-5 prixs"><strong>20 €</br></strong> </h2>
-                <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
-                  ?><p><a href="produitachat.php" class="boutonprod1">Acheter la box</a></p><?php
-                } else{ // Sinon, afficher le bouton d'inscription / connexion
-                  ?><p><a href="inscription.php" class="boutonprod1">Connectez-vous</a></p><?php
-                }?>
+                <h2 class="display-3 mb-5 prixs"><strong>20 €</br></strong></h2>
+                <?php if (isset($_SESSION['loggedin'])) { // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
+                    ?><p><a href="produitachat.php" class="boutonprod1">Acheter la box</a></p><?php
+                } else { // Sinon, afficher le bouton d'inscription / connexion
+                    ?><p><a href="connexion.php?achat=1" class="boutonprod1">Connectez-vous</a></p><?php
+                } ?>
             </div>
         </div>
     </div>
@@ -33,18 +33,21 @@ include("header2.php")
     <div class="container">
         <div class="gallery">
             <div class="gallery-item"><img src="images/sauce_tomates.png" alt="Sauce tomate"><span class="text-wrapper"><span
-                        class="name">La sauce tomate</span><span class="title">Véritable base pour les pâtes et pizza</span></span></div>
+                            class="name">La sauce tomate</span><span class="title">Véritable base pour les pâtes et pizza</span></span>
+            </div>
 
             <div class="gallery-item"><img src="images/pates.png" alt="Boite de pâtes"><span class="text-wrapper"><span
-                        class="name">La boite de pâtes</span><span class="title">L'incontournable ingrédients de
+                            class="name">La boite de pâtes</span><span class="title">L'incontournable ingrédients de
                         l'Italie</span></span></div>
 
-            <div class="gallery-item"><img src="images/livrer.png" alt="Livre de recette "><span class="text-wrapper"><span
-                        class="name">Le livre de recette</span><span class="title">Les recettes classiques italiens
+            <div class="gallery-item"><img src="images/livrer.png" alt="Livre de recette "><span
+                        class="text-wrapper"><span
+                            class="name">Le livre de recette</span><span class="title">Les recettes classiques italiens
                         d'une simplicité absolue</span></span></div>
 
-            <div class="gallery-item"><img src="images/vinb.png" alt="Une bouteille de vin"><span class="text-wrapper"><span
-                        class="name">Le vin rouge</span><span class="title"> Un vin en bouche, chaud et velouté
+            <div class="gallery-item"><img src="images/vinb.png" alt="Une bouteille de vin"><span
+                        class="text-wrapper"><span
+                            class="name">Le vin rouge</span><span class="title"> Un vin en bouche, chaud et velouté
                         selectioné par notre chef</span></span></div>
         </div>
     </div>
