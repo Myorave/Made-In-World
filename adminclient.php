@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <td><?php echo $user['created_at']; ?></td>
 
                             <td>
-                                <a href="" class="btn btn-warning event-edit">Edition</a><br><br>
+                                <a href="#" data-role="update" data-id="<?php echo $user['id'] ;?>" class="btn btn-warning event-edit">Edition</a><br><br>
                                 <a href="" class="btn btn-danger event-delete">Supprimer</a>
                             </td>
                         </tr>
@@ -74,23 +74,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 
-<div id="modal-edition" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title">Edition de Commentaire</h4>
-            </div>
-            <div class="modal-body">
+<!-- Modal -->
+<div id="modal-edit" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Edition d'utilisateur
+            <small> : Made in World</small>
+        </h2>
+        <div class="row">
+            <div class="col-xs-12col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="text" name="prenom" id="prenom" class="form-control input-lg"
+                           placeholder="Prénom" tabindex="1">
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary">Modifier</button>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="text" name="nom" id="nom" class="form-control input-lg" placeholder="Nom"
+                           tabindex="2">
+                </div>
             </div>
         </div>
+
+        <div class="form-group">
+            <input type="text" name="identifiant" id="identifiant" class="form-control input-lg"
+                   placeholder="Identifiant" tabindex="3">
+        </div>
+
+        <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control input-lg"
+                   placeholder="Adresse Email" tabindex="4">
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="mdp" id="mdp" class="form-control input-lg"
+                   placeholder="Mot de passe" tabindex="5">
+        </div>
+
+            <input type="hidden" id="userId" class="form-control">
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" id="save" class="btn btn-primary pull-right">Mettre à jour</a>
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fermer</button>
+      </div>
     </div>
+  </div>
 </div>
 
 <div id="modal-ajout" class="modal fade" tabindex="-1" role="dialog">
@@ -127,7 +164,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                placeholder="Identifiant" tabindex="3">
                     </div>
 
-                    <div class="form-group          ">
+                    <div class="form-group">
                         <input type="email" name="email" id="email" class="form-control input-lg"
                                placeholder="Adresse Email" tabindex="4">
                     </div>
@@ -155,10 +192,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script type="text/javascript">
     $(document).ready(function () {
 
-        $('.event-ajout').on('click', function (e) {
-            e.preventDefault();
-            $('#modal-ajout').modal('show');
-        });
+          $('.event-ajout').on('click', function (e) {
+              e.preventDefault();
+              $('#modal-ajout').modal('show');
+          });
 
         //  Récupération des données de la modal pour la requete d'edition
           $(document).on('click','a[data-role=update]',function(){
@@ -167,15 +204,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 var nom  = $('#'+id).children('td[data-target=nom]').text();
                 var identifiant  = $('#'+id).children('td[data-target=identifiant]').text();
                 var email  = $('#'+id).children('td[data-target=email]').text();
+                var password  = $('#'+id).children('td[data-target=password]').text();
 
                 $('#prenom').val(prenom);
                 $('#nom').val(nom);
                 $('#email').val(email);
                 $('#id').val(id);
                 $('#identifiant').val(identifiant);
-                $('#modal-ajout').modal('toggle');
+                $('#password').val(password);
+                $('#modal-edit').modal('toggle');
           });
-
 
           // Création d'evenement pour mettre les données dans les Champs
           // et mise a jour en BDD
@@ -192,14 +230,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   method   : 'post',
                   data     : {prenom : prenom , nom: nom , identifiant : identifiant , email : email , password : password , id: id},
                   success  : function(response){
+                    
                                 // Mise a jour dans la table Users
                                  $('#'+id).children('td[data-target=prenom]').text(prenom);
                                  $('#'+id).children('td[data-target=nom]').text(nom);
                                  $('#'+id).children('td[data-target=identifiant]').text(identifiant);
                                  $('#'+id).children('td[data-target=email]').text(email);
                                  $('#'+id).children('td[data-target=password]').text(password);
-                                 $('#modal-ajout').modal('toggle');
-
+                                 $('#modal-edit').modal('toggle');
                              }
               });
            });
