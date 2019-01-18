@@ -122,20 +122,30 @@ function modifierClient($prenom, $nom, $identifiant, $email, $password, $id)
 
     require_once "config.php";
 
-    $stmt = $pdo->prepare("UPDATE commentaire SET prenom = :prenom, nom = :nom, identifiant = :identifiant, email = :email, password = :password WHERE id = :id");
+    try {
+        $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
+        // Mettre l'erreur PDO en exception
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $password = password_hash($password);
+        $stmt = $pdo->prepare("UPDATE commentaire SET prenom = :prenom, nom = :nom, identifiant = :identifiant, email = :email, password = :password WHERE id = :id");
 
-    $stmt->bindParam(':prenom', $prenom);
-    $stmt->bindParam(':nom', $nom);
-    $stmt->bindParam(':identifiant', $identifiant);
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':password', $password);
-    $stmt->bindParam(':id', $id);
+        $password = password_hash($password);
 
+        $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':identifiant', $identifiant);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':id', $id);
 
-    return $stmt->execute();
+        return $stmt->execute();
 
+        // Fermeture de la requete
+        unset($stmt);
+
+    } catch (PDOException $e) {
+        die("ERREUR: Impossible de se connecter. " . $e->getMessage());
+    }
 }
 
 function modifierCommentaire($a_titre, $a_contenu, $id_commentaire)
@@ -143,14 +153,25 @@ function modifierCommentaire($a_titre, $a_contenu, $id_commentaire)
 
     require_once "config.php";
 
-    $stmt = $pdo->prepare("UPDATE commentaire SET titre = :titre, contenu = :contenu WHERE id = :id");
+    try {
+        $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
+        // Mettre l'erreur PDO en exception
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt->bindParam(':titre', $a_titre);
-    $stmt->bindParam(':contenu', $a_contenu);
-    $stmt->bindParam(':id', $id_commentaire);
+        $stmt = $pdo->prepare("UPDATE commentaire SET titre = :titre, contenu = :contenu WHERE id = :id");
 
-    return $stmt->execute();
+        $stmt->bindParam(':titre', $a_titre);
+        $stmt->bindParam(':contenu', $a_contenu);
+        $stmt->bindParam(':id', $id_commentaire);
 
+        return $stmt->execute();
+
+        // Fermeture de la requete
+        unset($stmt);
+
+    } catch (PDOException $e) {
+        die("ERREUR: Impossible de se connecter. " . $e->getMessage());
+    }
 }
 
 function deleteCommentaire($id_commentaire)

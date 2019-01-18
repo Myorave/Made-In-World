@@ -2,21 +2,16 @@
 include("header2.php")
 ?>
 
-<head>
-</head>
 <div class="ligne"></div>
 <div class="site-section"></div>
 <div class="site-section3">
   <div class="container">
-
       <p class="explications" ><b>Une Box qui vous fait voyager loin… </b></p>
       <p class="explications1">
       Un peu lassés de cuisiner les mêmes plats toutes l'année ?  On a la
       solution  pour vous : <b>un concept de voyage culinaire, ludique et instructif.</b> Nous travaillons avec la présence
       incontestée d’un Grand Chef étoilé qui nous permet de proposé des livres de recettes riche en <b>expériences et en
       savoir-faires.</b>
-
-
     </p>
     <div class="explications1"> <p>Toute les boites contiennent <b>un livre de recette et des anecdotes !</b></p> </div>
 </div>
