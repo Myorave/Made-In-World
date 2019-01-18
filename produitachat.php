@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $type = trim($_POST["type_boite"]);
         if ($type == "57932") {
             $description = "Boite Classique";
-            $prix = 25;
+            $prix = 30;
         } else if ($type == "1987") {
             $description = "Boite Economique";
             $prix = 20;
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Envoi d'un message à l'administrateur pour le prévenir d'une commande
 
-                $body_html = "Une nouvelle commande à été confirmée<br/><br/> 
+                $body_html = "Une nouvelle commande à été confirmée<br/><br/>
                                   Voici le récapitulatif de la commande: <br/><br/>
                                   Nom du client : $nom_client<br/>
                                   Adresse de livraison : $adresse<br/>
@@ -177,7 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="form-group <?php echo (!empty($type_err)) ? 'has-error' : ''; ?>">
                         <label>Format de boïte à commander :</label><br/>
-                        <input type="radio" name="type_boite" value="57932"> Boîte <strong>Classique</strong> : 25 €<br>
+                        <input type="radio" name="type_boite" value="57932"> Boîte <strong>Classique</strong> : 30 €<br>
                         <input type="radio" name="type_boite" value="1987"> Boîte <strong>Economique</strong> : 20 €<br>
                         <input type="radio" name="type_boite" value="984"> Boîte <strong> Sur Mesure</strong> : 40 €
                         <span class="help-block"><?php echo $type_err; ?></span>

@@ -5,24 +5,22 @@ include("fonctions.php");
 
 <?php
 
-// Je définis les variables et les initialisent avec des valeurs vides
-$identifiant = $mdp = $email = $mdp2 = "";
-$identifiant_err = $mdp_err = $email_err = $mdp2_err = "";
-
 // Execution du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $prenom = $_POST['prenom'];
-    $nom = $_POST['nom'];
-    $identifiant = $_POST['identifiant'];
-    $email = $_POST['email'];
-    $password = $_POST['mdp'];
+    $prenom = trim($_POST['prenom']);
+    $nom = trim($_POST['nom']);
+    $identifiant = trim($_POST['identifiant']);
+    $email = trim($_POST['email']);
+    $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
     insererClient($prenom,
         $nom,
         $identifiant,
         $email,
         $password);
+
+    unset($pdo);
 }
 ?>
 
