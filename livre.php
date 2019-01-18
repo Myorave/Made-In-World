@@ -1,6 +1,9 @@
 <?php
 include("header2.php");
 include("config.php");
+
+$auteur = $titre = $note = $contenu = "";
+$auteur_err = $titre_err = $note_err = $contenu_err = "";
 ?>
 
 <div class="ligne"></div>
@@ -13,8 +16,8 @@ include("config.php");
                 <h2 class="font-weight-light text-black display-4">Donner votre avis</h2> </br>
             </div>
 
-            <div class="col-4 ">
-                <select class="form-control form-control-lg id=" titre" name="titre">
+            <div class="col-4">
+                <select class="form-control form-control-lg" id="titre" name="titre">
                 <option value="">Choix de la box</option>
                 <option value="Box Economique">Box Economique</option>
                 <option value="Box Classique">Box Classique</option>
@@ -29,6 +32,7 @@ include("config.php");
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
 
@@ -57,9 +61,6 @@ include("config.php");
     </div>
 
     <?php
-
-    $auteur = $titre = $note = $contenu = "";
-    $auteur_err = $titre_err = $note_err = $contenu_err = "";
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Validation du nom d'utilisateur
@@ -96,10 +97,6 @@ include("config.php");
             // Préparationn de requete
             $sql = "INSERT INTO commentaire (titre, auteur, contenu, note, date) VALUES (:titre, :auteur, :contenu, :note,  NOW())";    // fonction SQL qui me donne la date
 
-            if ($resultat) {
-                header('Location: livre.php?messageenvoye');
-            }
-
             if ($stmt = $pdo->prepare($sql)) {
                 // Liaison des variables à la requete comme parametres
                 $stmt->bindParam(":titre", $titre, PDO::PARAM_STR);
@@ -111,7 +108,7 @@ include("config.php");
                 if ($stmt->execute()) {
 
                     // Redirection à la page de connexion
-                    header('Location: livre.php?messageenvoye');
+                    header('Location: livre.php?envoye');
 
                 } else {
                     echo "Une erreur est survenue. Veuillez recommencer.";

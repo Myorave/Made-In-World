@@ -6,8 +6,6 @@ session_start();
 <html lang="fr">
 
 <head>
-
-
     <title>Made in World &mdash; Le monde à portée d'une boite</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
 
@@ -26,9 +24,7 @@ session_start();
     <link rel="stylesheet" href="css/aos.css"> <!-- Permet les apparitions des blocs par progression du scroll -->
     <link rel="stylesheet" href="css/style.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
-
-
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -65,4 +61,3 @@ session_start();
         </ul>
     </div>
 </nav>
-</body>

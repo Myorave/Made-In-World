@@ -12,7 +12,6 @@ if (isset($_GET['achat']) && !empty($_GET['achat'])) {
     $_SESSION["achat"] = 1;
 }
 
-
 // Inclusion du fichier config.php
 require_once "config.php";
 

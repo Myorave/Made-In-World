@@ -5,24 +5,22 @@ include("fonctions.php");
 
 <?php
 
-// Je définis les variables et les initialisent avec des valeurs vides
-$identifiant = $mdp = $email = $mdp2 = "";
-$identifiant_err = $mdp_err = $email_err = $mdp2_err = "";
-
 // Execution du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $prenom = $_POST['prenom'];
-    $nom = $_POST['nom'];
-    $identifiant = $_POST['identifiant'];
-    $email = $_POST['email'];
-    $password = $_POST['mdp'];
+    $prenom = trim($_POST['prenom']);
+    $nom = trim($_POST['nom']);
+    $identifiant = trim($_POST['identifiant']);
+    $email = trim($_POST['email']);
+    $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
     insererClient($prenom,
         $nom,
         $identifiant,
         $email,
         $password);
+
+    unset($pdo);
 }
 ?>
 
@@ -144,10 +142,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                class="btn btn-primary btn-block btn-lg" tabindex="6">
                         </div>
                     </div>
-            </form>
-        </div>
-    </div>
-</div>
+                </div>
+          </form>
+      </div>
+  </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -162,11 +160,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $('#modal-ajout').modal('show');
         });
 
-        $('.event-edit').on('click', function (e) {
-            e.preventDefault();
-            $('#modal-edit').modal('show');
-        });
+        //  Récupération des données de la modal pour la requete d'edition
+          $(document).on('click','a[data-role=update]',function(){
+                var id  = $(this).data('id');
+                var prenom  = $('#'+id).children('td[data-target=prenom]').text();
+                var nom  = $('#'+id).children('td[data-target=nom]').text();
+                var identifiant  = $('#'+id).children('td[data-target=identifiant]').text();
+                var email  = $('#'+id).children('td[data-target=email]').text();
 
+                $('#prenom').val(prenom);
+                $('#nom').val(nom);
+                $('#email').val(email);
+                $('#id').val(id);
+                $('#identifiant').val(identifiant);
+                $('#modal-ajout').modal('toggle');
+          });
+
+
+          // Création d'evenement pour mettre les données dans les Champs
+          // et mise a jour en BDD
+           $('#save').click(function(){
+              var id  = $('#id').val();
+              var prenom =  $('#prenom').val();
+              var nom =  $('#nom').val();
+              var identifiant =  $('#identifiant').val();
+              var email =   $('#email').val();
+              var password =   $('#password').val();
+
+              $.ajax({
+                  url      : 'connection.php',
+                  method   : 'post',
+                  data     : {prenom : prenom , nom: nom , identifiant : identifiant , email : email , password : password , id: id},
+                  success  : function(response){
+                                // Mise a jour dans la table Users
+                                 $('#'+id).children('td[data-target=prenom]').text(prenom);
+                                 $('#'+id).children('td[data-target=nom]').text(nom);
+                                 $('#'+id).children('td[data-target=identifiant]').text(identifiant);
+                                 $('#'+id).children('td[data-target=email]').text(email);
+                                 $('#'+id).children('td[data-target=password]').text(password);
+                                 $('#modal-ajout').modal('toggle');
+
+                             }
+              });
+           });
+
+        // Evenement de suppression
         $('.event-delete').on('click', function (e) {
             e.preventDefault();
 
