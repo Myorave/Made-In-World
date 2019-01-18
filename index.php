@@ -86,7 +86,7 @@ include("config.php");
           <li> <strong>2- </strong> Je reçois la box dans ma boite au lettre</li>
           <li> <strong>3- </strong> C'est à vous de cuisiner !</li>
         </ul>
-        <p><a href="#" class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">En savoir plus</a></p>
+        <p><a href="produits.php" class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">En savoir plus</a></p>
       </div>
     </div>
   </div>
@@ -95,7 +95,6 @@ include("config.php");
 <div class="site-section section-about">
   <div class="container">
     <div class="row mb-5 justify-content-center">
-
       <div class="col-md-6 text-center">
         <h1 class="display-4 text-black1 mb-5">NOS PRODUITS</h1>
       </div>
@@ -154,11 +153,9 @@ include("config.php");
           echo '
           <div class="p-4">
             <div class="block-47 d-flex">
-              <div class="block-47-image d-none d-sm-block">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid">
-              </div>
               <blockquote class="block-47-quote">
                 <h3> ' . $donnees['titre'] . '</h3>
+                <h5> Avis : ' . $donnees['note'] . ' / 5</h5>
                 <p>&ldquo;' . $donnees['contenu'] . '&rdquo;</p>
                 <cite class="block-47-quote-author">&mdash; ' . $donnees['auteur'] . '</cite>
               </blockquote>
