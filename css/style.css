@@ -1,3 +1,4 @@
+/************VARIABLE DE COULEURS ********************/
 /*LOGO*/
 @import url("https://fonts.googleapis.com/css?family=Saira+Extra+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Saira+Extra+Condensed");
@@ -6,11 +7,6 @@
   position: absolute;
   padding-top: 10px;
   padding-left: 10px;
-}
-
-.inscrit {
-  padding-left: 30px;
-  padding-top: 20px;
 }
 
 .logo1 {
@@ -26,18 +22,12 @@
   padding-left: 10px;
 }
 
-.fa {
-  padding-right: 20px;
+.inscrit {
+  padding-left: 30px;
+  padding-top: 20px;
 }
 
-/*FORMULAIRE*/
-.form {
-  width: 95%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-/* BASE COMMUNE*/
+/***************** BASE COMMUNE ********************/
 body {
   line-height: 1.7;
   color: #000000;
@@ -47,42 +37,10 @@ body {
 }
 
 ::-moz-selection {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 
-.toque1 {
-  margin-bottom: 90px;
-  position: absolute;
-  height: 70px;
-  margin-left: 70px;
-}
-
-.toque2 {
-  margin-bottom: 90px;
-  position: absolute;
-  height: 70px;
-  margin-left: 120px;
-}
-
-.zone {
-  padding-bottom: 30px;
-}
-
-.fondjaune {
-  margin-top: 6rem;
-  margin-left: 40px;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  -webkit-transform: scale(1.5) !important;
-          transform: scale(1.5) !important;
-}
-
-/* SURLIGNEMENT DU DOCUMENT*/
-::-moz-selection {
-  background: #000;
-  color: #fff;
-}
 ::selection {
   background: #000;
   color: #fff;
@@ -97,23 +55,53 @@ a :hover {
   text-decoration: none !important;
 }
 
-.text-black {
+/*********************PAGE INDEX********************/
+.fondjaune {
+  margin-top: 6rem;
+  margin-left: 40px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  -webkit-transform: scale(1.5) !important;
+          transform: scale(1.5) !important;
+}
+
+.liste .zone {
+  padding-bottom: 30px;
+}
+
+.liste .zone .toque1 {
+  margin-bottom: 90px;
+  position: absolute;
+  height: 70px;
+  margin-left: 70px;
+}
+
+.liste .zone .toque2 {
+  margin-bottom: 90px;
+  position: absolute;
+  height: 70px;
+  margin-left: 120px;
+}
+
+.site-section1 .text-white {
+  color: white;
+}
+
+/***********PAGE LIVRE D'OR*****************/
+.site-section .text-black {
   color: #000 !important;
 }
 
-.text-black1 {
+.site-section .text-black1 {
   color: #000 !important;
   font-weight: 500;
   padding-bottom: 80px;
 }
 
-.elements {
+/*.elements {
   text-align: left;
 }
 
-.text-white {
-  color: white;
-}
 
 .bg-black {
   background: #000 !important;
@@ -125,8 +113,7 @@ a :hover {
 
 .line-height-xs {
   line-height: 1;
-}
-
+}*/
 .site-wrap:before {
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
@@ -249,6 +236,9 @@ a :hover {
 
 @media (min-width: 768px) {
   .site-section {
+    padding: 7em 0;
+  }
+  .site-section1 {
     padding: 7em 0;
   }
 }
@@ -379,6 +369,21 @@ p .commentaire {
 
 .site-footer .col-6 {
   padding-top: 3rem !important;
+}
+
+@media all and (max-width: 1150px) {
+  .site-section {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .site-section1 {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .site-section3 {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
 }
 
 @media screen and (max-width: 572px) {
@@ -1747,7 +1752,7 @@ li a {
 }
 
 .hauteur1 {
-  height: 550px;
+  height: 450px;
 }
 
 .feature1 {
@@ -1990,7 +1995,7 @@ li a {
 
 .site-section4 .spe {
   text-align: left;
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 300;
   padding-bottom: 150px;
   margin-top: 50px;
@@ -1999,7 +2004,7 @@ li a {
 
 .site-section4 .spe2 {
   text-align: left;
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 300;
   margin-top: 200px;
   padding-left: 110px;

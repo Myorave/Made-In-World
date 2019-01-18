@@ -1,3 +1,11 @@
+/************VARIABLE DE COULEURS ********************/
+$bleu: #27CDF4;
+$jaune:#FDCF04;
+$rose:#F4274C;
+$noir:black;
+$blanc: white;
+
+
 /*LOGO*/
 @import url("https://fonts.googleapis.com/css?family=Saira+Extra+Condensed");
 
@@ -7,19 +15,12 @@
   padding-top: 10px;
   padding-left: 10px;
 }
-// INSCRIPTION 
-.inscrit{
-  padding-left: 30px;
-  padding-top: 20px;
-  
-}
+
 // logo footer
 .logo1 {
   width: 100px;
   margin-bottom: 30px;
   text-align: center;
-
-
 }
 
 .logob {
@@ -29,19 +30,15 @@
   padding-left: 10px;
 }
 
-// fa
-.fa {
-  padding-right: 20px;
+
+// INSCRIPTION 
+.inscrit {
+  padding-left: 30px;
+  padding-top: 20px;
 }
 
-/*FORMULAIRE*/
-.form {
-  width: 95%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 
-/* BASE COMMUNE*/
+/***************** BASE COMMUNE ********************/
 body {
   line-height: 1.7;
   color: #000000;
@@ -51,39 +48,10 @@ body {
 }
 
 ::-moz-selection {
-  background: #000;
-  color: #fff;
+  background: $noir;
+  color: $blanc;
 }
-
-// PAGE INDEX
-.toque1 {
-  margin-bottom: 90px;
-  position: absolute;
-  height: 70px;
-  margin-left: 70px;
-}
-.toque2{
-  margin-bottom: 90px;
-  position: absolute;
-  height: 70px;
-  margin-left: 120px;
-}
-
-.zone {
-  padding-bottom: 30px;
-
-}
-
-// HOME
-.fondjaune {
-  margin-top: 6rem;
-  margin-left: 40px;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  transform: scale(1.5) !important;
-}
-
-/* SURLIGNEMENT DU DOCUMENT*/
+//SURLIGNEMENT DU DOCUMENT
 ::selection {
   background: #000;
   color: #fff;
@@ -93,30 +61,62 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-
   :hover {
     text-decoration: none !important;
   }
 }
+/*********************PAGE INDEX********************/
+// PREMIER VISUEL 
+.fondjaune {
+  margin-top: 6rem;
+  margin-left: 40px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  transform: scale(1.5) !important;
+}
+//ZONE CE QUE NOUS PROPOSONS
+.liste {
+  .zone {
+    padding-bottom: 30px;
+    .toque1 {
+      margin-bottom: 90px;
+      position: absolute;
+      height: 70px;
+      margin-left: 70px;
+    }
 
-.text-black {
-  color: #000 !important;
-
+    .toque2 {
+      margin-bottom: 90px;
+      position: absolute;
+      height: 70px;
+      margin-left: 120px;
+    }
+  }
+}
+.site-section1{
+  .text-white {
+    color: white;
+  }
+  }
+/***********PAGE LIVRE D'OR*****************/
+.site-section{
+  .text-black {
+    color: #000 !important;
+  }
+  .text-black1 {
+    color: #000 !important;
+    font-weight: 500;
+    padding-bottom: 80px;
+  }
 }
 
-.text-black1 {
-  color: #000 !important;
-  font-weight: 500;
-  padding-bottom: 80px;
-}
 
-.elements {
+
+
+/*.elements {
   text-align: left;
 }
 
-.text-white {
-  color: white;
-}
 
 .bg-black {
   background: #000 !important;
@@ -128,7 +128,7 @@ a {
 
 .line-height-xs {
   line-height: 1;
-}
+}*/
 
 .site-wrap:before {
   -webkit-transition: .3s all ease-in-out;
@@ -146,14 +146,15 @@ a {
   visibility: hidden;
 }
 
-.offcanvas-menu .site-wrap {
+.offcanvas-menu {
+.site-wrap {
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 2;
   overflow: hidden;
 }
-
+}
 .offcanvas-menu .site-wrap:before {
   opacity: 1;
   visibility: visible;
@@ -258,6 +259,11 @@ a {
   .site-section {
     padding: 7em 0;
 
+
+  }
+
+  .site-section1 {
+    padding: 7em 0;
   }
 }
 
@@ -395,15 +401,38 @@ p {
 /* END FOOTER*/
 
 .site-footer {
-  .Agence{
-   margin-top: 50px;
-   padding-left: 30px;
-   margin-right: 20px;
+  .Agence {
+    margin-top: 50px;
+    padding-left: 30px;
+    margin-right: 20px;
   }
-  .col-6{
+
+  .col-6 {
     padding-top: 3rem !important;
   }
 }
+
+@media all and (max-width: 1150px) {
+  .site-section {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .site-section1 {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .site-section3 {
+    padding-left: 3em;
+    padding-right: 3em;
+
+
+  }
+
+
+}
+
 @media screen and (max-width: 572px) {
   .site-footer {
     padding-top: 3rem !important;
@@ -1778,7 +1807,7 @@ li {
 /* QUI SOMMES NOUS */
 .pdesc {
   width: 60%;
-  
+
 
 }
 
@@ -1820,11 +1849,12 @@ li {
 }
 
 // BOX PRODUIT
-.hauteur{
-  height :450px;
+.hauteur {
+  height: 450px;
 }
-.hauteur1{
-  height :550px;
+
+.hauteur1 {
+  height: 450px;
 }
 
 // PAGE A PROPOS DE   BOX1
@@ -2103,7 +2133,7 @@ li {
 
   .spe {
     text-align: left;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 300;
     padding-bottom: 150px;
     margin-top: 50px;
@@ -2113,7 +2143,7 @@ li {
 
   .spe2 {
     text-align: left;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 300;
 
     margin-top: 200px;
