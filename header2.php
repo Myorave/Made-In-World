@@ -61,17 +61,6 @@ session_start();
                       ?><li><i class="fas fa-tools" ></i><a href="admincommentaire.php"> Administration</a></li> <?php
                     }
                     ?>
-                    <li><i class="fas fa-user"></i><a
-                            href="compte.php"><?php echo htmlspecialchars($_SESSION["identifiant"]); ?></a></li><?php
-                } else { // Sinon, afficher le bouton d'inscription / connexion
-                    ?>
-                    <li><i class="fas fa-user"></i><a href="inscription.php">S'inscrire/Login </Br></a></li>  <?php
-                } ?>
-                <?php if (isset($_SESSION['admin'])) { // Si le compte utilisateur est un admin
-                    ?>
-                    <li><i class="fas fa-tools"></i><a href="admincommentaire.php"> Administration</a></li> <?php
-                }
-                ?>
             </div>
         </ul>
     </div>
