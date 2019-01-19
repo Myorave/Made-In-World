@@ -21,7 +21,7 @@ include("config.php");
         </h6>
         </br>
         </br>
-        <p><a href="produits.php" class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">Voir la box du mois</a></p>
+        <p><a href="produits.php" class="boutonprod4">Voir la box du mois</a></p>
       </div>
       <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2 fondjaune" style="background-image: url('images/box 3 produits home.png');"
         data-aos="fade-up" data-aos-delay="300">
@@ -86,7 +86,9 @@ include("config.php");
           <li> <strong>2- </strong> Je reçois la box dans ma boite au lettre</li>
           <li> <strong>3- </strong> C'est à vous de cuisiner !</li>
         </ul>
-        <p><a href="produits.php" class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">En savoir plus</a></p>
+        </br>
+        <p><a href="produits.php" class="boutonprod4">En savoir plus</a></p>
+        </br>   
       </div>
     </div>
   </div>

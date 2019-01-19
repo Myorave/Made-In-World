@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <input type="submit" name="submit" value="Envoyer" class="btn btn-primary">
+                            <input type="submit" name="submit" value="Envoyer" class="boutonprod3">
                         </div>
                     </div>
 

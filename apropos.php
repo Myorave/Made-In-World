@@ -79,7 +79,7 @@ include("header2.php")
 
           <img src="images/equipe-03.png" alt="Image" class="w-50 mb-5 rounded">
 
-          <h3>Mehdi CHOUANIA</h3>
+          <h3>Mehdi Chouania</h3>
 
           <p class="lead">Gastronomies de qualité, </p>
           <p class="pdesc">Chef Cuisinier depuis 10 ans. Mehdi met son talent au service des plus grand restaurants du
@@ -143,6 +143,6 @@ include("header2.php")
 </div>
 
 <?php
-
+ 
 include("footer.php");
 ?>
