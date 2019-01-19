@@ -4,14 +4,15 @@ include("header2.php");
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: index.php");
+    header("location: /");
     exit;
 }
 
+// Création d'une variable de session "achat" permettant de renvoyer l'utilisateur vers la page de commande
 if (isset($_GET['achat']) && !empty($_GET['achat'])) {
     $_SESSION["achat"] = 1;
 }
-
+// Création d'une variable de session "commentaire" permettant de renvoyer vers la page "livre.php"
 if (isset($_GET['commentaire']) && !empty($_GET['commentaire'])) {
     $_SESSION["commentaire"] = 1;
 }
@@ -79,12 +80,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             // Redirection vers la page de login ou de commande
                             if (isset($_SESSION['achat'])) {
-                                unset($_SESSION['achat']);
+                                unset($_SESSION['achat']); // destruction de la variable de session "achat"
                                 header("location: produitachat.php");
                             } else if (isset($_SESSION['commentaire'])) {
+                                unset($_SESSION['commentaire']); // destruction de la variable de session "commentaire"
                                 header("location: livre.php");
                             } else {
-                                header("location: index.php");
+                                header("location: /");
 
                             }
 
