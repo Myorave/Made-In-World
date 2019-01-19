@@ -94,14 +94,14 @@ a {
       margin-bottom: 90px;
       position: absolute;
       height: 70px;
-      margin-left: 70px;
+      margin-left: 120px;
     }
 
     .toque2 {
       margin-bottom: 90px;
       position: absolute;
       height: 70px;
-      margin-left: 120px;
+      margin-left: 150px;
     }
   }
 }
@@ -1531,7 +1531,29 @@ textarea:focus {
     padding-top: 10px;
     padding-left: 10px;
   }
-
+  .liste {
+    padding-bottom: 70px;
+    text-align: center;
+  
+    .zone {
+      padding-bottom: 30px;
+  
+      .toque1 {
+        margin-bottom: 90px;
+        position: absolute;
+        height: 0px;
+        margin-left: 100px;
+      }
+  
+      .toque2 {
+        margin-bottom: 90px;
+        position: absolute;
+        height: 0px;
+        
+      }
+    }
+  }
+  
 
 }
 

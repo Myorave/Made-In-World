@@ -81,14 +81,14 @@ a :hover {
   margin-bottom: 90px;
   position: absolute;
   height: 70px;
-  margin-left: 70px;
+  margin-left: 120px;
 }
 
 .liste .zone .toque2 {
   margin-bottom: 90px;
   position: absolute;
   height: 70px;
-  margin-left: 120px;
+  margin-left: 150px;
 }
 
 .site-section1 .text-white {
@@ -1455,6 +1455,24 @@ textarea:focus {
     position: absolute;
     padding-top: 10px;
     padding-left: 10px;
+  }
+  .liste {
+    padding-bottom: 70px;
+    text-align: center;
+  }
+  .liste .zone {
+    padding-bottom: 30px;
+  }
+  .liste .zone .toque1 {
+    margin-bottom: 90px;
+    position: absolute;
+    height: 0px;
+    margin-left: 100px;
+  }
+  .liste .zone .toque2 {
+    margin-bottom: 90px;
+    position: absolute;
+    height: 0px;
   }
 }
 

@@ -40,7 +40,7 @@ include("config.php");
 
       <div class="col-md-6 col-lg-4 mb-0 zone" data-aos="fade" data-aos-delay="0">
         <img src="images/monde.svg" alt="Image" class="toque1">
-        <div class="d-flex align-items-center">
+        <div class="">
           <div class="">
             <h2 class="text-black">Voyage culinaire</h2> Au quatres coins du <strong class="text-black">monde</strong>
           </div>
@@ -48,8 +48,8 @@ include("config.php");
       </div>
 
       <div class="col-md-6 col-lg-4  zone" data-aos="fade" data-aos-delay="300">
-      <img src="images/tray.svg"  alt="Image" class="toque1">
-        <div class="d-flex align-items-center">
+        <img src="images/tray.svg" alt="Image" class="toque1">
+        <div class="">
           <div class="mr-3"></div>
           <div class="">
             <h2 class="text-black">Des produits </h2> <strong class="text-black"> 100%</strong> Made in world
@@ -58,8 +58,8 @@ include("config.php");
       </div>
 
       <div class="col-md-6 col-lg-4 zone" data-aos="fade" data-aos-delay="700">
-      <img src="images/chef.svg"   alt="Image" class=toque2>
-        <div class="d-flex align-items-center">
+        <img src="images/chef.svg" alt="Image" class=toque2>
+        <div class="">
           <div class="mr-3"></div>
           <div class="">
             <h2 class="text-black">Un livre de recette </h2> <strong class="text-black"> Voyager </strong> et retrouver
@@ -79,16 +79,17 @@ include("config.php");
         data-aos="fade-up"></div>
       <div class="col-md-6 pr-md-5 order-md-1">
         <h2 class="display-4 text-white "><strong>LA BOX</strong> </br> Made in World</h2>
-        <p class=" commentaire" style="color:white">Made in World vous propose un voyage culinaire exceptionnel pour savourer des plats
+        <p class=" commentaire" style="color:white">Made in World vous propose un voyage culinaire exceptionnel pour
+          savourer des plats
           typiques, cuisiner des recettes originales et découvrir avec curiosité et étonnement la cuisine du monde.</p>
-        <ul class="site-block-check">
+        <div class="site-block-check">
           <li> <strong>1- </strong> Je choisis la box qui me convient</li>
           <li> <strong>2- </strong> Je reçois la box dans ma boite au lettre</li>
           <li> <strong>3- </strong> C'est à vous de cuisiner !</li>
-        </ul>
+        </div>
         </br>
         <p><a href="produits.php" class="boutonprod4">En savoir plus</a></p>
-        </br>   
+        </br>
       </div>
     </div>
   </div>
