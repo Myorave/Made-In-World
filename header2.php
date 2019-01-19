@@ -28,7 +28,9 @@ session_start();
 </head>
 
 <body>
- <h2 class="logo"><a href="index.php"><img class="logob" src="images/logob.png" align="center"></a></h2>
+
+
+ <h2 class="logo"><a href="index.php"><img class="logob" src="images/logoMIW.png" align="center"></a></h2>
 
 <nav role='navigation'>
     <div id="menuToggle">

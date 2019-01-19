@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <div class="row">
                     <div class="col-xs-12 col-md-6"><input type="submit" value="Connexion"
-                                                           class="btn btn-primary btn-block btn-lg" tabindex="3"></div>
+                                                           class="boutonprod3" tabindex="3"></div>
                 </div>
                 <br/>
                 <p><a href="requetemdp.php">Mot de passe oublié ?</a></p>
@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-md-6"><a href="inscription.php" class="btn btn-success btn-block btn-lg" tabindex="8">S'inscrire</a>
+        <div class="col-xs-12 col-md-6"><a href="inscription.php" class="boutonprod3" tabindex="8">S'inscrire</a>
         </div>
     </div>
 </div>

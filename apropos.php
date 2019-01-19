@@ -3,16 +3,17 @@ include("header2.php")
 ?>
 
 
-    <div class="ligne">
+<div class="ligne">
 
 </div>
 
 <div class="site-section4 ">
 
-  <h4 class="spe"> NOS SPÉCIALITÉS</h4>
+  <h5 class="spe"> NOS SPÉCIALITÉS</h5>
+  
+  
   <div class="flip">
     <div class="front" style="background-image: url(images/visu1.png)">
-
     </div>
     <div class="back">
       <h2>Des saveurs insoupçonnés</h2>
@@ -22,6 +23,8 @@ include("header2.php")
         bouchées.</p>
     </div>
   </div>
+  
+  
   <div class="flip">
     <div class="front" style="background-image: url(images/visu2.png)">
 
@@ -34,6 +37,8 @@ include("header2.php")
         authentique.</p>
     </div>
   </div>
+  
+  
   <div class="flip">
     <div class="front" style="background-image: url(images/visu3.png)">
 
@@ -50,7 +55,7 @@ include("header2.php")
   </div>
 
 
-<h4 class="spe2"> NOTRE EQUIPE</h4>
+  <h4 class="spe2"> NOTRE EQUIPE</h4>
 
 </div>
 
@@ -69,15 +74,17 @@ include("header2.php")
     </div>
     <div class="row">
       <div class="col-md-4">
-      <img src="images/chef.svg"   alt="Image" class="toque">
+        <img src="images/chef.svg" alt="Image" class="toque">
         <div class="cadrage">
 
-          <img src="images/equipe-03.png"   alt="Image" class="w-50 mb-5 rounded">
+          <img src="images/equipe-03.png" alt="Image" class="w-50 mb-5 rounded">
 
-          <h3>Mehdi CHOUANIA</h3>
+          <h3>Mehdi Chouania</h3>
 
-          <p class="lead">Gastronomies de qualité </p>
-          <p class="pdesc">Chef Cuisinier depuis 10 ans. Mehdi met son talent au service des plus grand restaurants du monde. Cette fois-ci c’est à Made In World qui pose sa toque. A travers son expérience, il confectionne des petits plats à reproduire facilement chez soi !</p>
+          <p class="lead">Gastronomies de qualité, </p>
+          <p class="pdesc">Chef Cuisinier depuis 10 ans. Mehdi met son talent au service des plus grand restaurants du
+            monde. Cette fois-ci c’est à Made In World qui pose sa toque. A travers son expérience, il confectionne
+            des petits plats à reproduire facilement chez soi !</p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
@@ -90,13 +97,14 @@ include("header2.php")
       </div>
 
       <div class="col-md-4">
-      <img src="images/tray.svg"   alt="Image" class="tray">
+        <img src="images/tray.svg" alt="Image" class="tray">
         <div class="cadrage">
           <img src="images/equipe-02.png" alt="Image" class="w-50 mb-5 rounded">
           <h3>Aurélie Saurel</h3>
-          <p class="lead">Cuisiner de bonnes recettes </p>
-          <p class="pdesc">Aurélie supervise avec notre chef Mehdi la confection de nos recettes du tour du monde. Son goût de l’esthétique nous permettent d’avoir un livre de recettes au miles et une saveurs !
-</p>
+          <p class="lead">Cuisiner de bonnes recettes, </p>
+          <p class="pdesc">Aurélie supervise avec notre chef Mehdi la confection de nos recettes du tour du monde. Son
+            goût de l’esthétique nous permettent d’avoir un livre de recettes au miles et une saveurs !
+          </p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
@@ -111,14 +119,16 @@ include("header2.php")
 
 
       <div class="col-md-4">
-      <img src="images/monde.svg"   alt="Image" class=chef>
+        <img src="images/monde.svg" alt="Image" class=chef>
         <div class="cadrage">
 
           <img src="images/equipe-01.png" alt="Image" class="w-50 mb-5 rounded">
 
           <h3 class="nomb">Adélaïde Breuleux</h3>
-          <p class="lead">Développer nos papilles </p>
-          <p class="pdesc">C’est notre globetrotteuse avertie ! Adélaïde parcours le monde à la recherche de produits locaux qui composeront les box. Pour chaque voyage elle nous partage ces anecdotes et les origines de chaque produit.</p>
+          <p class="lead">Développer nos papilles, </p>
+          <p class="pdesc">C’est notre globetrotteuse avertie ! Adélaïde parcours le monde à la recherche de
+            produits locaux qui composeront les box. Pour chaque voyage elle nous partage ces anecdotes et les origines
+            de chaque produit.</p>
 
           <p class="mt-5">
             <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
@@ -133,6 +143,6 @@ include("header2.php")
 </div>
 
 <?php
-
+ 
 include("footer.php");
 ?>

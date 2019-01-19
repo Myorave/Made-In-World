@@ -43,7 +43,7 @@ $auteur_err = $titre_err = $note_err = $contenu_err = "";
             </div>
             <span class="help-block"><?php echo $contenu_err ?></span><br/>
             <div class="col-8">
-                <input class="btn btn-primary center" type="submit" name="go" value="Valider"><br/>
+                <input class="boutonprod3" type="submit" name="go" value="Valider"><br/>
             </div>
 </form>
 
