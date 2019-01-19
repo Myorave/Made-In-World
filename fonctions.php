@@ -97,16 +97,15 @@ function insererClient($prenom, $nom, $identifiant, $email, $password)
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         if ($stmt = $pdo->prepare(
-          "INSERT INTO users (prenom, nom, identifiant, email, password, created_at)
-           VALUES(:prenom, :nom, :identifiant, :email, :password, NOW())"))
-        {
-          // Liaison des variables à la requete comme parametres
-          $stmt->bindParam(':prenom', $prenom);
-          $stmt->bindParam(':nom', $nom);
-          $stmt->bindParam(':identifiant', $identifiant);
-          $stmt->bindParam(':email', $email);
-          $stmt->bindParam(':password', $password);
-          $stmt->execute();
+            "INSERT INTO users (prenom, nom, identifiant, email, password, created_at)
+           VALUES(:prenom, :nom, :identifiant, :email, :password, NOW())")) {
+            // Liaison des variables à la requete comme parametres
+            $stmt->bindParam(':prenom', $prenom);
+            $stmt->bindParam(':nom', $nom);
+            $stmt->bindParam(':identifiant', $identifiant);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $password);
+            $stmt->execute();
         }
 
         // Fermeture de la requete
