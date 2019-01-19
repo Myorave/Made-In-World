@@ -247,9 +247,9 @@ img.CartP {
 
 /********* PAGE POUR CHAQUE BOX: ECO CLASSIQUE ET SUR MESURE ************/
 .boutonprod1 {
-  color: #F4274C;
+  color: #FDCF04;
   background-color: white;
-  border: solid 2px #F4274C;
+  border: solid 2px #FDCF04;
   padding: 8px 28px;
   border-radius: 10px;
   text-transform: initial;
@@ -259,7 +259,7 @@ img.CartP {
 
 .boutonprod1:hover {
   color: white;
-  background-color: #F4274C;
+  background-color: #FDCF04;
   border: solid 2px transparent;
   text-decoration: none;
 }
@@ -1128,6 +1128,11 @@ img.CartP {
 }
 
 /*PAGE PRODUITS BOX1 */
+.imgboite {
+  height: 320px;
+  width: 400px;
+}
+
 .container {
   max-width: 1145px;
   margin: 0 auto;
@@ -1142,8 +1147,8 @@ img.CartP {
 }
 
 .gallery-item {
-  width: 525px;
-  height: 525px;
+  width: 500px;
+  height: 500px;
   margin: 10px;
   text-decoration: none;
   margin-right: 30px;
@@ -1205,28 +1210,6 @@ img.CartP {
 
 .name {
   font-size: 1.5em;
-}
-
-@media only screen and (max-width: 1024px) {
-  .text-wrapper {
-    width: 350px;
-    height: 350px;
-  }
-  .gallery-item {
-    width: 350px;
-    height: 350px;
-  }
-  .gallery-item img {
-    width: 350px;
-    height: 350px;
-  }
-  .gallery-item .name {
-    font-size: 20px;
-  }
-  .gallery-item .title {
-    margin-bottom: 1em;
-    font-size: 10px;
-  }
 }
 
 /******** BOUTON RETURN **********/
@@ -1416,6 +1399,55 @@ textarea:focus {
 }
 
 /*************************   RESPONSIVE   *************************/
+@media only screen and (max-width: 1024px) {
+  .text-wrapper {
+    width: 350px;
+    height: 350px;
+  }
+  .gallery-item {
+    width: 350px;
+    height: 350px;
+  }
+  .gallery-item img {
+    width: 350px;
+    height: 350px;
+  }
+  .gallery-item .name {
+    font-size: 20px;
+  }
+  .gallery-item .title {
+    margin-bottom: 1em;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgboite {
+    margin-top: 30px;
+    height: 220px;
+    width: 300px;
+  }
+  .text-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+  .gallery-item {
+    width: 250px;
+    height: 250px;
+  }
+  .gallery-item img {
+    width: 250px;
+    height: 250px;
+  }
+  .gallery-item .name {
+    font-size: 20px;
+  }
+  .gallery-item .title {
+    margin-bottom: 1em;
+    font-size: 10px;
+  }
+}
+
 @media (min-width: 768px) {
   .site-section {
     padding: 7em 0;
@@ -1431,9 +1463,15 @@ textarea:focus {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 8px) {
   .site-section3 {
     padding: 7em 0;
+  }
+}
+
+@media all and (max-width: 930px) {
+  .site-section3 {
+    padding-left: 3em;
   }
 }
 
@@ -1443,10 +1481,6 @@ textarea:focus {
     padding-right: 3em;
   }
   .site-section1 {
-    padding-left: 3em;
-    padding-right: 3em;
-  }
-  .site-section3 {
     padding-left: 3em;
     padding-right: 3em;
   }

@@ -27,7 +27,7 @@ $auteur_err = $titre_err = $note_err = $contenu_err = "";
             </div>
             <div class="col-4 ">
                 <select class="form-control form-control-lg option" id="note" name="note">
-                    <option value="">Notez cette box</option>
+                    <option value="">Noter cette box</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <br/>
                 <div>
-                    <button type="submit" name="reset-password" class="btn btn-success btn-lg">Envoyer</button>
+                    <button type="submit" name="reset-password" class="boutonprod3">Envoyer</button>
                 </div>
             </form>
 

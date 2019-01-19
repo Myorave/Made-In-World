@@ -15,7 +15,7 @@ include("config.php");
         </br>
         <h6 style="color:white;line-height:1.5">
           Retrouvez chaque mois un nouveau pays
-          et des recettes à partager entres amis.
+          et des recettes à partager entre amis.
           C’est à vous de vous lancer dans notre
           voyage aux saveurs !
         </h6>
@@ -42,7 +42,7 @@ include("config.php");
         <img src="images/monde.svg" alt="Image" class="toque1">
         <div class="">
           <div class="">
-            <h2 class="text-black">Voyage culinaire</h2> Au quatres coins du <strong class="text-black">monde</strong>
+            <h2 class="text-black">Voyage culinaire</h2> Au quatre coins du <strong class="text-black">monde</strong>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ include("config.php");
           typiques, cuisiner des recettes originales et découvrir avec curiosité et étonnement la cuisine du monde.</p>
         <div class="site-block-check">
           <li> <strong>1- </strong> Je choisis la box qui me convient</li>
-          <li> <strong>2- </strong> Je reçois la box dans ma boite au lettre</li>
+          <li> <strong>2- </strong> Je reçois la box dans ma boite aux lettres</li>
           <li> <strong>3- </strong> C'est à vous de cuisiner !</li>
         </div>
         </br>
@@ -140,7 +140,7 @@ include("config.php");
 <div class="site-section bg-light">
   <div class="row mb-5 justify-content-center">
     <div class="col-12 text-center">
-      <h2 class="font-weight-light text-black display-4">Derniers temoignages</h2>
+      <h2 class="font-weight-light text-black display-4">Derniers témoignages</h2>
     </div>
   </div>
 

@@ -8,12 +8,12 @@ include("header2.php")
   <div class="container">
       <p class="explications" ><b>Une Box qui vous fait voyager loin… </b></p>
       <p class="explications1">
-      Un peu lassés de cuisiner les mêmes plats toutes l'année ?  On a la
+      Un peu lassés de cuisiner les mêmes plats toute l'année ?  On a la
       solution  pour vous : <b>un concept de voyage culinaire, ludique et instructif.</b> Nous travaillons avec la présence
-      incontestée d’un Grand Chef étoilé qui nous permet de proposé des livres de recettes riche en <b>expériences et en
+      incontestée d’un Grand Chef étoilé qui nous permet de proposer des livres de recettes riches en <b>expériences et en
       savoir-faires.</b>
     </p>
-    <div class="explications1"> <p>Toute les boites contiennent <b>un livre de recette et des anecdotes !</b></p> </div>
+    <div class="explications1"> <p>Toute les box contiennent <b>un livre de recettes et des anecdotes !</b></p> </div>
 </div>
 </div>
 
@@ -46,9 +46,9 @@ include("header2.php")
 
         <ul class="site-block-check2">
         <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 1 livre de Recettes</li>
-        <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 5 ingrédiets choisis par notre chez étoilé</li>
+        <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 5 ingrédients choisis par notre chez étoilé</li>
          <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 2 ingrédients supplémentaires des meilleurs ventes</li>
-         <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> Sélectioné par notre équipe de professionels</li>
+         <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> Sélectionné par notre équipe de professionnels</li>
         </ul>
         <p><a href="produit2.php" class="boutonprod3">Voir le contenu</a></p>
       </div>
@@ -67,9 +67,9 @@ include("header2.php")
         <ul class="site-block-check2">
           <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 1 livre de Recettes</li>
           <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> 3 ingrédients choisis par notre chef étoilé</li>
-          <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> Cuisinnez facilement à petit </li>
+          <li> <img src="images/c2.png" alt="liste round" height="15" width="15"> Cuisinez facilement à petit </li>
         </ul>
-        <p><a href="produit1.php" class="boutonprod3">Voir le contenu </a></p>
+        <p><a href="produit3.php" class="boutonprod3">Voir le contenu </a></p>
       </div>
     </div>
   </div>

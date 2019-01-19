@@ -8,12 +8,11 @@ include("header2.php")
         <div class="row">
             <div class="col-md-4 pr-md-5 order-md-1">
                 <h2 class="display-4">LA BOX <br>sur mesure </h2>
-                <p> Le plus de cette box est de pouvoir recevoir les 2 derniers produits du mois précedents. Les
-                    produits selectioné du mois précedents sont les bananes séchés et le thé d'ici et d'ailleurs </p>
+                <p> Le plus de cette box est de pouvoir recevoir les 2 derniers produits du mois précédents. Les produits sélectionné du mois précédents sont les bananes séchées et le thé d'ici et d'ailleurs.</p>
             </div>
 
             <div class="col-md-4 order-md-1">
-                <img src="images/box-forfait.png" alt="boite sur mesure" style="width:400px;height:300px; ">
+                <img class="imgboite" src="images/box-forfait.png" alt="boite sur mesure">
             </div>
 
             <div class="col-md-4  order-md-1 prixdesc">
@@ -21,7 +20,7 @@ include("header2.php")
                 <?php if (isset($_SESSION['loggedin'])) { // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
                     ?><p><a href="produitachat.php" class="boutonprod1">Acheter la box</a></p><?php
                 } else { // Sinon, afficher le bouton d'inscription / connexion
-                    ?><p><a href="connexion.php?achat=1" class="boutonprod1">Connectez-vous</a></p><?php
+                    ?><p><a href="connexion.php?achat=1" class="boutonprod1">Acheter la box</a></p><?php
                 } ?>
             </div>
         </div>

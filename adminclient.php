@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Administration du site <a href="" class="btn btn-success event-ajout">Ajouter un
+            <h1 class="page-header">Administration du site <a href="" class="btn btn-danger event-ajout">Ajouter un
                     client</a></h1>
             <h2 class="sub-header">Liste des utilisateurs</h2>
             <div class="table-responsive">

@@ -17,7 +17,7 @@ include("header2.php")
             </div>
 
             <div class="col-md-4 order-md-1">
-                <img src="images/box-forfait.png" alt="boite economique" style="width:400px;height:300px; ">
+                <img class="imgboite" src="images/box-forfait.png" alt="boite economique ">
             </div>
 
             <div class="col-md-4  order-md-1 prixdesc">

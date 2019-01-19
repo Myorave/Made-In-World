@@ -185,8 +185,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <br/>
 
                     <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Valider la commande">
-                        <a class="btn btn-primary" href="index.php">Annuler</a>
+                        <input type="submit" class="boutonprod3" value="Valider la commande">
+                        <a class="boutonprod3" href="index.php">Annuler</a>
                     </div>
                 </form>
             </div>

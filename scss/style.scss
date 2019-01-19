@@ -266,9 +266,9 @@ img.CartP {
 /********* PAGE POUR CHAQUE BOX: ECO CLASSIQUE ET SUR MESURE ************/
 .boutonprod1 {
   
-  color: $rose;
+  color: $jaune;
   background-color: white;
-  border: solid 2px $rose;
+  border: solid 2px $jaune;
   padding: 8px 28px;
   border-radius: 10px;
   text-transform: initial;
@@ -277,7 +277,7 @@ img.CartP {
 }
   .boutonprod1:hover {
     color: white;
-    background-color: $rose;
+    background-color: $jaune;
     border: solid 2px transparent;
     text-decoration: none;
   }
@@ -1186,6 +1186,11 @@ img.CartP {
 }
 
 /*PAGE PRODUITS BOX1 */
+.imgboite{
+  height: 320px;
+  width:400px;
+}
+
 .container {
   max-width: 1145px;
   margin: 0 auto;
@@ -1197,8 +1202,8 @@ img.CartP {
 }
 
 .gallery-item {
-  width: 525px;
-  height: 525px;
+  width: 500px;
+  height: 500px;
   margin: 10px;
   text-decoration: none;
   margin-right: 30px;
@@ -1254,36 +1259,6 @@ img.CartP {
   font-size: 1.5em;
 }
 
-@media only screen and (max-width: 1024px) {
-  .text-wrapper {
-
-
-    width: 350px;
-    height: 350px;
-
-  }
-
-  .gallery-item {
-    width: 350px;
-    height: 350px;
-
-    img {
-      width: 350px;
-      height: 350px;
-    }
-
-    .name {
-      font-size: 20px;
-    }
-
-    .title {
-      margin-bottom: 1em;
-      font-size: 10px;
-
-    }
-  }
-
-}
 
 
 /******** BOUTON RETURN **********/
@@ -1482,7 +1457,76 @@ textarea:focus {
 }
 
 /*************************   RESPONSIVE   *************************/
+// TEXT WRAPPER 
+@media only screen and (max-width: 1024px) {
+  .text-wrapper {
 
+
+    width: 350px;
+    height: 350px;
+
+  }
+
+  .gallery-item {
+    width: 350px;
+    height: 350px;
+
+    img {
+      width: 350px;
+      height: 350px;
+    }
+
+    .name {
+      font-size: 20px;
+    }
+
+    .title {
+      margin-bottom: 1em;
+      font-size: 10px;
+
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .imgboite{
+    margin-top: 30px;
+    height:220px;
+    width: 300px;
+    
+  }
+  
+  .text-wrapper {
+
+
+    width: 250px;
+    height: 250px;
+
+  }
+
+  .gallery-item {
+    width: 250px;
+    height: 250px;
+
+    img {
+      width: 250px;
+      height: 250px;
+    }
+
+    .name {
+      font-size: 20px;
+    }
+
+    .title {
+      margin-bottom: 1em;
+      font-size: 10px;
+
+    }
+  }
+
+}
 //SECTIONS
 @media (min-width: 768px) {
   .site-section {
@@ -1501,13 +1545,19 @@ textarea:focus {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 8px) {
   .site-section3 {
     padding: 7em 0;
   }
 }
 
-
+@media all and (max-width:930px){
+  .site-section3 {
+    padding-left: 3em;
+    
+    
+  }
+}
 @media all and (max-width: 1150px) {
   .site-section {
     padding-left: 3em;
@@ -1519,12 +1569,9 @@ textarea:focus {
     padding-right: 3em;
   }
 
-  .site-section3 {
-    padding-left: 3em;
-    padding-right: 3em;
+ 
 
 
-  }
   .logob {
     width: 140px;
     position: absolute;
