@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
 if (!isset($_SESSION["identifiant"])) {
-    header("location: index.php");
+    header("location: /");
     exit;
 }
 
@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
 
                 // Redirection à la page d'accueil
-                header("location: index.php?commandeeffectué");
+                header("location: /?commandeeffectué");
             } else {
 
                 echo "Une erreur est survenue. Veuillez recommencer.";

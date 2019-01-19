@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Redirection vers la page de reset de mot de passe.
-    header('Location: index.php?messageenvoye');
+    header('Location: /?messageenvoye');
 }
 ?>
 

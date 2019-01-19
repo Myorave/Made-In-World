@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['admin'])) { // Si le compte utilisateur n'est pas un admin
-    header("Location:index.php"); // Retour à la page d'accueil
+    header("Location:/"); // Retour à la page d'accueil
 }
 ?>
 <!DOCTYPE html>
@@ -32,8 +32,7 @@ if (!isset($_SESSION['admin'])) { // Si le compte utilisateur n'est pas un admin
 </head>
 
 <body>
- <h2 class="logo"><a href="index.php"><img class="logob" src="images/logoMIW.png" align="center"></a></h2>
-
+<h2 class="logo"><a href="/"><img class="logob" src="images/logoMIW.png" align="center"></a></h2>
 <nav role='navigation'>
     <div id="menuToggle">
 

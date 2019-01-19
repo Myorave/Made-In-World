@@ -30,7 +30,7 @@ session_start();
 <body>
 
 
-<h2 class="logo"><a href="index.php"><img class="logob" src="images/logoMIW.png" align="center"></a></h2>
+<h2 class="logo"><a href="/"><img class="logob" src="images/logoMIW.png" align="center"></a></h2>
 
 <nav role='navigation'>
     <div id="menuToggle">
@@ -45,14 +45,14 @@ session_start();
                 <div class="container pullRight">
                     <li><a href="produits.php">Nos Boxs</a></li><br/>
                     <li><a href="apropos.php">Qui-Sommes Nous</a></li><br/>
-                    <?php if (isset($_SESSION['loggedin'])) { // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
+                    <?php if (isset($_SESSION['loggedin'])) { // Si l'utilisateur est connecté, renvoi vers la page de commentaire
                         ?><li><a href="livre.php">Livre d'Or</a></li><br/><?php
-                    } else { // Sinon, afficher le bouton d'inscription / connexion
+                    } else { // Sinon, renvoi vers la page de connexion pour valider un commentaire
                         ?><li><a href="connexion.php?commentaire=true">Livre d'Or</a></li><br/><?php
                     } ?>
                     <li><a href="contact.php">Contact</a></li><br/>
                     <br/><br/>
-                    <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
+                    <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher la page de profil
                       ?><li><i class="fas fa-user" style='padding-right:20px;'></i><a href="compte.php"><?php echo htmlspecialchars($_SESSION["identifiant"]); ?></a></li><?php
                     } else{ // Sinon, afficher le bouton d'inscription / connexion
                       ?><li><i class="fas fa-user" style='padding-right:20px;' ></i><a href="inscription.php">S'inscrire/Login </a></li><br/>  <?php
