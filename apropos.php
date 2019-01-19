@@ -81,7 +81,7 @@ include("header2.php")
 
           <h3>Mehdi Chouania</h3>
 
-          <p class="lead">Gastronomies de qualité, </p>
+          <p class="lead">Gastronomies de qualité </p>
           <p class="pdesc">Chef Cuisinier depuis 10 ans. Mehdi met son talent au service des plus grand restaurants du
             monde. Cette fois-ci c’est à Made In World qui pose sa toque. A travers son expérience, il confectionne
             des petits plats à reproduire facilement chez soi !</p>
@@ -101,7 +101,7 @@ include("header2.php")
         <div class="cadrage">
           <img src="images/equipe-02.png" alt="Image" class="w-50 mb-5 rounded">
           <h3>Aurélie Saurel</h3>
-          <p class="lead">Cuisiner de bonnes recettes, </p>
+          <p class="lead">Cuisiner de bonnes recettes </p>
           <p class="pdesc">Aurélie supervise avec notre chef Mehdi la confection de nos recettes du tour du monde. Son
             goût de l’esthétique nous permettent d’avoir un livre de recettes au miles et une saveurs !
           </p>
@@ -125,7 +125,7 @@ include("header2.php")
           <img src="images/equipe-01.png" alt="Image" class="w-50 mb-5 rounded">
 
           <h3 class="nomb">Adélaïde Breuleux</h3>
-          <p class="lead">Développer nos papilles, </p>
+          <p class="lead">Développer nos papilles </p>
           <p class="pdesc">C’est notre globetrotteuse avertie ! Adélaïde parcours le monde à la recherche de
             produits locaux qui composeront les box. Pour chaque voyage elle nous partage ces anecdotes et les origines
             de chaque produit.</p>

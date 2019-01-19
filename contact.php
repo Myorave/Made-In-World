@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <p class="mb-4"><a href="#">01 23 45 67 89</a></p>
 
                     <p class="mb-0 font">Adresse Mail</p>
-                    <p class="mb-0"><a href="#">email@domaine.com</a></p>
+                    <p class="mb-0"><a href="#">contact@madeinworld.com</a></p>
 
                 </div>
 

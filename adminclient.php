@@ -25,13 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <div class="ligne"></div>
-<div class="site-section"></div>
-<div class="container-fluid">
+<div class="site-section4">
     <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Administration du site <a href="" class="btn btn-success event-ajout">Ajouter un
-                    client</a></h1>
-            <h2 class="sub-header">Liste des Utilisateurs</h2>
+        <div class="container">
+            <h2 class="page-header">Administration du site <a href="" class="btn btn-success event-ajout">Ajouter un
+                    client</a></h2>
+            <h3 class="sub-header">Liste des Utilisateurs</h3><br/>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -42,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <th>Pseudo</th>
                             <th>Email</th>
                             <th>Password</th>
-                            <th>Droit Admin</th>
                             <th>Date de Création</th>
                         </tr>
                     </thead>
@@ -55,19 +53,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         <tr id="<?php echo $user['id']; ?>">
 
-                            <td><?php echo $user['id']; ?></td>
+                            <td data-target="id_client"><?php echo $user['id']; ?></td>
                             <td data-target="prenom"><?php echo $user['prenom']; ?></td>
                             <td data-target="nom"><?php echo $user['nom']; ?></td>
                             <td data-target="identifiant"><?php echo $user['identifiant']; ?></td>
                             <td data-target="email"><?php echo $user['email']; ?></td>
                             <td data-target="password"><?php echo $user['password']; ?></td>
-                            <td data-target="admin"><?php echo $user['admin']; ?></td>
                             <td data-target="date_crea"><?php echo $user['created_at']; ?></td>
 
                             <td>
                                 <a href="#update" data-role="update" data-id="<?php echo $user['id']; ?>"
                                    class="btn btn-warning event-edit">Edition</a><br><br>
-                                <a href="" class="btn btn-danger event-delete">Supprimer</a>
+                                <a href="" class="btn btn-danger event-delete" data-id="<?php echo $user['id']; ?>">Supprimer</a>
                             </td>
 
                         </tr>
@@ -252,9 +249,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $('.event-delete').on('click', function (e) {
             e.preventDefault();
 
-            var id = $(this).parents('tr').data('id');
+            var id = $(this).data('id');
             var tr = $(this).parents('tr');
 
+            console.log (id, tr);
             alertify.confirm('Confirmez-vous la suppression ?', 'Êtes-vous sûr de vouloir supprimer ce commentaire ?', function () {
                     $.ajax({
                         method: "POST",

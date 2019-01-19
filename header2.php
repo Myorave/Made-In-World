@@ -30,7 +30,7 @@ session_start();
 <body>
 
 
- <h2 class="logo"><a href="index.php"><img class="logob" src="images/logoMIW.png" align="center"></a></h2>
+<h2 class="logo"><a href="index.php"><img class="logob" src="images/logoMIW.png" align="center"></a></h2>
 
 <nav role='navigation'>
     <div id="menuToggle">
@@ -43,15 +43,19 @@ session_start();
 
             <ul id="menu">
                 <div class="container pullRight">
-                    <li><a href="produits.php">Nos Boxs</a></li></Br>
-                    <li><a href="apropos.php">Qui-sommes nous</a></li></Br>
-                    <li><a href="livre.php">Livre d'or</a></li></Br>
-                    <li><a href="contact.php">Contact</a></li></Br>
-                    <br/>
+                    <li><a href="produits.php">Nos Boxs</a></li><br/>
+                    <li><a href="apropos.php">Qui-Sommes Nous</a></li><br/>
+                    <?php if (isset($_SESSION['loggedin'])) { // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
+                        ?><li><a href="livre.php">Livre d'Or</a></li><br/><?php
+                    } else { // Sinon, afficher le bouton d'inscription / connexion
+                        ?><li><a href="connexion.php?commentaire=true">Livre d'Or</a></li><br/><?php
+                    } ?>
+                    <li><a href="contact.php">Contact</a></li><br/>
+                    <br/><br/>
                     <?php if(isset($_SESSION['loggedin'])){ // Si l'utilisateur s'est connecté, afficher le bouton de deconnexion
                       ?><li><i class="fas fa-user" style='padding-right:20px;'></i><a href="compte.php"><?php echo htmlspecialchars($_SESSION["identifiant"]); ?></a></li><?php
                     } else{ // Sinon, afficher le bouton d'inscription / connexion
-                      ?><li><i class="fas fa-user" style='padding-right:20px;' ></i><a href="inscription.php">S'inscrire/Login </Br></a></li>  <?php
+                      ?><li><i class="fas fa-user" style='padding-right:20px;' ></i><a href="inscription.php">S'inscrire/Login </a></li><br/>  <?php
                     }?>
                     <?php if(isset($_SESSION['admin'])){ // Si le compte utilisateur est un admin
                       ?><li><i class="fas fa-tools" ></i><a href="admincommentaire.php"> Administration</a></li> <?php
