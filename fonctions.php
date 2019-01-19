@@ -97,16 +97,15 @@ function insererClient($prenom, $nom, $identifiant, $email, $password)
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         if ($stmt = $pdo->prepare(
-          "INSERT INTO users (prenom, nom, identifiant, email, password, created_at)
-           VALUES(:prenom, :nom, :identifiant, :email, :password, NOW())"))
-        {
-          // Liaison des variables à la requete comme parametres
-          $stmt->bindParam(':prenom', $prenom);
-          $stmt->bindParam(':nom', $nom);
-          $stmt->bindParam(':identifiant', $identifiant);
-          $stmt->bindParam(':email', $email);
-          $stmt->bindParam(':password', $password);
-          $stmt->execute();
+            "INSERT INTO users (prenom, nom, identifiant, email, password, created_at)
+           VALUES(:prenom, :nom, :identifiant, :email, :password, NOW())")) {
+            // Liaison des variables à la requete comme parametres
+            $stmt->bindParam(':prenom', $prenom);
+            $stmt->bindParam(':nom', $nom);
+            $stmt->bindParam(':identifiant', $identifiant);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $password);
+            $stmt->execute();
         }
 
         // Fermeture de la requete
@@ -179,11 +178,23 @@ function deleteCommentaire($id_commentaire)
 
     require_once "config.php";
 
-    $stmt = $pdo->prepare("DELETE FROM commentaire
-    WHERE id = :id");
+    try {
+        $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
+        // Mettre l'erreur PDO en exception
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt->bindParam(':id', $id_commentaire);
-    return $stmt->execute();
+        $stmt = $pdo->prepare("DELETE FROM commentaire
+        WHERE id = :id");
+
+        $stmt->bindParam(':id', $id_commentaire);
+        return $stmt->execute();
+
+        // Fermeture de la requete
+        unset($stmt);
+
+    } catch (PDOException $e) {
+        die("ERREUR: Impossible de se connecter. " . $e->getMessage());
+    }
 
 }
 
@@ -192,11 +203,23 @@ function deleteClient($id_client)
 
     require_once "config.php";
 
-    $stmt = $pdo->prepare("DELETE FROM users
-    WHERE id = :id");
+    try {
+        $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
+        // Mettre l'erreur PDO en exception
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt->bindParam(':id', $id_client);
-    return $stmt->execute();
+        $stmt = $pdo->prepare("DELETE FROM users
+        WHERE id = :id");
+
+        $stmt->bindParam(':id', $id_client);
+        return $stmt->execute();
+
+        // Fermeture de la requete
+        unset($stmt);
+
+    } catch (PDOException $e) {
+        die("ERREUR: Impossible de se connecter. " . $e->getMessage());
+    }
 
 }
 
@@ -205,11 +228,24 @@ function deleteCommande($id_commande)
 
     require_once "config.php";
 
-    $stmt = $pdo->prepare("DELETE FROM commande
-    WHERE num_commande = :id");
+    try {
+        $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
+        // Mettre l'erreur PDO en exception
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt->bindParam(':id', $id_client);
-    return $stmt->execute();
+        $stmt = $pdo->prepare("DELETE FROM commande
+        WHERE num_commande = :id");
+
+
+        $stmt->bindParam(':id', $id_commande);
+        return $stmt->execute();
+
+        // Fermeture de la requete
+        unset($stmt);
+
+    } catch (PDOException $e) {
+        die("ERREUR: Impossible de se connecter. " . $e->getMessage());
+    }
 
 }
 

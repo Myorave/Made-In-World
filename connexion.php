@@ -12,6 +12,10 @@ if (isset($_GET['achat']) && !empty($_GET['achat'])) {
     $_SESSION["achat"] = 1;
 }
 
+if (isset($_GET['commentaire']) && !empty($_GET['commentaire'])) {
+    $_SESSION["commentaire"] = 1;
+}
+
 // Inclusion du fichier config.php
 require_once "config.php";
 
@@ -77,8 +81,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             if (isset($_SESSION['achat'])) {
                                 unset($_SESSION['achat']);
                                 header("location: produitachat.php");
+                            } else if (isset($_SESSION['commentaire'])) {
+                                header("location: livre.php");
                             } else {
-                                header("location: compte.php");
+                                header("location: index.php");
+
                             }
 
                         } else {

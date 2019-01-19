@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else if ($type == "1987") {
             $description = "Boite Economique";
             $prix = 20;
-        } else if ($type == "984") {
+        } else if ( $type == "984") {
             $description = "Boite Sur Mesure";
             $prix = 40;
         }

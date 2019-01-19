@@ -72,7 +72,7 @@ $auteur_err = $titre_err = $note_err = $contenu_err = "";
 
         // Verification si le mdp est vide
         if (empty(trim($_POST["titre"]))) {
-            $titre_err = "Veuillez entrer entrer un titre ";
+            $titre_err = "Veuillez entrer un titre ";
         } else {
             $titre = trim($_POST["titre"]);
         }
@@ -106,9 +106,6 @@ $auteur_err = $titre_err = $note_err = $contenu_err = "";
 
                 // Tentative d'execution de la requete
                 if ($stmt->execute()) {
-
-                    // Redirection à la page de connexion
-                    header('Location: livre.php?envoye');
 
                 } else {
                     echo "Une erreur est survenue. Veuillez recommencer.";

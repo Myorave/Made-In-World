@@ -3,13 +3,11 @@ include("header-admin.php");
 include("fonctions.php");
 ?>
 <div class="ligne"></div>
-<div class="site-section"></div>
-<div class="container-fluid">
-
+<div class="site-section4">
     <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Administration du site
-                <h2 class="sub-header">Liste des commandes</h2>
+        <div class="container">
+            <h2 class="page-header">Administration du site</h2>
+                <h3 class="sub-header">Liste des commandes</h3><br/>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -18,7 +16,6 @@ include("fonctions.php");
                         <th>Adresse de Livraison</th>
                         <th>Code Postal</th>
                         <th>Ville</th>
-                        <th>Pays</th>
                         <th>Numéro Box</th>
                         <th>Date de commande</th>
                         <th>Prix</th>
