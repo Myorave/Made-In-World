@@ -9,7 +9,7 @@ include("header2.php")
 
 <div class="site-section4 ">
 
-  <h5 class="spe"> NOS SPÉCIALITÉS</h5>
+  <div class="spe"> NOS SPÉCIALITÉS</div>
   
   
   <div class="flip">

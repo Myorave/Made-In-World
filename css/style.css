@@ -1374,6 +1374,7 @@ img.CartP {
   line-height: 160%;
   color: #999;
   text-align: left;
+  padding-right: 30px;
 }
 
 .text-shadow {
@@ -1418,6 +1419,50 @@ textarea:focus {
   .gallery-item .title {
     margin-bottom: 1em;
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Agence {
+    padding-right: 2rem;
+    line-height: 2.2;
+    border-left: solid black 0px;
+    border-right: solid black 0px;
+  }
+  .cadrage {
+    padding-left: 0px;
+    width: 500px;
+  }
+  .pdesc {
+    width: 40%;
+  }
+  .tray {
+    position: absolute;
+    margin-left: 40px;
+    height: 0px;
+  }
+  .chef {
+    position: absolute;
+    height: 0px;
+    margin-left: 40px;
+    -webkit-transform: rotate(300deg);
+            transform: rotate(300deg);
+  }
+  .toque {
+    position: absolute;
+    height: 0px;
+    margin-left: 40px;
+  }
+  .spe {
+    font-size: 25px;
+    font-weight: 300;
+    padding-bottom: 150px;
+    margin-top: 50px;
+  }
+  .spe2 {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 200px;
   }
 }
 

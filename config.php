@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 /* Informations de la BDD. */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'root');
 
 define('DB_NAME', 'projetphp');
 
