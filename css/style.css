@@ -765,7 +765,7 @@ p .commentaire {
   font-weight: 500;
   font-size: 16px;
   color: white;
-  margin-right: 100px;
+  margin-right: 20px;
 }
 
 .site-block-check2 {
@@ -1453,16 +1453,19 @@ textarea:focus {
     height: 0px;
     margin-left: 40px;
   }
-  .spe {
-    font-size: 25px;
-    font-weight: 300;
-    padding-bottom: 150px;
-    margin-top: 50px;
-  }
-  .spe2 {
-    font-size: 25px;
+  .site-section4 .spe2 {
+    text-align: left;
+    font-size: 35px;
     font-weight: 300;
     margin-top: 200px;
+    padding-left: 40px;
+  }
+  .site-section4 .spe {
+    text-align: left;
+    font-size: 35px;
+    font-weight: 300;
+    margin-top: 100px;
+    padding-left: 40px;
   }
 }
 

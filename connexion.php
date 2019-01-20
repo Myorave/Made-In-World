@@ -143,20 +143,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p><a href="requetemdp.php">Mot de passe oublié ?</a></p>
             </form>
         </div>
+        <div class="col-lg-4">
+            <h2>Pas encore inscrit sur <b>Made in World</b> ?</h2>
+            <div ><a href="inscription.php" class="boutonprod3" tabindex="8">S'inscrire</a>
+        </div>
+        
+    </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-4">
-            <h2>Pas encore inscrit sur <b>Made in World</b> ?</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-6"><a href="inscription.php" class="boutonprod3" tabindex="8">S'inscrire</a>
-        </div>
-    </div>
-</div>
+
+
 
 <?php
 include("footer.php");

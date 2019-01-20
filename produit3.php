@@ -34,20 +34,20 @@ include("header2.php")
 <div class="site-section site-block-3 bg-light">
     <div class="container">
         <div class="gallery">
-            <div class="gallery-item"><img src="images/sauce_tomates.png" alt="Sauce tomate"><span class="text-wrapper"><span
+            <div class="gallery-item"><img src="images/sauce_tomatej.png" alt="Sauce tomate"><span class="text-wrapper"><span
                         class="name">La sauce tomate</span><span class="title">Véritable base pour les pâtes et pizza</span></span>
             </div>
 
             <div class="gallery-item"><img src="images/pates.png" alt="Boite de pâtes"><span class="text-wrapper"><span
-                        class="name">La boite de pâtes</span><span class="title">L'incontournable ingrédients de
+                        class="name">La boîte de pâtes</span><span class="title">L'incontournable ingrédient de
                         l'Italie</span></span></div>
 
             <div class="gallery-item"><img src="images/vinr.png" alt="Une bouteille de vin"><span class="text-wrapper"><span
-                        class="name">Le vin rouge</span><span class="title"> Un vin en bouche, chaud et velouté
-                        selectioné par notre chef</span></span></div>
+                        class="name">Le vin rouge</span><span class="title"> 
+Un vin en bouche, boisé sélectionné par notre chef</span></span></div>
 
-            <div class="gallery-item"><img src="images/livreb.png" alt="Livre de recette "><span class="text-wrapper"><span
-                        class="name">Le livre de recette</span><span class="title">Les recettes classiques italiens
+            <div class="gallery-item"><img src="images/livrebl.png" alt="Livre de recette "><span class="text-wrapper"><span
+                        class="name">Le livre de recettes</span><span class="title">Les recettes classiques italiens
                         d'une simplicité absolue</span></span></div>
         </div>
     </div>
