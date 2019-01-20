@@ -4,7 +4,7 @@ include("header2.php");
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
 if(!isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] !== true){
-    header("location: /");
+    header("location: index.php");
     exit;
 }
 
@@ -94,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Réinitialiser">
-                    <a class="btn btn-success btn-lg" href="/">Annuler</a>
+                    <a class="btn btn-success btn-lg" href="index.php">Annuler</a>
                 </div>
             </form>
         </div>

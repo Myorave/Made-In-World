@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Créer un lien URL vérifiant la requete d'oublie de mdp
     // permettant l'utlisateur de changer son mdp
-    $verifyScript = 'https://madeinworld-ducci2.alwaysdata.net/oublimdp.php';
+    $verifyScript = 'http://localhost/made-in-world/oublimdp.php';
 
     // Lien de reset
     $linkToSend = $verifyScript . '?uid=' . $userId . '&id=' . $passwordRequestId . '&t=' . $token;
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Redirection vers la page de reset de mot de passe.
-    header('Location: /?messageenvoye');
+    header('Location: index.php?messageenvoye');
 }
 ?>
 

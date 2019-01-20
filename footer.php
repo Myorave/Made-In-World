@@ -5,7 +5,7 @@
 
           <div class="col-6 col-sm-3">
           <div class="AgenceM">
-            <a href="/"><img class="logo1" src="images/logo.png"></a></br>
+            <a href="index.php"><img class="logo1" src="images/logo.png"></a></br>
             <li><a href="mentionslegales.php">Mentions légales</a></li></br>
             <li><a href="cgv.php"> Contrat CGV</a></li> </br>
             <i class="fab fa-facebook-f"></i>

@@ -4,7 +4,7 @@ include("header2.php");
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: /");
+    header("location: index.php");
     exit;
 }
 
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 unset($_SESSION['commentaire']); // destruction de la variable de session "commentaire"
                                 header("location: livre.php");
                             } else {
-                                header("location: /");
+                                header("location: index.php");
 
                             }
 

@@ -5,7 +5,7 @@ include("fonctions.php");
 // Verification si l'utilisateur est deja loggé,
 // Si oui, redirection vers la page d'accueil
 if (!isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] !== true) {
-    header("location: /");
+    header("location: index.php");
     exit;
 }
 ?>
