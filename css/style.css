@@ -942,7 +942,7 @@ img.CartP {
   position: fixed;
   top: 50px;
   right: 50px;
-  z-index: 1;
+  z-index: 9999;
   -webkit-user-select: none;
   -moz-user-select: none;
    -ms-user-select: none;

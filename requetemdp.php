@@ -64,12 +64,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Créer un lien URL vérifiant la requete d'oublie de mdp
     // permettant l'utlisateur de changer son mdp
-    $verifyScript = 'http://localhost/made-in-world/oublimdp.php';
+    $verifyScript = 'https://madeinworld-ducci2.alwaysdata.net/oublimdp.php';
 
     // Lien de reset
     $linkToSend = $verifyScript . '?uid=' . $userId . '&id=' . $passwordRequestId . '&t=' . $token;
 
-    $body_html = "Vous avez reçu un email de Made in World<br/><br/> 
+    $body_html = "Vous avez reçu un email de Made in World<br/><br/>
                   Voici votre de reset de mot de passe : <br/><br/>
                   <a href='$linkToSend'>$linkToSend</a>";
 
@@ -78,11 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     $mail->IsSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'ns0.ovh.net';                         // Specify main and backup server
+    $mail->Host = 'ns0.ovh.net';                          // Specify main and backup server
     $mail->Port = 587;                                    // Set the SMTP port
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'hello@chouania-mehdi.fr';          // SMTP username
-    $mail->Password = 'Pl@y$t@t10n1';                     // SMTP password
+    $mail->Password = 'Pl@yst@t10n1';                     // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64';
@@ -135,4 +135,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-

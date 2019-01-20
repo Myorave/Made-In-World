@@ -20,14 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail->Port = 587;                                    // Set the SMTP port
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'hello@chouania-mehdi.fr';          // SMTP username
-    $mail->Password = 'Pl@y$t@t10n1';                     // SMTP password
+    $mail->Password = 'Pl@yst@t10n1';                     // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64';
 
     $mail->From = 'hello@chouania-mehdi.fr';
     $mail->FromName = $nom;
-    $mail->AddAddress('chouania.mehdi@hotmail.fr');                         // Name is optional
+    $mail->AddAddress('chouania.mehdi@hotmail.fr');
+    // Name is optional
 
     $mail->IsHTML(true);                             // Set email format to HTML
 

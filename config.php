@@ -4,11 +4,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 /* Informations de la BDD. */
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
+define('DB_SERVER', 'mysql-madeinworld-ducci2.alwaysdata.net');
+define('DB_USERNAME', '175441_admin');
+define('DB_PASSWORD', 'tropbien');
 
-define('DB_NAME', 'projetphp');
+define('DB_NAME', 'madeinworld-ducci2_projetphp');
 
 /* Tentative de connexion à la BDD MySQL */
 try {

@@ -21,7 +21,7 @@ include("header2.php")
                 Le responsable publication est une personne physique ou une personne morale.<br>
                 Webmaster : Mehdi Chouania – test@test.fr<br>
                 Hébergeur : AlwaysData – https://alwaysdata.com<br>
-              </p>
+                </p>
 
                 <p><b>2. Conditions générales d’utilisation du site et des services proposés.</b></p>
 
