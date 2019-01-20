@@ -8,7 +8,7 @@ include("header2.php")
   <div class="container">
       <p class="explications" ><b>Une Box qui vous fait voyager loin… </b></p>
       <p class="explications1">
-      Un peu lassés de cuisiner les mêmes plats toute l'année ? On a la solution pour vous :<b>un concept de voyage culinaire, ludique et instructif. </b> Nous travaillons avec la présence incontestée d’un Grand Chef étoilé qui nous permet de proposer des livres de recettes riches en <b>expériences et en savoir-faire.</b>
+      Un peu lassés de cuisiner les mêmes plats toute l'année ? Nous vous apportons "LA" solution : <b>un concept de voyage culinaire, ludique et instructif. </b> Nous travaillons avec la présence incontestée d’un Grand Chef étoilé qui nous permet de proposer des livres de recettes riches en <b>expériences et en savoir-faire.</b>
     </p>
     <div class="explications1"> <p>Toute les box contiennent <b>un livre de recettes et des anecdotes !</b></p> </div>
 </div>
@@ -17,7 +17,7 @@ include("header2.php")
 <div class="site-section back2">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-1 hauteur" style="background-image: url('images/La_classique.png');"
+      <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-1 hauteur" style="background-image: url('images/La_Classique.png');"
         data-aos="fade-up"></div>
       <div class="col-md-6 pr-md-5 order-md-2">
         <h2 class="display-3m ">La box <strong>classique</strong></h2>
@@ -56,7 +56,7 @@ include("header2.php")
 <div class="site-section back2">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-1 hauteur" style="background-image: url('images/Economique.png');"
+      <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-1 hauteur" style="background-image: url('images/economique.png');"
         data-aos="fade-up"></div>
       <div class="col-md-6 pr-md-5 order-md-2">
         <h2 class="display-3m ">La box <strong>économique</strong></h2>

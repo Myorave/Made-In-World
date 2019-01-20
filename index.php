@@ -106,7 +106,7 @@ include("config.php");
     <div class="row">
       <div class="col-md-4">
         <div class="CarteP">
-          <img src="images/La_classique.png" alt="Image" class="w-50 mb-4 rounded" data-aos="fade" data-aos-delay="0">
+          <img src="images/La_Classique.png" alt="Image" class="w-50 mb-4 rounded" data-aos="fade" data-aos-delay="0">
           <h4>La classique</h4>
           <div class="prix">30€</div>
           <a href="produit1.php" class="boutonprod">Acheter</a>
@@ -124,7 +124,7 @@ include("config.php");
 
       <div class="col-md-4">
         <div class="CarteP">
-          <img src="images/Economique.png" alt="Image" class="w-50 mb-4 rounded" data-aos="fade" data-aos-delay="700">
+          <img src="images/economique.png" alt="Image" class="w-50 mb-4 rounded" data-aos="fade" data-aos-delay="700">
           <h4>L'économique </h4>
           <div class="prix">20€</div>
           <a href="produit3.php" class="boutonprod">Acheter</a>
